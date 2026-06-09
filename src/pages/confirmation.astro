@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import config from '../data/config.json';
+
+// Get params from URL
+const url = new URL(Astro.request.url);
+const devisId = url.searchParams.get('devis_id') || '';
+const devisHash = url.searchParams.get('devis_hash') || '';
+const prenom = url.searchParams.get('prenom') || '';
+const ville = url.searchParams.get('ville') || '';
+const catId = url.searchParams.get('cat') || '';
+
+// Resolve project type name based on cat_id
+let projectLabel = "installation de pompe à chaleur";
+if (catId === '40') {
+  projectLabel = "installation de climatisation réversible";
+} else if (catId === '93') {
+  projectLabel = "installation de pompe à chaleur géothermique";
+} else if (catId === '162') {
+  projectLabel = "entretien de pompe à chaleur";
+} else if (catId === '171') {
+  projectLabel = "dépannage de pompe à chaleur";
+}
+
+const boxId = config.viteundevis.boxId;
+const containerId = `vud_spin_${boxId}`;
+---
+
+<Layout title={`Merci ${prenom} | Demande de devis enregistrée`} description="Confirmation de votre demande de devis de pompe à chaleur en Isère. Validation par code SMS.">
+  <section class="section" style="min-height: 75vh; display: flex; align-items: center; padding: 40px 0; background: #f8fafc;">
+    <div class="container" style="max-width: 680px; margin: 0 auto; background: #ffffff; padding: 40px; border-radius: var(--radius-md); box-shadow: var(--shadow-md); border: 1px solid var(--border-color); text-align: center;">
+      
+      <!-- Success Icon -->
+      <div style="font-size: 5rem; margin-bottom: 20px; animation: bounce 0.6s ease;">✅</div>
+
+      <h1 style="font-size: 2.2rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 12px; line-height: 1.2;">
+        Merci{prenom ? ` ${prenom}` : ''} !
+      </h1>
+      
+      <p style="font-size: 1.15rem; color: var(--text-muted); margin-bottom: 30px; line-height: 1.6;">
+        Votre demande de devis pour <strong>{projectLabel}</strong>{ville ? ` à <strong>${ville}</strong>` : ''} a été transmise avec succès à nos installateurs certifiés RGE.
+      </p>
+
+      <!-- SMS Spinner Validation Widget -->
+      {devisId && devisHash ? (
+        <div style="margin: 30px 0; padding: 25px; border-radius: var(--radius-sm); background: #f0fdf4; border: 1px solid #bbf7d0;">
+          <h3 style="font-size: 16px; font-weight: 700; color: #15803d; margin-bottom: 15px;">
+            ⚠️ DERNIÈRE ÉTAPE : Validez votre numéro par SMS
+          </h3>
+          <p style="font-size: 13px; color: #166534; margin-bottom: 20px;">
+            Afin d'éviter les demandes erronées, notre partenaire vous envoie un code de validation par SMS. Entrez-le ci-dessous pour activer votre dossier immédiatement.
+          </p>
+          
+          <div id={containerId} class="vud-spinner-widget"></div>
+          
+          <script is:inline define:vars={{ devisId, devisHash, boxId, containerId }}>
+            var vud_js = document.createElement('script');
+            vud_js.type = 'text/javascript';
+            vud_js.src = 'https://www.viteundevis.com/mb/spinner.php?devis_id=' + devisId + '&devis_hash=' + devisHash + '&box=' + boxId;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(vud_js, s);
+          </script>
+        </div>
+      ) : null}
+
+      <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 30px 0;" />
+
+      <!-- What happens next -->
+      <div style="text-align: left;">
+        <h2 style="font-size: 1.25rem; font-weight: 700; color: var(--secondary-color); margin-bottom: 20px; text-align: center;">
+          📋 Quelles sont les étapes suivantes ?
+        </h2>
+        <div class="next-steps-grid" style="display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 15px;">
+          <div style="display: flex; gap: 15px; align-items: flex-start;">
+            <div style="font-size: 24px;">📱</div>
+            <div>
+              <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 4px;">1. Validation du numéro</h4>
+              <p style="font-size: 13px; color: var(--text-muted); margin: 0;">Entrez le code reçu par SMS. Les dossiers validés par SMS sont traités en priorité sous 2 heures.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 15px; align-items: flex-start;">
+            <div style="font-size: 24px;">📞</div>
+            <div>
+              <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 4px;">2. Contact téléphonique</h4>
+              <p style="font-size: 13px; color: var(--text-muted); margin: 0;">Jusqu'à 3 installateurs locaux certifiés RGE vous contactent par téléphone sous 48h pour affiner vos besoins.</p>
+            </div>
+          </div>
+          <div style="display: flex; gap: 15px; align-items: flex-start;">
+            <div style="font-size: 24px;">🤝</div>
+            <div>
+              <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 4px;">3. Comparaison libre</h4>
+              <p style="font-size: 13px; color: var(--text-muted); margin: 0;">Vous recevez des propositions détaillées. Vous comparez les tarifs et l'éligibilité aux aides sans aucun engagement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 35px;">
+        <a href="/" class="btn-primary" style="display: inline-block; padding: 12px 28px; text-decoration: none; border-radius: var(--radius-sm); font-weight: 700; background: var(--accent-color); color: #ffffff;">
+          &larr; Retour à l'accueil
+        </a>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes bounce {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .next-steps-grid {
+    border-radius: var(--radius-sm);
+  }
+</style>

@@ -1,0 +1,304 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StepsForm from '../components/StepsForm.astro';
+import config from '../data/config.json';
+---
+
+<Layout title="Comment Fonctionne une Pompe à Chaleur (PAC) | Guide Technique" description="Tout savoir sur le fonctionnement technique des PAC Air/Eau, Air/Air et Géothermie. COP, fluide frigorigène, compresseur. Devis gratuits RGE en Isère.">
+  <section class="section" style="padding: 60px 0; background: #f8fafc;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto;">
+      
+      <div class="section-title" style="text-align: center; margin-bottom: 40px;">
+        <h1 style="font-size: 2.6rem; font-weight: 800; color: var(--secondary-color); line-height: 1.25;">
+          Comment fonctionne une Pompe à Chaleur (PAC) ?
+        </h1>
+        <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 800px; margin: 15px auto 0;">
+          Découvrez les principes de la thermodynamique, le cycle frigorifique en 4 étapes et les spécificités des technologies adaptées au climat rigoureux de l'Isère (38).
+        </p>
+      </div>
+
+      <!-- Banner Image -->
+      <div style="margin-bottom: 40px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-color);">
+        <img src="/images/fonctionnement-pac-banner.png" alt="Cycle frigorifique et thermodynamique d'une pompe à chaleur" style="width: 100%; height: auto; max-height: 400px; object-fit: cover; display: block;" />
+      </div>
+
+      <!-- Main Content & Form Layout -->
+      <div class="two-column-layout">
+        
+        <!-- Detailed explanations -->
+        <div>
+          <div style="background: #ffffff; padding: 35px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 35px;">
+            
+            <!-- Principle Intro -->
+            <div>
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                <span>💡</span> Le Principe de la Thermodynamique
+              </h2>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.7;">
+                Une pompe à chaleur fonctionne sur le principe du transfert d'énergie thermique. Au lieu de brûler un combustible (comme le gaz, le fioul ou le bois) ou de consommer de l'électricité pure dans des résistances pour générer de la chaleur, elle <strong>prélève des calories gratuites et renouvelables</strong> présentes dans l'environnement extérieur (l'air, le sol ou les eaux souterraines) pour les injecter dans votre circuit de chauffage intérieur.
+              </p>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.7; margin-top: 10px;">
+                Grâce à cette technologie thermodynamique, la PAC restitue plus d'énergie sous forme de chaleur qu'elle n'en consomme sous forme d'électricité. C'est ce rendement exceptionnel qui permet de diviser vos factures de chauffage par 3 ou 4.
+              </p>
+            </div>
+
+            <!-- Evaporation at low temperatures physics callout -->
+            <div style="background: rgba(30, 58, 138, 0.03); border: 1px solid rgba(30, 58, 138, 0.1); border-radius: var(--radius-sm); padding: 20px;">
+              <h4 style="font-weight: 700; color: var(--secondary-color); font-size: 14.5px; margin-bottom: 6px;">❄️ Comment capter du chaud par -15°C ?</h4>
+              <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6;">
+                Cela semble contre-intuitif, mais l'air à -15°C contient encore une grande quantité d'énergie thermique. Les fluides frigorigènes utilisés dans les PAC ont un point d'ébullition extrêmement bas (par exemple, le propane R290 bout à <strong>-42,1°C</strong> à pression atmosphérique). Même par grand froid montagnard en Isère, l'air extérieur est donc suffisamment "chaud" pour faire bouillir le fluide et le transformer en gaz.
+              </p>
+            </div>
+
+            <!-- The 4 Cycle Phases -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 25px;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                <span>🔄</span> Le Cycle Frigorifique en 4 Étapes
+              </h2>
+              <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
+                Le transfert de chaleur s'effectue au sein d'un circuit scellé où circule un fluide frigorigène. Ce fluide change d'état physique (liquide ou gazeux) à travers quatre composants mécaniques principaux :
+              </p>
+              
+              <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                  <span style="font-size: 14px; font-weight: 700; background: rgba(243, 112, 33, 0.1); color: var(--accent-color); padding: 4px 10px; border-radius: 4px; display: inline-block; margin-top: 2px;">1</span>
+                  <div>
+                    <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 4px; font-size: 15px;">L'Évaporateur (Unité Extérieure)</h4>
+                    <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+                      Le fluide frigorigène à l'état liquide, circulant à très basse température, capte les calories de l'air ou du sol. Sa température étant inférieure à celle du milieu extérieur, il absorbe la chaleur ambiante et commence à bouillir jusqu'à s'évaporer pour se transformer en gaz basse pression.
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                  <span style="font-size: 14px; font-weight: 700; background: rgba(243, 112, 33, 0.1); color: var(--accent-color); padding: 4px 10px; border-radius: 4px; display: inline-block; margin-top: 2px;">2</span>
+                  <div>
+                    <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 4px; font-size: 15px;">Le Compresseur (Électrique)</h4>
+                    <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+                      Le fluide sous forme gazeuse est aspiré par le compresseur. En utilisant l'énergie électrique, le compresseur comprime fortement le gaz. Cette élévation mécanique de pression provoque une augmentation thermique spectaculaire du fluide, qui ressort sous forme de gaz très chaud à haute pression.
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                  <span style="font-size: 14px; font-weight: 700; background: rgba(243, 112, 33, 0.1); color: var(--accent-color); padding: 4px 10px; border-radius: 4px; display: inline-block; margin-top: 2px;">3</span>
+                  <div>
+                    <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 4px; font-size: 15px;">Le Condenseur (Unité Intérieure)</h4>
+                    <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+                      Le gaz chaud haute pression entre dans le condenseur (l'échangeur thermique raccordé à vos émetteurs). Le gaz cède ses calories à l'eau de votre circuit de radiateurs ou à l'air de votre maison. En libérant sa chaleur, le fluide se refroidit et se condense pour redevenir liquide sous haute pression.
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                  <span style="font-size: 14px; font-weight: 700; background: rgba(243, 112, 33, 0.1); color: var(--accent-color); padding: 4px 10px; border-radius: 4px; display: inline-block; margin-top: 2px;">4</span>
+                  <div>
+                    <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 4px; font-size: 15px;">Le Détendeur</h4>
+                    <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.6; margin: 0;">
+                      Le fluide liquide haute pression traverse le détendeur. Ce composant abaisse brutalement la pression du liquide, ce qui engendre instantanément une chute de sa température. Le fluide refroidi retourne à l'évaporateur extérieur pour entamer un nouveau cycle frigorifique.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Defrost and Buffer Tank section -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 25px;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                <span>❄️</span> Le Cycle de Dégivrage & le Ballon Tampon
+              </h2>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.7;">
+                En hiver, par températures proches de 0°C et forte humidité, de la condensation se dépose sur l'échangeur extérieur et se transforme en givre. Ce givre fait barrière thermique et dégrade le rendement.
+              </p>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.7; margin-top: 10px;">
+                Pour y remédier, la pompe à chaleur effectue automatiquement des **cycles de dégivrage** : elle inverse temporairement son cycle pour prélever des calories du chauffage intérieur et les envoyer vers l'extérieur pour faire fondre le givre.
+              </p>
+              <div style="background: rgba(243, 112, 33, 0.05); border-left: 4px solid var(--accent-color); padding: 15px; border-radius: var(--radius-sm); margin-top: 15px;">
+                <p style="font-size: 13.5px; color: var(--text-dark); margin: 0; line-height: 1.6;">
+                  💡 <strong>Importance du ballon tampon :</strong> Le ballon tampon (ou bouteille de mélange) stocke un volume d'eau chaude constant. Il empêche la PAC de refroidir vos radiateurs pendant les dégivrages et évite les démarrages trop fréquents (courts-cycles) du compresseur en régulation, augmentant sa durée de vie de plusieurs années.
+                </p>
+              </div>
+            </div>
+
+            <!-- Technologies Sections with Anchors -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 25px; display: flex; flex-direction: column; gap: 30px;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 5px; display: flex; align-items: center; gap: 10px;">
+                <span>🛠️</span> Les 3 Grandes Familles de PAC
+              </h2>
+
+              <!-- PAC Air-Eau -->
+              <div id="air-eau" style="scroll-margin-top: 90px; background: #fafafb; padding: 25px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                  💧 La Pompe à Chaleur Air/Eau
+                </h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                  Ce système capte les calories de l'air et les transmet à de l'eau injectée dans le réseau hydraulique de la maison. C'est l'alternative parfaite pour remplacer une chaudière thermique.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13.5px; margin-bottom: 15px;">
+                  <div style="background: #ffffff; padding: 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                    <strong>Basse Température (35°C - 45°C) :</strong> Efficacité énergétique maximale, recommandée pour les constructions neuves avec plancher chauffant.
+                  </div>
+                  <div style="background: #ffffff; padding: 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+                    <strong>Haute/Très Haute Température (65°C - 75°C) :</strong> Température d'eau de départ très élevée, indispensable pour la rénovation de vieilles maisons avec radiateurs en fonte sans perte de confort en plein hiver alpin.
+                  </div>
+                </div>
+                <p style="font-size: 13.5px; line-height: 1.6; margin: 0;">
+                  📍 En savoir plus sur nos services d'installation : <a href="/pompe-a-chaleur-air-eau-grenoble" style="color: var(--accent-color); font-weight: 700; text-decoration: underline;">Installation PAC Air-Eau Grenoble</a>.
+                </p>
+              </div>
+
+              <!-- PAC Air-Air -->
+              <div id="air-air" style="scroll-margin-top: 90px; background: #fafafb; padding: 25px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                  ❄️ La Pompe à Chaleur Air/Air (Clim Réversible)
+                </h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                  Cette technologie utilise l'aéraulique : elle puise l'énergie dans l'air extérieur et souffle de l'air chaud en hiver, ou de l'air frais en été, par le biais de consoles murales ou d'un réseau gainable centralisé.
+                </p>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                  Elle est très recherchée dans la cuve de Grenoble pour soulager les habitations du phénomène d'îlot de chaleur urbain pendant l'été tout en se substituant avantageusement à de vieux convecteurs électriques en hiver.
+                </p>
+                <p style="font-size: 13.5px; line-height: 1.6; margin: 0;">
+                  📍 En savoir plus sur la climatisation réversible : <a href="/pompe-a-chaleur-air-air-grenoble" style="color: var(--accent-color); font-weight: 700; text-decoration: underline;">Climatisation Réversible Grenoble</a>.
+                </p>
+              </div>
+
+              <!-- PAC Géothermie -->
+              <div id="geothermie" style="scroll-margin-top: 90px; background: #fafafb; padding: 25px; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+                  🌍 La Pompe à Chaleur Géothermique (Sol/Eau)
+                </h3>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                  Elle capte la chaleur stockée sous terre via des capteurs horizontaux enfouis ou des sondes verticales forées. Elle peut également prélever l'eau d'une nappe phréatique de proximité (hydrothermie).
+                </p>
+                <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                  Puisque la température du sol reste stable (entre 10°C et 12°C) peu importe les intempéries en surface, elle offre un rendement constant toute l'année, ce qui en fait le système le plus performant pour les zones froides de montagne en Isère.
+                </p>
+                <p style="font-size: 13.5px; line-height: 1.6; margin: 0;">
+                  📍 Découvrir le captage sous-terrain : <a href="/pompe-a-chaleur-geothermie-grenoble" style="color: var(--accent-color); font-weight: 700; text-decoration: underline;">Géothermie et forages en Isère</a>.
+                </p>
+              </div>
+            </div>
+
+            <!-- COP, SCOP and ETAS Definitions & Equations -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 25px;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                <span>📊</span> COP, SCOP & ETAS : Décrypter les Rendements
+              </h2>
+              <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                Ces indicateurs mesurent l'efficacité énergétique de la PAC sous différents angles. Comprendre leur calcul permet de s'assurer de l'adéquation technique d'un matériel.
+              </p>
+              
+              <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="background: #f8fafc; padding: 20px; border: 1px solid var(--border-color); border-radius: 6px;">
+                  <strong style="color: var(--secondary-color); display: block; margin-bottom: 8px; font-size: 14.5px;">COP (Coefficient de Performance)</strong>
+                  <span style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5; display: block; margin-bottom: 10px;">
+                    C'est l'indice d'efficacité instantanée mesuré en laboratoire à des températures extérieures de référence (+7°C).
+                  </span>
+                  <div style="background: #ffffff; padding: 10px; border-radius: 4px; border: 1.5px dashed var(--accent-color); text-align: center; font-family: monospace; font-size: 14px; font-weight: 700;">
+                    COP = Énergie Thermique Restituée (kWh) / Énergie Électrique Consommée (kWh)
+                  </div>
+                  <span style="font-size: 12.5px; color: var(--text-muted); display: block; margin-top: 8px;">
+                    Exemple : Un COP de 4 indique que la pompe à chaleur restitue 4 kWh de chauffage pour seulement 1 kWh d'électricité facturé.
+                  </span>
+                </div>
+                
+                <div style="background: #f8fafc; padding: 20px; border: 1px solid var(--border-color); border-radius: 6px;">
+                  <strong style="color: var(--secondary-color); display: block; margin-bottom: 8px; font-size: 14.5px;">SCOP (Coefficient de Performance Saisonnier)</strong>
+                  <span style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5; display: block;">
+                    Le SCOP calcule le rendement global sur l'intégralité d'une saison de chauffage. Il prend en compte les variations réelles des températures en Isère tout au long de l'hiver. Il est essentiel pour estimer vos factures d'énergie annuelles réelles.
+                  </span>
+                </div>
+                
+                <div style="background: #f8fafc; padding: 20px; border: 1px solid var(--border-color); border-radius: 6px;">
+                  <strong style="color: var(--secondary-color); display: block; margin-bottom: 8px; font-size: 14.5px;">ETAS (Efficacité Énergétique Saisonnière - &eta;<sub>s</sub>)</strong>
+                  <span style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5; display: block; margin-bottom: 10px;">
+                    Exprimée en %, c'est la valeur légale de référence utilisée par l'Anah pour l'attribution des subventions publiques. L'ETAS est déduite du SCOP en appliquant le facteur d'énergie primaire officiel français de <strong>2,1</strong> :
+                  </span>
+                  <div style="background: #ffffff; padding: 10px; border-radius: 4px; border: 1.5px dashed var(--accent-color); text-align: center; font-family: monospace; font-size: 14px; font-weight: 700;">
+                    ETAS (%) = (SCOP / 2.1) x 100
+                  </div>
+                  <ul style="font-size: 12.5px; color: var(--text-dark); margin: 10px 0 0 20px; line-height: 1.5;">
+                    <li><strong>PAC Air-Eau Basse Température :</strong> Exigence d'une ETAS &ge; 126 % pour obtenir les aides.</li>
+                    <li><strong>PAC Air-Eau Moyenne/Haute Température :</strong> Exigence d'une ETAS &ge; 111 % pour obtenir les aides.</li>
+                  </ul>
+                  <a href="/aides-financieres" style="font-size: 13px; color: var(--accent-color); font-weight: 700; text-decoration: underline; margin-top: 10px; display: inline-block;">Consulter le barème officiel des aides &rarr;</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fluides comparatifs (R32 vs R290) - Mobile scroll responsive -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 25px;">
+              <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                <span>🍃</span> R32 vs R290 Propane : Le comparatif des fluides
+              </h2>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                Le choix du fluide frigorigène a un rôle prédominant sur l'empreinte carbone et l'efficacité thermodynamique globale par grand froid.
+              </p>
+              
+              <div style="overflow-x: auto; border: 1px solid var(--border-color); border-radius: var(--radius-sm); margin: 20px 0; -webkit-overflow-scrolling: touch;">
+                <table style="width: 100%; min-width: 600px; border-collapse: collapse; text-align: left; font-size: 13px;">
+                  <thead>
+                    <tr style="background: #f1f5f9; border-bottom: 2px solid var(--border-color); color: var(--secondary-color); font-weight: 700;">
+                      <th style="padding: 12px 14px;">Caractéristique</th>
+                      <th style="padding: 12px 14px; color: #1e3a8a;">Fluide R32 (Standard)</th>
+                      <th style="padding: 12px 14px; color: #166534;">Fluide R290 Propane (Naturel)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 12px 14px; font-weight: 600;">Type de gaz</td>
+                      <td style="padding: 12px 14px;">Synthétique (HFC)</td>
+                      <td style="padding: 12px 14px; font-weight: 600; color: #166534;">Gaz Naturel (Hydrocarbure)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 12px 14px; font-weight: 600;">PRG (Potentiel Réchauffement Global)</td>
+                      <td style="padding: 12px 14px; color: #b91c1c; font-weight: 600;">675 (Moyen)</td>
+                      <td style="padding: 12px 14px; font-weight: 700; color: #166534;">3 (Quasiment nul)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 12px 14px; font-weight: 600;">Réglementation F-Gaz</td>
+                      <td style="padding: 12px 14px;">Soumis à des quotas progressifs</td>
+                      <td style="padding: 12px 14px; font-weight: 600; color: #166534;">Non menacé de restriction</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 12px 14px; font-weight: 600;">Température max de départ d'eau</td>
+                      <td style="padding: 12px 14px;">55°C à 60°C (Moyenne température)</td>
+                      <td style="padding: 12px 14px; font-weight: 700; color: #166534;">75°C (Très haute température)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 12px 14px; font-weight: 600;">Classification de Sécurité</td>
+                      <td style="padding: 12px 14px;">A2L (Faiblement inflammable)</td>
+                      <td style="padding: 12px 14px; font-weight: 600; color: #b45309;">A3 (Inflammable - pose extérieure)</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 12px 14px; font-weight: 600;">Idéal pour...</td>
+                      <td style="padding: 12px 14px;">Plancher chauffant & climatisation</td>
+                      <td style="padding: 12px 14px; font-weight: 700; color: #166534;">Radiateurs en fonte existants</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.6;">
+                En résumé, les PAC utilisant le <strong>R290 (Propane)</strong> sont particulièrement adaptées pour la transition d'une chaudière fioul dans l'ancien en Isère, car elles évitent d'avoir à remplacer tous ses radiateurs en fonte. De plus, leur PRG de 3 les protège de toute interdiction future.
+              </p>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.6; margin-top: 10px;">
+                ⚠️ Le dimensionnement d'une PAC dépend étroitement du fluide, des émetteurs et de l'altitude du chantier. Lisez notre guide : <a href="/guides/dimensionner-pompe-a-chaleur-altitude" style="color: var(--accent-color); font-weight: 700; text-decoration: underline;">Bien dimensionner sa PAC en altitude en Isère</a>.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sticky form sidebar -->
+        <div style="position: sticky; top: 100px;">
+          <StepsForm />
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</Layout>
+

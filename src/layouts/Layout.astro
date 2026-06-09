@@ -2,6 +2,7 @@
 import config from '../data/config.json';
 import '../styles/global.css';
 import communes from '../data/communes.json';
+import ExitIntentPopup from '../components/ExitIntentPopup.astro';
 
 interface Props {
 	title?: string;
@@ -11,7 +12,7 @@ interface Props {
 }
 
 const { 
-  title = `${config.brandName} | Location de Benne ${config.mainCity} & ${config.department}`, 
+  title = `${config.brandName} | Chauffage & Climatisation RGE Isère (38)`, 
   description = config.description,
   canonicalUrl
 } = Astro.props;
@@ -58,7 +59,7 @@ const topFooterCommunes = communes.slice(0, 10);
 		<meta name="twitter:image" content={`${siteUrl}/images/hero.png`} />
 
 		<!-- Geo meta tags for local SEO -->
-		<meta name="geo.region" content="FR-59" />
+		<meta name="geo.region" content="FR-38" />
 		<meta name="geo.placename" content={config.mainCity} />
 
 		<!-- Inject brand-specific styles dynamically -->
@@ -81,10 +82,11 @@ const topFooterCommunes = communes.slice(0, 10);
 				</a>
 				<nav class="header-nav" aria-label="Navigation principale">
 					<a href="/">Accueil</a>
-					<a href="/tarifs">Tarifs</a>
-					<a href="/types-bennes">Nos Bennes</a>
-					<a href="/guides">Guides & Conseils</a>
-					<a href="/communes">Villes (59)</a>
+					<a href="/outils" style="color: var(--accent-color); font-weight: 700;">🧮 Simulateurs Gratuits</a>
+					<a href="/aides-financieres">Aides Financières</a>
+					<a href="/fonctionnement-pac">Fonctionnement</a>
+					<a href="/guides">Guides</a>
+					<a href="/communes">Villes</a>
 				</nav>
 				<a href="#devis" class="contact-btn">
 					📋 Devis Gratuit
@@ -102,32 +104,32 @@ const topFooterCommunes = communes.slice(0, 10);
 			<div class="container footer-grid-enriched">
 				<div class="footer-brand">
 					<h3>🔥 {config.brandName}</h3>
-					<p>Votre partenaire de confiance pour la <a href="/types-bennes" style="color: var(--accent-color);">location de bennes</a> à gravats, DIB, déchets verts et encombrants dans tout le département du {config.department} ({config.departmentCode}). Consultez nos <a href="/tarifs" style="color: var(--accent-color);">tarifs transparents</a>.</p>
+					<p>Votre partenaire de confiance pour l'installation, l'entretien et le dépannage de <a href="/fonctionnement-pac" style="color: var(--accent-color);">pompes à chaleur</a> et climatisations en {config.department} ({config.departmentCode}). Comparez 3 devis gratuits d'artisans RGE.</p>
 				</div>
 				<div class="footer-links">
-					<h4>Nos Services</h4>
+					<h4>Nos Simulateurs</h4>
 					<ul>
-						<li><a href="/#devis">Demande de Devis</a></li>
-						<li><a href="/tarifs">Tarifs par Volume</a></li>
-						<li><a href="/types-bennes">Guide des Bennes</a></li>
+						<li><a href="/outils" style="font-weight: 700; color: var(--accent-color);">🛠️ Espace Simulateurs</a></li>
+						<li><a href="/aides-financieres">Aides Financières</a></li>
+						<li><a href="/fonctionnement-pac">Fonctionnement PAC</a></li>
 						<li><a href="/guides">Guides & Conseils</a></li>
-						<li><a href="/communes">Toutes les communes (59)</a></li>
+						<li><a href="/communes">Toutes les communes (38)</a></li>
 					</ul>
 				</div>
 				<div class="footer-links">
-					<h4>Bennes à {config.mainCity}</h4>
+					<h4>PAC à {config.mainCity}</h4>
 					<ul>
-						<li><a href="/location-benne-gravats-lille">🪨 Gravats Lille</a></li>
-						<li><a href="/location-benne-encombrants-lille">📦 Encombrants Lille</a></li>
-						<li><a href="/location-benne-dechets-verts-lille">🌿 Déchets Verts Lille</a></li>
-						<li><a href="/location-benne-dib-lille">🏭 DIB / Bois Lille</a></li>
+						<li><a href="/pompe-a-chaleur-air-eau-grenoble">💧 PAC Air/Eau Grenoble</a></li>
+						<li><a href="/pompe-a-chaleur-air-air-grenoble">❄️ Clim Réversible Grenoble</a></li>
+						<li><a href="/pompe-a-chaleur-geothermie-grenoble">🌍 Géothermie Grenoble</a></li>
+						<li><a href="/entretien-pompe-a-chaleur-grenoble">🔧 Entretien PAC Grenoble</a></li>
 					</ul>
 				</div>
 				<div class="footer-links">
 					<h4>Villes populaires</h4>
 					<ul>
 						{topFooterCommunes.map((c) => (
-							<li><a href={`/location-benne-${c.slug}`}>{c.nom}</a></li>
+							<li><a href={`/installation-pompe-a-chaleur-${c.slug}`}>{c.nom}</a></li>
 						))}
 					</ul>
 				</div>
@@ -140,5 +142,8 @@ const topFooterCommunes = communes.slice(0, 10);
 				</p>
 			</div>
 		</footer>
+
+		<!-- Exit Intent Popup -->
+		<ExitIntentPopup />
 	</body>
 </html>

@@ -1,0 +1,17 @@
+# Build output
+dist/
+
+# Astro cache
+.astro/
+
+# Node modules
+node_modules/
+
+# NPM cache
+.npm-cache/
+
+# Log files
+*.log
+
+# OS files
+.DS_Store

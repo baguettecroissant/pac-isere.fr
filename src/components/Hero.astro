@@ -8,6 +8,20 @@ interface Props {
 }
 
 const { communeName = config.mainCity, categoryName = "" } = Astro.props;
+
+// Determine title prefix
+let titlePrefix = "Installation Pompe à Chaleur";
+if (categoryName === "Entretien") {
+  titlePrefix = "Entretien Pompe à Chaleur";
+} else if (categoryName === "Dépannage") {
+  titlePrefix = "Dépannage Pompe à Chaleur";
+} else if (categoryName === "Air/Eau") {
+  titlePrefix = "Pompe à Chaleur Air/Eau";
+} else if (categoryName === "Air/Air") {
+  titlePrefix = "Climatisation Réversible";
+} else if (categoryName === "Géothermie") {
+  titlePrefix = "Pompe à Chaleur Géothermique";
+}
 ---
 
 <section class="hero">
@@ -15,29 +29,29 @@ const { communeName = config.mainCity, categoryName = "" } = Astro.props;
     <!-- Left Column: Localized SEO Hook & Badges -->
     <div class="hero-content">
       <h1>
-        Location de Benne {categoryName ? categoryName + " " : ""}à <span>{communeName}</span> et dans tout le <span>{config.department}</span>
+        {titlePrefix} à <span>{communeName}</span> et dans toute l'<span>{config.department}</span>
       </h1>
       <p>
-        Besoin d'évacuer des gravats, des déchets verts, du bois ou du tout-venant ? Réservez votre benne de 8m³ à 30m³ chez <strong>{config.brandName}</strong>. Service rapide, conforme et au meilleur prix local.
+        Bénéficiez du chauffage thermodynamique nouvelle génération pour diviser vos factures par 3. Estimez vos subventions de l'État (MaPrimeRénov', Prime CEE) et comparez jusqu'à 3 devis gratuits d'artisans certifiés RGE locaux.
       </p>
 
       <div class="trust-badges">
         <div class="badge">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
           </svg>
-          <span>Livraison sous 24h</span>
+          <span>Artisans RGE QualiPAC</span>
         </div>
         <div class="badge">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <span>Prix local garanti</span>
+          <span>Devis gratuit sous 48h</span>
         </div>
       </div>
 
       <div style="margin-top: 30px; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-color);">
-        <img src="/images/hero.png" alt={`Location de benne à ${communeName}`} style="width: 100%; height: auto; display: block;" />
+        <img src="/images/hero.png" alt={`Installation de pompe à chaleur à ${communeName}`} style="width: 100%; height: auto; display: block;" />
       </div>
     </div>
 

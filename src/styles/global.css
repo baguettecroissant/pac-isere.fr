@@ -575,6 +575,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
   .features-grid {
     grid-template-columns: 1fr;
   }
@@ -598,4 +601,44 @@ footer {
   .cities-grid {
     grid-template-columns: 1fr;
   }
+  .logo {
+    font-size: 18px;
+    gap: 4px;
+  }
+  .contact-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .header-inner {
+    height: 60px;
+  }
 }
+
+/* --- Two Column Layout --- */
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+/* --- Responsive Form options --- */
+@media (max-width: 600px) {
+  .options-grid-row {
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  .form-group-row {
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+}
+

@@ -1,10 +1,7 @@
 /**
  * Geographic proximity linking engine.
- * Instead of always linking to the same top-N communes (Lille, Tourcoing, Roubaix...),
- * this module links each commune to its actual geographic neighbors based on INSEE code proximity.
- * 
- * INSEE codes in the Nord (59xxx) are roughly assigned geographically,
- * so sorting by absolute difference in INSEE code gives a reasonable geographic proximity.
+ * Computes physical distance between communes using latitude and longitude
+ * to link each commune to its actual geographic neighbors.
  */
 
 export interface CommuneData {
@@ -13,11 +10,13 @@ export interface CommuneData {
   codeInsee: string;
   codePostal: string;
   population: number;
+  latitude?: number;
+  longitude?: number;
 }
 
 /**
  * Returns the N geographically closest communes to the given commune,
- * sorted by INSEE code proximity (a decent geographic proxy for the same department).
+ * sorted by actual physical distance (in kilometers).
  */
 export function getNearbyCommunes(
   currentSlug: string,
@@ -27,19 +26,40 @@ export function getNearbyCommunes(
   const current = allCommunes.find(c => c.slug === currentSlug);
   if (!current) return allCommunes.filter(c => c.slug !== currentSlug).slice(0, count);
 
-  const currentInsee = parseInt(current.codeInsee, 10);
-  const currentPostal = parseInt(current.codePostal, 10);
+  const currentLat = current.latitude;
+  const currentLon = current.longitude;
+
+  // Fallback to numerical postal code distance if coordinates are missing
+  if (currentLat === undefined || currentLon === undefined) {
+    const currentPostal = parseInt(current.codePostal, 10);
+    return allCommunes
+      .filter(c => c.slug !== currentSlug)
+      .map(c => {
+        const postal = parseInt(c.codePostal, 10);
+        const distance = Math.abs(postal - currentPostal);
+        return { commune: c, distance };
+      })
+      .sort((a, b) => a.distance - b.distance)
+      .slice(0, count)
+      .map(item => item.commune);
+  }
 
   return allCommunes
     .filter(c => c.slug !== currentSlug)
     .map(c => {
-      const insee = parseInt(c.codeInsee, 10);
-      const postal = parseInt(c.codePostal, 10);
-      // Weighted distance: postal code proximity (geographic) + INSEE proximity
-      const postalDist = Math.abs(postal - currentPostal);
-      const inseeDist = Math.abs(insee - currentInsee);
-      // Postal codes are more geographically meaningful, so weight them more
-      const distance = postalDist * 3 + inseeDist;
+      const lat = c.latitude;
+      const lon = c.longitude;
+      if (lat === undefined || lon === undefined) {
+        return { commune: c, distance: Infinity };
+      }
+      
+      // Approximate physical distance in km using local projection (45°N)
+      // 1 degree of Latitude ≈ 111 km
+      // 1 degree of Longitude ≈ 111 * cos(45°) ≈ 78.5 km
+      const dLat = (lat - currentLat) * 111.0;
+      const dLon = (lon - currentLon) * 78.5;
+      const distance = dLat * dLat + dLon * dLon; // Square of distance in km
+      
       return { commune: c, distance };
     })
     .sort((a, b) => a.distance - b.distance)

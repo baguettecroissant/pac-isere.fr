@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://les-bennes-du-nord.fr',
+  site: 'https://pac-isere.fr',
   integrations: [
     sitemap({
       filter: (page) =>

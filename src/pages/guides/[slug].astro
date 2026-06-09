@@ -28,12 +28,8 @@ const breadcrumbItems = [
   { label: post.data.title }
 ];
 
-// Fallback images matching existing assets
 const getFallbackImage = (slug: string) => {
-  if (slug.includes('voirie')) return '/images/hero.png';
-  if (slug.includes('taille')) return '/images/benne-dib.png';
-  if (slug.includes('tri')) return '/images/benne-verts.png';
-  return '/images/hero.png';
+  return '/images/blog/installation-pompe-a-chaleur.png';
 };
 
 const imageUrl = post.data.image || getFallbackImage(post.slug);

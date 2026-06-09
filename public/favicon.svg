@@ -1,22 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
-  <!-- Rounded background card (Slate Secondary Color) -->
-  <rect width="512" height="512" rx="128" fill="#1E293B"/>
+  <!-- Circular background (Slate Secondary Color) -->
+  <circle cx="256" cy="256" r="256" fill="#1E293B"/>
   
-  <!-- Dumpster / Skip container main body (Orange Industrial Accent) -->
-  <path d="M96 160H416L368 368H144L96 160Z" fill="#F37021"/>
+  <!-- Outer temperature ring (blue left for cold, red-orange right for hot) -->
+  <path d="M256 40 A216 216 0 0 0 256 472" stroke="#3B82F6" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <path d="M256 40 A216 216 0 0 1 256 472" stroke="#EF4444" stroke-width="16" stroke-linecap="round" fill="none"/>
   
-  <!-- Top lip reinforcement of the dumpster -->
-  <rect x="80" y="144" width="352" height="24" rx="12" fill="#FFFFFF" opacity="0.9"/>
+  <!-- Stylized House silhouette in white -->
+  <path d="M256 120 L130 230 V390 H382 V230 Z" stroke="#FFFFFF" stroke-width="20" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
   
-  <!-- Vertical reinforcement ribs of the container (dark translucent for depth) -->
-  <rect x="180" y="168" width="16" height="192" fill="#000000" opacity="0.15"/>
-  <rect x="248" y="168" width="16" height="192" fill="#000000" opacity="0.15"/>
-  <rect x="316" y="168" width="16" height="192" fill="#000000" opacity="0.15"/>
+  <!-- Left Side: Snowflake representing cooling/comfort (Blue #3B82F6) -->
+  <path d="M195 240 V320" stroke="#3B82F6" stroke-width="12" stroke-linecap="round"/>
+  <path d="M155 280 H235" stroke="#3B82F6" stroke-width="12" stroke-linecap="round"/>
+  <path d="M167 252 L223 308" stroke="#3B82F6" stroke-width="12" stroke-linecap="round"/>
+  <path d="M167 308 L223 252" stroke="#3B82F6" stroke-width="12" stroke-linecap="round"/>
   
-  <!-- Lift lugs on the sides (steel hooks for chains) -->
-  <circle cx="108" cy="240" r="16" fill="#1E293B"/>
-  <circle cx="108" cy="240" r="8" fill="#FFFFFF"/>
-  
-  <circle cx="404" cy="240" r="16" fill="#1E293B"/>
-  <circle cx="404" cy="240" r="8" fill="#FFFFFF"/>
+  <!-- Right Side: Flame representing heating/energy (Red-Orange #EF4444 and Orange-Yellow #F59E0B) -->
+  <!-- Outer Flame -->
+  <path d="M310 360 C280 360 270 320 290 290 C310 260 340 290 340 320 C340 350 325 360 310 360 Z" fill="#EF4444"/>
+  <!-- Inner Flame -->
+  <path d="M310 355 C295 355 290 335 300 320 C310 305 325 320 325 335 C325 350 317 355 310 355 Z" fill="#F59E0B"/>
 </svg>

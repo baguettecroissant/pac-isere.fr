@@ -1,0 +1,159 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import SchemaMarkup from '../components/SchemaMarkup.astro';
+import Hero from '../components/Hero.astro';
+import CityMap from '../components/CityMap.astro';
+import { generateCommuneContent } from '../lib/contentEngine';
+import { getSmartNearbyCommunes } from '../lib/geoLinks';
+import communes from '../data/communes.json';
+
+export async function getStaticPaths() {
+  return communes.map((c) => ({
+    params: { commune: c.slug },
+    props: { commune: c },
+  }));
+}
+
+const { commune } = Astro.props;
+const content = generateCommuneContent(commune, 'entretien');
+const nearbyCommunes = getSmartNearbyCommunes(commune.slug, communes);
+
+const pageTitle = `Entretien Pompe à Chaleur ${commune.nom} (${commune.codePostal}) | Contrat RGE`;
+const pageDesc = `🔧 Entretien de pompe à chaleur à ${commune.nom}. Assurez la conformité réglementaire de votre PAC, préservez son rendement et réduisez vos factures.`;
+
+const breadcrumbItems = [
+  { label: 'Accueil', href: '/' },
+  { label: 'Villes (38)', href: '/communes' },
+  { label: `PAC ${commune.nom}`, href: `/installation-pompe-a-chaleur-${commune.slug}` },
+  { label: 'Entretien PAC' }
+];
+---
+
+<Layout title={pageTitle} description={pageDesc}>
+  <SchemaMarkup
+    slot="head"
+    pageUrl={`https://pac-isere.fr/entretien-pompe-a-chaleur-${commune.slug}`}
+    pageTitle={pageTitle}
+    pageDescription={pageDesc}
+    faqItems={content.faqItems}
+    breadcrumbItems={breadcrumbItems}
+    communeName={commune.nom}
+  />
+
+  <Breadcrumb items={breadcrumbItems} />
+
+  <!-- Hero with steps form -->
+  <Hero communeName={commune.nom} categoryName="Entretien" />
+
+  <section class="section" style="padding: 50px 0;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto;">
+      
+      <div class="two-column-layout">
+        
+        <!-- Main content column -->
+        <div>
+          <!-- Local E-E-A-T Authority Badges -->
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+            <span style="background: rgba(243, 112, 33, 0.08); color: var(--accent-color); padding: 6px 14px; border-radius: 50px; font-size: 12px; font-weight: 700; border: 1px solid rgba(243, 112, 33, 0.15); display: inline-flex; align-items: center; gap: 6px;">
+              🏔️ Zone : {content.climateZoneLabel}
+            </span>
+            <span style="background: #f1f5f9; color: var(--secondary-color); padding: 6px 14px; border-radius: 50px; font-size: 12px; font-weight: 700; border: 1px solid var(--border-color); display: inline-flex; align-items: center; gap: 6px;">
+              🏢 Référent : {content.localAgencyName}
+            </span>
+          </div>
+
+          <div style="background: #ffffff; padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+            <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px;">
+              Contrôle et nettoyage réglementaire de votre PAC à {commune.nom}
+            </h2>
+            <p style="font-size: 15px; color: var(--text-dark); line-height: 1.7; margin-bottom: 15px;">
+              {content.introParagraph}
+            </p>
+            <p style="font-size: 15px; color: var(--text-dark); line-height: 1.7; margin-bottom: 15px;">
+              {content.localContext}
+            </p>
+            <p style="font-size: 15px; color: var(--text-dark); line-height: 1.7;">
+              {content.ecoText}
+            </p>
+          </div>
+
+          <!-- Highlight box -->
+          <div style="background: #eff6ff; border-left: 4px solid var(--accent-color); padding: 25px; border-radius: var(--radius-sm); margin-bottom: 30px;">
+            <h3 style="font-weight: 700; color: var(--secondary-color); margin-top: 0; margin-bottom: 10px;">📋 Pourquoi est-il obligatoire d'entretenir sa PAC ?</h3>
+            <p style="font-size: 14px; color: var(--text-dark); margin: 0; line-height: 1.6;">
+              Un suivi bisannuel régulier par un professionnel RGE habilité permet de :
+              <span style="display: block; margin-top: 8px; font-weight: 600;">{content.useCaseText}</span>
+            </p>
+          </div>
+
+          <!-- Pricing & aids -->
+          <div style="background: #ffffff; padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+            <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 15px;">
+              Quel est le tarif d'un entretien de PAC à {commune.nom} ?
+            </h2>
+            <p style="font-size: 14px; color: var(--text-dark); line-height: 1.6; margin-bottom: 15px;">
+              {content.pricesContext}
+            </p>
+            <div style="background: #fffbeb; border-left: 4px solid #f59e0b; padding: 15px; font-size: 13px; color: #b45309; border-radius: 4px;">
+              <strong>⚠️ Conseil Technique Isère :</strong> {content.logisticsAlert}
+            </div>
+          </div>
+
+          <!-- Localized FAQ Section -->
+          <div style="background: #ffffff; padding: 30px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+            <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 20px;">
+              FAQ Entretien PAC - {commune.nom}
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+              {content.faqItems.map(faq => (
+                <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+                  <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 6px;">❓ {faq.question}</h4>
+                  <p style="font-size: 14px; color: var(--text-muted); line-height: 1.5;">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sidebar column -->
+        <div>
+          <!-- Google Map of the city -->
+          <div style="background: #ffffff; padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+            <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 15px; text-align: center;">🗺️ Zone de service : {commune.nom}</h4>
+            <CityMap cityName={commune.nom} zip={commune.codePostal} departmentName="Isère" />
+          </div>
+
+          <!-- Other services links -->
+          <div style="background: #ffffff; padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-bottom: 30px; box-shadow: var(--shadow-sm);">
+            <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 15px;">📍 Services {commune.nom}</h4>
+            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13px;">
+              <li><a href={`/installation-pompe-a-chaleur-${commune.slug}`} style="color: var(--text-dark); text-decoration: none; font-weight: 600;">ℹ️ Installation PAC {commune.nom}</a></li>
+              <li><a href={`/pompe-a-chaleur-air-eau-${commune.slug}`} style="color: var(--text-dark); text-decoration: none; font-weight: 600;">💧 PAC Air/Eau {commune.nom}</a></li>
+              <li><a href={`/pompe-a-chaleur-air-air-${commune.slug}`} style="color: var(--text-dark); text-decoration: none; font-weight: 600;">❄️ PAC Air/Air {commune.nom}</a></li>
+              <li><a href={`/pompe-a-chaleur-geothermie-${commune.slug}`} style="color: var(--text-dark); text-decoration: none; font-weight: 600;">🌍 Géothermie {commune.nom}</a></li>
+              <li><a href={`/entretien-pompe-a-chaleur-${commune.slug}`} style="color: var(--accent-color); font-weight: 700; text-decoration: none;">🔧 Entretien PAC {commune.nom}</a></li>
+              <li><a href={`/depannage-pompe-a-chaleur-${commune.slug}`} style="color: var(--text-dark); text-decoration: none; font-weight: 600;">🚨 Dépannage {commune.nom}</a></li>
+            </ul>
+          </div>
+
+          <!-- Smart Proximity Communes Links -->
+          <div style="background: #ffffff; padding: 20px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+            <h4 style="font-weight: 700; color: var(--secondary-color); margin-bottom: 15px;">🚗 Villes voisines</h4>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+              {nearbyCommunes.map(c => (
+                <a href={`/entretien-pompe-a-chaleur-${c.slug}`} style="color: var(--text-dark); text-decoration: none; font-weight: 500; display: flex; justify-content: space-between; border-bottom: 1px dashed var(--border-color); padding-bottom: 4px;">
+                  <span>📍 {c.nom}</span>
+                  <span style="color: var(--text-muted); font-size: 11px;">{c.codePostal}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</Layout>

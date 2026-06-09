@@ -8,102 +8,147 @@ import communes from '../data/communes.json';
 const topCommunes = communes.slice(0, 24);
 ---
 
-<Layout>
-  <!-- Hero Section with Form -->
+<Layout title="Installation Pompe à Chaleur Isère (38) | Devis & Aides RGE" description="Bénéficiez jusqu'à 90% d'aides pour l'installation de votre pompe à chaleur en Isère (38). Comparez 3 devis gratuits de chauffagistes RGE locaux.">
+  <!-- Hero Section with StepsForm -->
   <Hero />
 
   <!-- Features / How it works Section -->
-  <section class="features" id="types-bennes">
+  <section class="features" id="pompe-a-chaleur-avantages">
     <div class="container">
       <div class="section-title">
-        <h2>Une benne adaptée à chaque projet</h2>
-        <p>Professionnels du BTP ou particuliers, découvrez nos solutions d'évacuation</p>
+        <h2>Pourquoi installer une pompe à chaleur en Isère ?</h2>
+        <p>Une solution écologique et économique parfaitement adaptée au climat du Dauphiné</p>
       </div>
 
       <div class="features-grid">
         <!-- Feature 1 -->
         <div class="feature-card" style="padding: 24px;">
-          <img src="/images/benne-gravats.png" alt="Bennes à Gravats" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);" />
-          <h3>Bennes à Gravats & Inertes</h3>
-          <p>Pour l'évacuation de terre, béton, briques, tuiles, carrelage et pierres. Idéal après une démolition ou un terrassement.</p>
+          <div style="font-size: 3rem; margin-bottom: 15px;">📉</div>
+          <h3>Jusqu'à 75% d'économies</h3>
+          <p>La PAC utilise les calories gratuites de l'air ou du sol pour chauffer votre logement. Pour 1 kWh d'électricité consommé, elle restitue jusqu'à 4 kWh de chaleur, divisant vos factures énergétiques par 3 ou 4.</p>
         </div>
 
         <!-- Feature 2 -->
         <div class="feature-card" style="padding: 24px;">
-          <img src="/images/benne-encombrants.png" alt="Bennes Tout-Venant" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);" />
-          <h3>Bennes Tout-Venant (DIB)</h3>
-          <p>Pour vider un logement, évacuer du plâtre, plastique, métaux, cartons, meubles et déchets mélangés non dangereux.</p>
+          <div style="font-size: 3rem; margin-bottom: 15px;">🌿</div>
+          <h3>Énergie propre & durable</h3>
+          <p>En remplaçant votre ancienne chaudière fioul ou gaz par une pompe à chaleur, vous réduisez de plus de 80% l'empreinte carbone de votre foyer. Un geste fort pour la préservation de notre environnement alpin.</p>
         </div>
 
         <!-- Feature 3 -->
         <div class="feature-card" style="padding: 24px;">
-          <img src="/images/benne-verts.png" alt="Bennes Déchets Verts" style="width: 100%; height: 160px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);" />
-          <h3>Bennes Déchets Verts</h3>
-          <p>Pour les paysagistes ou élagueurs. Évacuation de branches, terre végétale, feuilles, troncs et tailles de haies.</p>
+          <div style="font-size: 3rem; margin-bottom: 15px;">❄️</div>
+          <h3>Confort toutes saisons</h3>
+          <p>Optez pour une climatisation réversible (PAC Air/Air) pour affronter sereinement les étés très chauds dans la cuve de Grenoble et les hivers rigoureux dans les massifs montagneux de l'Isère.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing Table Section -->
-  <section class="features" id="tarifs" style="background: var(--bg-color);">
+  <!-- Types of Heat Pumps -->
+  <section class="features" id="types-pac" style="background: #f8fafc;">
     <div class="container">
       <div class="section-title">
-        <h2>Tarifs indicatifs de location</h2>
-        <p>Prix moyens constatés dans le {config.department} ({config.departmentCode}) - Transport & Traitement inclus</p>
+        <h2>Quelle technologie de PAC choisir pour votre maison ?</h2>
+        <p>Découvrez les différents types de pompes à chaleur adaptés à votre réseau hydraulique ou électrique</p>
       </div>
 
-      <div class="form-card" style="max-width: 800px; margin: 0 auto; padding: 30px;">
+      <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+        <!-- PAC Air/Eau -->
+        <div class="feature-card" style="padding: 24px; background: #ffffff; border: 1px solid var(--border-color);">
+          <img src="/images/pac-air-eau.png" alt="Pompe à chaleur Air-Eau" style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);" />
+          <h3>Pompe à chaleur Air/Eau</h3>
+          <p>Le système hydraulique idéal pour remplacer votre chaudière fioul ou gaz. Elle se raccorde sur vos radiateurs existants ou plancher chauffant et produit également l'eau chaude sanitaire. Éligible aux aides maximales.</p>
+          <a href="/fonctionnement-pac#air-eau" style="color: var(--accent-color); font-weight: 700; text-decoration: none; display: inline-block; margin-top: 10px;">En savoir plus &rarr;</a>
+        </div>
+
+        <!-- PAC Air/Air -->
+        <div class="feature-card" style="padding: 24px; background: #ffffff; border: 1px solid var(--border-color);">
+          <img src="/images/pac-air-air.png" alt="Climatisation réversible Air-Air" style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);" />
+          <h3>Climatisation Réversible (Air/Air)</h3>
+          <p>Parfaite pour les logements chauffés par des radiateurs électriques. Elle diffuse l'air chaud en hiver et refroidit les pièces en été via des splits discrets ou un système gainable. Installation simple et économique.</p>
+          <a href="/fonctionnement-pac#air-air" style="color: var(--accent-color); font-weight: 700; text-decoration: none; display: inline-block; margin-top: 10px;">En savoir plus &rarr;</a>
+        </div>
+
+        <!-- PAC Géothermie -->
+        <div class="feature-card" style="padding: 24px; background: #ffffff; border: 1px solid var(--border-color);">
+          <img src="/images/pac-geothermie.png" alt="Géothermie Isère" style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-sm); margin-bottom: 20px; border: 1px solid var(--border-color);" />
+          <h3>Géothermie (Sol/Eau)</h3>
+          <p>Le système haut de gamme qui capte la chaleur constante du sol via des forages ou réseaux horizontaux. C'est la solution la plus performante et la plus stable par grand froid. Idéal pour les constructions neuves ou grands terrains.</p>
+          <a href="/fonctionnement-pac#geothermie" style="color: var(--accent-color); font-weight: 700; text-decoration: none; display: inline-block; margin-top: 10px;">En savoir plus &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financial Aids Table Section -->
+  <section class="features" id="aides">
+    <div class="container">
+      <div class="section-title">
+        <h2>Jusqu'à 90% de subventions de l'État</h2>
+        <p>En faisant appel à un artisan certifié RGE, financez votre transition énergétique à moindre coût</p>
+      </div>
+
+      <div class="form-card" style="max-width: 800px; margin: 0 auto; padding: 30px; border: 1px solid var(--border-color);">
         <table style="width: 100%; border-collapse: collapse; text-align: left;">
           <thead>
             <tr style="border-bottom: 2px solid var(--border-color); color: var(--secondary-color); font-weight: 700;">
-              <th style="padding: 12px 8px;">Volume de Benne</th>
-              <th style="padding: 12px 8px;">Type de Déchets</th>
-              <th style="padding: 12px 8px; text-align: right;">Prix Moyen HT</th>
+              <th style="padding: 12px 8px;">Dispositif d'aide</th>
+              <th style="padding: 12px 8px;">Bénéficiaires éligibles</th>
+              <th style="padding: 12px 8px; text-align: right;">Montant Maximum</th>
             </tr>
           </thead>
           <tbody>
             <tr style="border-bottom: 1px solid var(--border-color);">
-              <td style="padding: 14px 8px; font-weight: 600;">Benne 8 m³</td>
-              <td style="padding: 14px 8px; color: var(--text-muted);">Gravats propres (terre, béton)</td>
-              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">280 €</td>
+              <td style="padding: 14px 8px; font-weight: 600;">MaPrimeRénov'</td>
+              <td style="padding: 14px 8px; color: var(--text-muted);">Propriétaires occupants ou bailleurs (selon barème de revenus Anah)</td>
+              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">Jusqu'à 9 000 €</td>
             </tr>
             <tr style="border-bottom: 1px solid var(--border-color);">
-              <td style="padding: 14px 8px; font-weight: 600;">Benne 10 m³</td>
-              <td style="padding: 14px 8px; color: var(--text-muted);">Mélange / DIB (tout-venant)</td>
-              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">390 €</td>
+              <td style="padding: 14px 8px; font-weight: 600;">Prime CEE (Prime Énergie)</td>
+              <td style="padding: 14px 8px; color: var(--text-muted);">Tous les ménages français (cumulable avec MaPrimeRénov')</td>
+              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">Jusqu'à 4 500 €</td>
             </tr>
             <tr style="border-bottom: 1px solid var(--border-color);">
-              <td style="padding: 14px 8px; font-weight: 600;">Benne 15 m³</td>
-              <td style="padding: 14px 8px; color: var(--text-muted);">Mélange / DIB (tout-venant)</td>
-              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">490 €</td>
+              <td style="padding: 14px 8px; font-weight: 600;">Éco-Prêt à Taux Zéro (Éco-PTZ)</td>
+              <td style="padding: 14px 8px; color: var(--text-muted);">Financement du reste à charge sans aucun intérêt bancaire</td>
+              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">Jusqu'à 30 000 €</td>
             </tr>
             <tr>
-              <td style="padding: 14px 8px; font-weight: 600;">Benne 30 m³</td>
-              <td style="padding: 14px 8px; color: var(--text-muted);">Encombrants / Déchets verts</td>
-              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">750 €</td>
+              <td style="padding: 14px 8px; font-weight: 600;">TVA à taux réduit 5,5%</td>
+              <td style="padding: 14px 8px; color: var(--text-muted);">Appliquée directement sur la facture du chauffagiste RGE</td>
+              <td style="padding: 14px 8px; text-align: right; font-weight: 700; color: var(--accent-color);">Économie directe de 14,5%</td>
             </tr>
           </tbody>
         </table>
+        <div style="text-align: center; margin-top: 25px;">
+          <a href="/aides-financieres" class="btn-primary" style="display: inline-block; padding: 10px 24px; text-decoration: none; border-radius: var(--radius-sm); font-weight: 700; background: var(--secondary-color); color: #fff;">Tout savoir sur le cumul des aides &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Localized SEO Communes Links Section -->
-  <section class="cities-section">
+  <section class="cities-section" style="background: #f8fafc; border-top: 1px solid var(--border-color);">
     <div class="container">
       <div class="section-title">
-        <h2>Zones d'intervention prioritaires</h2>
-        <p>Nous livrons nos bennes dans toutes les villes du {config.department} ({config.departmentCode})</p>
+        <h2>Installateurs RGE à votre service en Isère</h2>
+        <p>Nos artisans qualifiés interviennent dans toutes les communes du département</p>
       </div>
 
       <div class="cities-grid">
         {topCommunes.map((commune) => (
-          <a href={`/location-benne-${commune.slug}`} class="city-link">
+          <a href={`/installation-pompe-a-chaleur-${commune.slug}`} class="city-link">
             <span>📍 {commune.nom}</span>
             <span class="arrow">&rarr;</span>
           </a>
         ))}
+      </div>
+      
+      <div style="text-align: center; margin-top: 35px;">
+        <a href="/communes" style="color: var(--accent-color); font-weight: 700; text-decoration: none; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 8px;">
+          Voir la liste des 456 communes de l'Isère <span>&rarr;</span>
+        </a>
       </div>
     </div>
   </section>

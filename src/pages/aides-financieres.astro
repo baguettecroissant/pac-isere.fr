@@ -1,0 +1,198 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StepsForm from '../components/StepsForm.astro';
+import config from '../data/config.json';
+---
+
+<Layout title="Aides Financières Pompe à Chaleur 2026 Isère (38)" description="Découvrez les subventions pour l'installation d'une PAC en Isère. Cumulez MaPrimeRénov', la Prime CEE et l'Éco-PTZ pour financer vos travaux RGE.">
+  <section class="section" style="padding: 60px 0; background: #f8fafc;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto;">
+      
+      <div class="section-title" style="text-align: center; margin-bottom: 40px;">
+        <h1 style="font-size: 2.6rem; font-weight: 800; color: var(--secondary-color); line-height: 1.25;">
+          Les Aides Financières pour votre Pompe à Chaleur en 2026
+        </h1>
+        <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 800px; margin: 15px auto 0;">
+          L'installation d'une pompe à chaleur RGE est fortement encouragée par l'État. En Isère (38), cumulez les subventions pour financer jusqu'à 90% du coût de vos travaux de transition énergétique.
+        </p>
+      </div>
+
+      <!-- Banner Image -->
+      <div style="margin-bottom: 40px; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--border-color);">
+        <img src="/images/aides-financieres-banner.png" alt="Financer sa pompe à chaleur avec les aides de l'Etat" style="width: 100%; height: auto; max-height: 380px; object-fit: cover; display: block;" />
+      </div>
+
+      <!-- Main Content & Form Layout -->
+      <div class="two-column-layout">
+        
+        <!-- Detailed explanations -->
+        <div>
+          <div style="background: #ffffff; padding: 35px; border-radius: var(--radius-md); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 30px;">
+            
+            <!-- Intro Link Box -->
+            <div style="background: rgba(243, 112, 33, 0.05); border-left: 4px solid var(--accent-color); padding: 20px; border-radius: var(--radius-sm);">
+              <p style="font-size: 14px; color: var(--text-dark); margin: 0; line-height: 1.6;">
+                ⚠️ <strong>Règle d'or :</strong> Ne signez aucun devis et ne versez aucun acompte avant d'avoir déposé vos demandes d'aides sur les portails officiels. Lisez notre guide pas à pas pour contacter l'ALEC ou l'AGEDEN : <a href="/guides/cumul-aides-pac-isere" style="color: var(--accent-color); font-weight: 700; text-decoration: underline;">Guide Cumul Aides Isère</a>.
+              </p>
+            </div>
+
+            <!-- Aid 1: MaPrimeRénov' -->
+            <div>
+              <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                <span style="font-size: 24px; padding: 8px; background: rgba(243, 112, 33, 0.1); border-radius: 50%;">💰</span>
+                <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin: 0;">1. MaPrimeRénov' (Anah)</h2>
+              </div>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                Gérée par l'Agence Nationale de l'Habitat, cette aide forfaitaire est attribuée selon votre **profil de revenus** (couleur de ressources). Voici le barème officiel 2026 applicable en Isère (catégorie Province hors Île-de-France) :
+              </p>
+
+              <!-- ResponsiveCeilings Table -->
+              <div style="overflow-x: auto; margin: 20px 0; border: 1px solid var(--border-color); border-radius: var(--radius-sm);">
+                <table style="width: 100%; min-width: 500px; border-collapse: collapse; text-align: left; font-size: 13px;">
+                  <thead>
+                    <tr style="background: #f1f5f9; border-bottom: 2px solid var(--border-color); color: var(--secondary-color); font-weight: 700;">
+                      <th style="padding: 10px 12px;">Composition du foyer</th>
+                      <th style="padding: 10px 12px; color: #1e3a8a;">Profil BLEU (Très Modeste)</th>
+                      <th style="padding: 10px 12px; color: #854d0e;">Profil JAUNE (Modeste)</th>
+                      <th style="padding: 10px 12px; color: #581c87;">Profil VIOLET (Intermédiaire)</th>
+                      <th style="padding: 10px 12px; color: #9d174d;">Profil ROSE (Aisé)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 10px 12px; font-weight: 600;">1 personne</td>
+                      <td style="padding: 10px 12px; color: #1e3a8a; font-weight: 600;">&le; 17 009 €</td>
+                      <td style="padding: 10px 12px; color: #854d0e;">&le; 21 838 €</td>
+                      <td style="padding: 10px 12px; color: #581c87;">&le; 32 894 €</td>
+                      <td style="padding: 10px 12px; color: #9d174d;">&gt; 32 894 €</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 10px 12px; font-weight: 600;">2 personnes</td>
+                      <td style="padding: 10px 12px; color: #1e3a8a; font-weight: 600;">&le; 24 875 €</td>
+                      <td style="padding: 10px 12px; color: #854d0e;">&le; 31 889 €</td>
+                      <td style="padding: 10px 12px; color: #581c87;">&le; 47 983 €</td>
+                      <td style="padding: 10px 12px; color: #9d174d;">&gt; 47 983 €</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 10px 12px; font-weight: 600;">3 personnes</td>
+                      <td style="padding: 10px 12px; color: #1e3a8a; font-weight: 600;">&le; 29 917 €</td>
+                      <td style="padding: 10px 12px; color: #854d0e;">&le; 38 349 €</td>
+                      <td style="padding: 10px 12px; color: #581c87;">&le; 57 734 €</td>
+                      <td style="padding: 10px 12px; color: #9d174d;">&gt; 57 734 €</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--border-color);">
+                      <td style="padding: 10px 12px; font-weight: 600;">4 personnes</td>
+                      <td style="padding: 10px 12px; color: #1e3a8a; font-weight: 600;">&le; 34 948 €</td>
+                      <td style="padding: 10px 12px; color: #854d0e;">&le; 44 802 €</td>
+                      <td style="padding: 10px 12px; color: #581c87;">&le; 67 473 €</td>
+                      <td style="padding: 10px 12px; color: #9d174d;">&gt; 67 473 €</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px 12px; font-weight: 600;">Par pers. sup.</td>
+                      <td style="padding: 10px 12px; color: #1e3a8a; font-weight: 600;">+ 5 033 €</td>
+                      <td style="padding: 10px 12px; color: #854d0e;">+ 6 462 €</td>
+                      <td style="padding: 10px 12px; color: #581c87;">+ 9 738 €</td>
+                      <td style="padding: 10px 12px; color: #9d174d;">-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4 style="font-weight: 700; color: var(--secondary-color); margin-top: 15px; margin-bottom: 8px; font-size: 14px;">Montants forfaitaires MaPrimeRénov' pour les PAC :</h4>
+              <ul style="font-size: 13.5px; color: var(--text-dark); margin: 0; padding-left: 20px; line-height: 1.6;">
+                <li><strong>Bleu (Très Modeste) :</strong> 9 000 € (PAC Air-Eau) / 11 000 € (PAC Géothermique).</li>
+                <li><strong>Jaune (Modeste) :</strong> 7 000 € (PAC Air-Eau) / 9 000 € (PAC Géothermique).</li>
+                <li><strong>Violet (Intermédiaire) :</strong> 4 000 € (PAC Air-Eau) / 6 000 € (PAC Géothermique).</li>
+                <li><strong>Rose (Aisé) :</strong> Pas d'aide MaPrimeRénov' hors rénovation d'ampleur.</li>
+              </ul>
+              <div style="font-size: 12px; color: var(--text-muted); font-style: italic; background: #f8fafc; padding: 12px; border-left: 3px solid var(--accent-color); margin-top: 12px; border-radius: 4px;">
+                Note : Les pompes à chaleur Air-Air (climatisation réversible) ne sont pas éligibles à MaPrimeRénov' en parcours classique, mais elles donnent droit à la prime CEE.
+              </div>
+            </div>
+
+            <!-- Aid 2: Prime CEE -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 25px;">
+              <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                <span style="font-size: 24px; padding: 8px; background: rgba(243, 112, 33, 0.1); border-radius: 50%;">⚡</span>
+                <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin: 0;">2. La Prime CEE (Certificats d'Économie d'Énergie)</h2>
+              </div>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">
+                Aussi appelée prime "Coup de Pouce Chauffage", elle est versée par les fournisseurs d'énergie pour encourager le remplacement d'un chauffage polluant (chaudière fioul, gaz hors condensation, charbon) par une PAC performante.
+              </p>
+              <ul style="font-size: 13.5px; color: var(--text-dark); margin: 0; padding-left: 20px; line-height: 1.6;">
+                <li><strong>Ménages Bleus et Jaunes (Modestes) :</strong> Prime minimale de 4 000 € à 4 500 € pour une PAC Air-Eau.</li>
+                <li><strong>Ménages Violets et Roses (Intermédiaires/Aisés) :</strong> Prime minimale de 2 500 € pour une PAC Air-Eau.</li>
+                <li><strong>PAC Air-Air (Climatisation réversible) :</strong> Éligible aux primes CEE standard (environ 300 € à 900 € selon la surface).</li>
+              </ul>
+            </div>
+
+            <!-- Practicle Simulations -->
+            <div style="background: #f0fdf4; border: 1.5px solid #bbf7d0; padding: 25px; border-radius: var(--radius-md);">
+              <h3 style="font-size: 1.25rem; font-weight: 800; color: #166534; margin-top: 0; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+                📝 Exemples de simulation (PAC Air-Eau à 14 000 € TTC)
+              </h3>
+              <p style="font-size: 13.5px; color: #15803d; line-height: 1.6; margin-bottom: 15px;">
+                L'État applique une règle de **plafond d'écrêtement** : le cumul des aides ne peut dépasser 90% du montant TTC pour les foyers très modestes, 75% pour les modestes et 60% pour les intermédiaires.
+              </p>
+              <div style="display: flex; flex-direction: column; gap: 15px; font-size: 13px;">
+                <div style="background: #ffffff; padding: 12px; border-radius: 6px; border: 1px solid #dcfce7;">
+                  <strong style="color: #1e3a8a;">Profil BLEU (Très Modeste) :</strong>
+                  <span style="display: block; margin-top: 4px;">Aides théoriques : 9 000 € (Anah) + 4 500 € (CEE) = 13 500 €.</span>
+                  <span style="display: block; color: #166534; font-weight: 700;">Aides accordées après plafonnement (90%) : 12 600 € | Reste à charge réel : 1 400 €</span>
+                </div>
+                <div style="background: #ffffff; padding: 12px; border-radius: 6px; border: 1px solid #dcfce7;">
+                  <strong style="color: #854d0e;">Profil JAUNE (Modeste) :</strong>
+                  <span style="display: block; margin-top: 4px;">Aides théoriques : 7 000 € (Anah) + 4 000 € (CEE) = 11 000 €.</span>
+                  <span style="display: block; color: #166534; font-weight: 700;">Aides accordées après plafonnement (75%) : 10 500 € | Reste à charge réel : 3 500 €</span>
+                </div>
+                <div style="background: #ffffff; padding: 12px; border-radius: 6px; border: 1px solid #dcfce7;">
+                  <strong style="color: #581c87;">Profil VIOLET (Intermédiaire) :</strong>
+                  <span style="display: block; margin-top: 4px;">Aides théoriques : 4 000 € (Anah) + 2 500 € (CEE) = 6 500 €.</span>
+                  <span style="display: block; color: #166534; font-weight: 700;">Aides accordées (dans la limite de 60%) : 6 500 € | Reste à charge réel : 7 500 €</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Aid 3: Eco-PTZ & TVA -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 25px;">
+              <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 15px;">
+                <span style="font-size: 24px; padding: 8px; background: rgba(243, 112, 33, 0.1); border-radius: 50%;">🛡️</span>
+                <h2 style="font-size: 1.6rem; font-weight: 800; color: var(--secondary-color); margin: 0;">3. Éco-PTZ & TVA Réduite à 5,5%</h2>
+              </div>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.6;">
+                Pour financer le reste à charge restant sans payer aucun intérêt bancaire, vous pouvez souscrire un **Éco-Prêt à Taux Zéro (Éco-PTZ)** allant jusqu'à 30 000 €, remboursable sur une durée maximale de 15 ans.
+              </p>
+              <p style="font-size: 14.5px; color: var(--text-muted); line-height: 1.6; margin-top: 12px;">
+                De plus, les chantiers de pose de PAC ou climatisation Inverter bénéficient d'une **TVA à taux réduit de 5,5%** directement déduite sur la facture par l'installateur RGE pour les habitations de plus de 2 ans.
+              </p>
+            </div>
+
+            <!-- Technical requirements -->
+            <div style="border-top: 1px solid var(--border-color); padding-top: 25px;">
+              <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 12px;">🛠️ Exigences techniques pour obtenir les aides</h3>
+              <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
+                L'État soumet l'attribution des subventions à des critères d'efficacité énergétique stricts. Votre pompe à chaleur doit posséder une Efficacité Énergétique Saisonnière (ETAS) minimale :
+              </p>
+              <ul style="font-size: 13.5px; color: var(--text-dark); margin: 10px 0; padding-left: 20px; line-height: 1.6;">
+                <li><strong>PAC Moyenne/Haute Température :</strong> ETAS &ge; 111 % (avec radiateurs traditionnels).</li>
+                <li><strong>PAC Basse Température :</strong> ETAS &ge; 126 % (avec plancher chauffant ou radiateurs basse temp).</li>
+                <li><strong>Professionnel Qualifié :</strong> L'installateur doit posséder la certification RGE QualiPAC en cours de validité à la signature du devis.</li>
+              </ul>
+              <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-top: 12px;">
+                Pour en savoir plus sur les critères d'efficacité et la différence entre les émetteurs haute et basse température, découvrez notre dossier technique : <a href="/fonctionnement-pac" style="color: var(--accent-color); font-weight: 700; text-decoration: underline;">Comment fonctionne une Pompe à Chaleur ?</a>.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sticky form sidebar -->
+        <div style="position: sticky; top: 100px;">
+          <StepsForm />
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</Layout>

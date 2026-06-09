@@ -1,0 +1,1724 @@
+---
+import Layout from '../layouts/Layout.astro';
+import config from '../data/config.json';
+---
+
+<Layout title="Simulateurs & Outils Gratuits Pompe à Chaleur Isère (38)" description="Accédez à nos 3 outils interactifs gratuits : simulateur d'aides Anah 2026, calculateur de puissance (dimensionnement RGE) et comparateur d'économies d'énergie.">
+  <section class="section" style="padding: 60px 0; background: #f8fafc;">
+    <div class="container" style="max-width: 1150px; margin: 0 auto;">
+      
+      <!-- Title Section -->
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span style="font-size: 13px; font-weight: 700; background: rgba(59, 130, 246, 0.1); color: var(--accent-color); padding: 6px 16px; border-radius: 50px; text-transform: uppercase; letter-spacing: 0.5px;">
+          🛠️ Espace Simulateurs Officiels Isère (38)
+        </span>
+        <h1 style="font-size: 2.6rem; font-weight: 800; color: var(--secondary-color); line-height: 1.25; margin-top: 15px;">
+          Simulateurs & Outils Énergétiques
+        </h1>
+        <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 800px; margin: 15px auto 0; line-height: 1.6;">
+          Estimez vos primes, dimensionnez votre puissance et comparez vos factures. Basculez d'un outil à l'autre via les onglets ci-dessous.
+        </p>
+      </div>
+
+      <!-- Tab Navigation Bar -->
+      <div class="tabs-nav-container">
+        <button class="tab-btn active" data-tab="aides">
+          <span class="tab-icon">🧮</span>
+          <span class="tab-label">1. Simulateur d'Aides 2026</span>
+        </button>
+        <button class="tab-btn" data-tab="puissance">
+          <span class="tab-icon">📏</span>
+          <span class="tab-label">2. Calculateur de Puissance</span>
+        </button>
+        <button class="tab-btn" data-tab="economies">
+          <span class="tab-icon">📉</span>
+          <span class="tab-label">3. Simulateur d'Économies</span>
+        </button>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- TAB 1: SIMULATEUR D'AIDES 2026             -->
+      <!-- ========================================== -->
+      <div class="tab-content active" id="content-aides">
+        <div class="simulator-layout">
+          <!-- Left Side: Inputs -->
+          <div class="sim-card card-inputs">
+            <div class="sim-header">
+              <h3>📋 Vos informations fiscales & projet</h3>
+              <p>Modifiez les valeurs ci-dessous pour mettre à jour les aides en direct.</p>
+            </div>
+            
+            <div class="sim-body">
+              <div class="form-section">
+                <label class="section-label">1. Nombre de personnes dans le foyer (fiscal)</label>
+                <div class="foyer-buttons">
+                  <button type="button" class="foyer-btn active" data-value="1">1</button>
+                  <button type="button" class="foyer-btn" data-value="2">2</button>
+                  <button type="button" class="foyer-btn" data-value="3">3</button>
+                  <button type="button" class="foyer-btn" data-value="4">4</button>
+                  <button type="button" class="foyer-btn" data-value="5">5</button>
+                  <button type="button" class="foyer-btn" data-value="6">6+</button>
+                </div>
+                <input type="hidden" id="foyer_size" value="1" />
+              </div>
+
+              <div class="form-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <label class="section-label" style="margin-bottom: 0;">2. Revenu Fiscal de Référence annuel (RFR)</label>
+                  <span id="rfr_display" class="rfr-badge">20 000 €</span>
+                </div>
+                <input type="range" id="rfr_slider" min="10000" max="100000" step="500" value="20000" class="range-slider" />
+                <div style="display: flex; justify-content: space-between; font-size: 11px; color: var(--text-muted); margin-top: 4px;">
+                  <span>10 000 €</span>
+                  <span>50 000 €</span>
+                  <span>100 000 € +</span>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <label class="section-label">3. Chauffage actuel à remplacer</label>
+                <div class="options-vertical">
+                  <label class="radio-card active">
+                    <input type="radio" name="heating_current" value="fioul" checked />
+                    <span class="card-icon">🛢️</span>
+                    <div class="card-content">
+                      <span class="card-title">Chaudière Fioul (Mazout)</span>
+                      <span class="card-subtitle">Donne droit à la prime CEE bonifiée</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="heating_current" value="gaz_classique" />
+                    <span class="card-icon">🔥</span>
+                    <div class="card-content">
+                      <span class="card-title">Chaudière Gaz (hors condensation)</span>
+                      <span class="card-subtitle">Donne droit à la prime CEE bonifiée</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="heating_current" value="charbon" />
+                    <span class="card-icon">🪵</span>
+                    <div class="card-content">
+                      <span class="card-title">Chaudière Charbon ou Bois</span>
+                      <span class="card-subtitle">Donne droit à la prime CEE bonifiée</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="heating_current" value="gaz_condens" />
+                    <span class="card-icon">💧</span>
+                    <div class="card-content">
+                      <span class="card-title">Chaudière Gaz à Condensation</span>
+                      <span class="card-subtitle">Prime CEE standard uniquement</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="heating_current" value="electricite" />
+                    <span class="card-icon">⚡</span>
+                    <div class="card-content">
+                      <span class="card-title">Radiateurs Électriques directs</span>
+                      <span class="card-subtitle">Prime CEE standard uniquement</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <label class="section-label">4. Quel type de PAC souhaitez-vous simuler ?</label>
+                <div class="options-vertical">
+                  <label class="radio-card active">
+                    <input type="radio" name="pac_planned" value="air_eau" checked />
+                    <span class="card-icon">💧</span>
+                    <div class="card-content">
+                      <span class="card-title">Pompe à chaleur Air/Eau (Hydraulique)</span>
+                      <span class="card-subtitle">Coût moyen estimé : 14 000 € TTC</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="pac_planned" value="geothermie" />
+                    <span class="card-icon">🌍</span>
+                    <div class="card-content">
+                      <span class="card-title">Pompe à chaleur Géothermique (Sonde/Sol)</span>
+                      <span class="card-subtitle">Coût moyen estimé : 22 000 € TTC</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="pac_planned" value="air_air" />
+                    <span class="card-icon">❄️</span>
+                    <div class="card-content">
+                      <span class="card-title">Climatisation Réversible (Air/Air)</span>
+                      <span class="card-subtitle">Coût moyen estimé : 6 000 € TTC</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <label class="section-label" style="margin-bottom: 0;">5. Montant estimé ou réel des travaux (TTC)</label>
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <input type="number" id="project_cost_input" class="number-input" value="14000" min="2000" max="40000" step="100" />
+                    <span style="font-weight: 700; color: var(--secondary-color);">€</span>
+                  </div>
+                </div>
+                <input type="range" id="project_cost_slider" min="2000" max="40000" step="500" value="14000" class="range-slider" />
+                <span style="font-size: 11px; color: var(--text-muted); margin-top: 4px;">
+                  Ajustez ce montant si vous avez déjà reçu un devis ou une estimation d'un professionnel.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Results -->
+          <div class="sim-card card-results" style="border: 1.5px solid var(--secondary-color);">
+            <div class="results-inner">
+              <div class="results-top" style="background: var(--secondary-color);">
+                <span class="badge-title">VOTRE ESTIMATION D'AIDES 2026</span>
+                <div class="total-aides" id="res_total_aides">12 600 €</div>
+                <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                  Subventions de l'État déduites directement de votre facture
+                </p>
+                <div class="profile-card profile-bleu" id="res_profile_card">
+                  <span class="profile-dot"></span>
+                  <span id="res_profile_name">Profil BLEU (Revenus Très Modestes)</span>
+                </div>
+              </div>
+
+              <div class="results-middle">
+                <div class="summary-row">
+                  <span>Coût du projet (moyen) :</span>
+                  <strong id="res_project_cost">14 000 €</strong>
+                </div>
+                <div class="summary-row highlight-row" style="background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; margin-top: 15px; font-size: 15px; padding: 12px 14px;">
+                  <span>Reste à charge estimé :</span>
+                  <strong id="res_remaining_charge" style="color: #15803d; font-size: 17px;">1 400 €</strong>
+                </div>
+
+                <div style="margin: 20px 0 10px;">
+                  <div style="display: flex; justify-content: space-between; font-size: 12.5px; margin-bottom: 6px;">
+                    <span style="color: var(--text-muted); font-weight: 500;">Prise en charge publique :</span>
+                    <strong id="res_pct_text" style="color: var(--accent-color);">90%</strong>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="res_progress_fill" style="width: 90%;"></div>
+                  </div>
+                </div>
+
+                <div class="breakdown-list">
+                  <h4>Détail des aides cumulables :</h4>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>🏠 MaPrimeRénov' (Anah)</span>
+                      <span class="info-helper" title="Aide de l'Agence Nationale de l'Habitat.">?</span>
+                    </div>
+                    <strong id="res_prime_anah">9 000 €</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>⚡ Prime CEE (Fournisseurs)</span>
+                      <span class="info-helper" title="Certificats d'Économie d'Énergie (Coup de Pouce).">?</span>
+                    </div>
+                    <strong id="res_prime_cee">4 500 €</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>🛡️ Économie TVA 5,5%</span>
+                      <span class="info-helper" title="TVA à taux réduit de 5.5% appliquée directement sur le matériel et la main d'œuvre.">?</span>
+                    </div>
+                    <strong id="res_tva_saving">1 980 €</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>🏦 Éco-Prêt à Taux Zéro</span>
+                      <span class="info-helper" title="Prêt sans intérêt pour financer votre reste à charge.">?</span>
+                    </div>
+                    <strong style="color: #166534;" id="res_ptz_status">Éligible</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="results-bottom-actions">
+                <a href="/#devis" class="btn-primary-results pulse-btn">
+                  📋 Bloquer mes aides & Devis RGE &rarr;
+                </a>
+                <p style="font-size: 11px; color: var(--text-muted); text-align: center; margin-top: 12px; line-height: 1.4;">
+                  *Simulation basée sur le barème Anah 2026 (Province). Soumise à la visite technique obligatoire d'un installateur certifié RGE QualiPAC.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 1 Guide -->
+        <section class="section" style="padding: 60px 0; border-top: 1px solid var(--border-color); background: #ffffff; margin-top: 40px;">
+          <div style="margin-bottom: 40px; text-align: center;">
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">
+              📊 Barème de Ressources Anah 2026 (Province / Hors Île-de-France)
+            </h2>
+            <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 14px;">
+              Retrouvez les plafonds officiels pour situer votre foyer. L'Isère dépend du barème **Province**.
+            </p>
+          </div>
+
+          <div class="table-responsive" style="overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius-sm); border: 1px solid var(--border-color); margin-bottom: 30px;">
+            <table class="bareme-table">
+              <thead>
+                <tr style="background: #f1f5f9;">
+                  <th>Foyer fiscal</th>
+                  <th style="color: #2563eb; background: rgba(59, 130, 246, 0.04);">Profil Bleu<br><small style="font-weight: 500;">Très Modeste</small></th>
+                  <th style="color: #ca8a04; background: rgba(234, 179, 8, 0.04);">Profil Jaune<br><small style="font-weight: 500;">Modeste</small></th>
+                  <th style="color: #9333ea; background: rgba(168, 85, 247, 0.04);">Profil Violet<br><small style="font-weight: 500;">Intermédiaire</small></th>
+                  <th style="color: #e11d48; background: rgba(244, 63, 94, 0.04);">Profil Rose<br><small style="font-weight: 500;">Aisé</small></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight: 700;">1 personne</td>
+                  <td style="background: rgba(59, 130, 246, 0.01);">≤ 17 009 €</td>
+                  <td style="background: rgba(234, 179, 8, 0.01);">17 010 € à 21 838 €</td>
+                  <td style="background: rgba(168, 85, 247, 0.01);">21 839 € à 32 894 €</td>
+                  <td style="background: rgba(244, 63, 94, 0.01);">&gt; 32 894 €</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">2 personnes</td>
+                  <td style="background: rgba(59, 130, 246, 0.01);">≤ 24 875 €</td>
+                  <td style="background: rgba(234, 179, 8, 0.01);">24 876 € à 31 889 €</td>
+                  <td style="background: rgba(168, 85, 247, 0.01);">31 890 € à 47 983 €</td>
+                  <td style="background: rgba(244, 63, 94, 0.01);">&gt; 47 983 €</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">3 personnes</td>
+                  <td style="background: rgba(59, 130, 246, 0.01);">≤ 29 917 €</td>
+                  <td style="background: rgba(234, 179, 8, 0.01);">29 918 € à 38 349 €</td>
+                  <td style="background: rgba(168, 85, 247, 0.01);">38 350 € à 57 734 €</td>
+                  <td style="background: rgba(244, 63, 94, 0.01);">&gt; 57 734 €</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">4 personnes</td>
+                  <td style="background: rgba(59, 130, 246, 0.01);">≤ 34 948 €</td>
+                  <td style="background: rgba(234, 179, 8, 0.01);">34 949 € à 44 802 €</td>
+                  <td style="background: rgba(168, 85, 247, 0.01);">44 803 € à 67 473 €</td>
+                  <td style="background: rgba(244, 63, 94, 0.01);">&gt; 67 473 €</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">5 personnes</td>
+                  <td style="background: rgba(59, 130, 246, 0.01);">≤ 40 002 €</td>
+                  <td style="background: rgba(234, 179, 8, 0.01);">40 003 € à 51 281 €</td>
+                  <td style="background: rgba(168, 85, 247, 0.01);">51 282 € à 77 206 €</td>
+                  <td style="background: rgba(244, 63, 94, 0.01);">&gt; 77 206 €</td>
+                </tr>
+                <tr>
+                  <td style="font-weight: 700;">Par pers. sup.</td>
+                  <td style="background: rgba(59, 130, 246, 0.01);">+ 5 033 €</td>
+                  <td style="background: rgba(234, 179, 8, 0.01);">+ 6 462 €</td>
+                  <td style="background: rgba(168, 85, 247, 0.01);">+ 9 738 €</td>
+                  <td style="background: rgba(244, 63, 94, 0.01);">Selon barème</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px;">
+            <div class="step-guide-card" style="padding: 25px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: #ffffff;">
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">📋 Conditions Administratives</h4>
+              <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.6; margin: 0;">
+                Les travaux doivent être réalisés par un installateur qualifié **RGE QualiPAC**. Le dossier d'aides doit être créé en ligne avant d'avoir signé votre devis de travaux. Le logement doit être votre résidence principale construite depuis plus de 15 ans.
+              </p>
+            </div>
+            <div class="step-guide-card" style="padding: 25px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: #ffffff;">
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">💰 Le Mécanisme d'Écrêtement</h4>
+              <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.6; margin: 0;">
+                Pour éviter qu'un chantier soit financé à 100% par l'argent public, l'Anah impose des plafonds de prise en charge cumulés (MaPrimeRénov' + CEE) : maximum 90% du montant des travaux pour le profil Bleu (Très Modeste), 75% pour Jaune (Modeste), et 60% pour Violet (Intermédiaire).
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- TAB 2: CALCULATEUR DE PUISSANCE            -->
+      <!-- ========================================== -->
+      <div class="tab-content" id="content-puissance" style="display: none;">
+        <div class="simulator-layout">
+          <!-- Left Side: Inputs -->
+          <div class="sim-card card-inputs">
+            <div class="sim-header">
+              <h3>📋 Paramètres de votre habitation</h3>
+              <p>Ajustez les valeurs pour recalculer les déperditions en direct.</p>
+            </div>
+            
+            <div class="sim-body">
+              <div class="form-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <label class="section-label" style="margin-bottom: 0;">1. Surface habitable (m²)</label>
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <input type="number" id="input_surface" class="number-input" value="120" min="20" max="400" step="1" />
+                    <span style="font-weight: 700; color: var(--secondary-color);">m²</span>
+                  </div>
+                </div>
+                <input type="range" id="slider_surface" min="20" max="400" step="5" value="120" class="range-slider" />
+              </div>
+
+              <div class="form-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <label class="section-label" style="margin-bottom: 0;">2. Hauteur sous plafond moyenne (m)</label>
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <input type="number" id="input_height" class="number-input" value="2.5" min="2.0" max="4.5" step="0.1" />
+                    <span style="font-weight: 700; color: var(--secondary-color);">m</span>
+                  </div>
+                </div>
+                <input type="range" id="slider_height" min="2.0" max="4.5" step="0.1" value="2.5" class="range-slider" />
+              </div>
+
+              <div class="form-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <label class="section-label" style="margin-bottom: 0;">3. Altitude de votre commune (m)</label>
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <input type="number" id="input_altitude" class="number-input" value="200" min="0" max="2000" step="50" />
+                    <span style="font-weight: 700; color: var(--secondary-color);">m</span>
+                  </div>
+                </div>
+                <input type="range" id="slider_altitude" min="0" max="2000" step="50" value="200" class="range-slider" />
+              </div>
+
+              <div class="form-section">
+                <label class="section-label">4. Niveau d'isolation & année de construction</label>
+                <div class="options-vertical">
+                  <label class="radio-card">
+                    <input type="radio" name="insulation_coef" value="0.6" />
+                    <span class="card-icon">🍃</span>
+                    <div class="card-content">
+                      <span class="card-title">Excellente (RT2012 / RT2020)</span>
+                      <span class="card-subtitle">Maison neuve ou construite après 2013</span>
+                    </div>
+                  </label>
+                  <label class="radio-card active">
+                    <input type="radio" name="insulation_coef" value="0.8" checked />
+                    <span class="card-icon">🏡</span>
+                    <div class="card-content">
+                      <span class="card-title">Bonne isolation (RT2000 / RT2005)</span>
+                      <span class="card-subtitle">Maison construite entre 2000 et 2012</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="insulation_coef" value="1.1" />
+                    <span class="card-icon">🧱</span>
+                    <div class="card-content">
+                      <span class="card-title">Isolation moyenne (Années 1980 - 1990)</span>
+                      <span class="card-subtitle">Isolation d'époque moyenne</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="insulation_coef" value="1.4" />
+                    <span class="card-icon">🏚️</span>
+                    <div class="card-content">
+                      <span class="card-title">Faible ou non isolé (Avant 1980)</span>
+                      <span class="card-subtitle">Vieille passoire thermique non rénovée</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <label class="section-label">5. Émetteurs de chauffage intérieur</label>
+                <div class="options-vertical">
+                  <label class="radio-card active">
+                    <input type="radio" name="emitters_type" value="low" checked />
+                    <span class="card-icon">♨️</span>
+                    <div class="card-content">
+                      <span class="card-title">Plancher chauffant / Radiateurs Basse Température</span>
+                      <span class="card-subtitle">Eau à 35°C - Rendement maximal (COP élevé)</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="emitters_type" value="med" />
+                    <span class="card-icon">🔥</span>
+                    <div class="card-content">
+                      <span class="card-title">Radiateurs Acier ou Alu classiques</span>
+                      <span class="card-subtitle">Eau à 45-50°C - Rendement intermédiaire</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="emitters_type" value="high" />
+                    <span class="card-icon">🛢️</span>
+                    <div class="card-content">
+                      <span class="card-title">Radiateurs en Fonte (Haute Température)</span>
+                      <span class="card-subtitle">Eau à 65°C+ - Nécessite une PAC Haute Température</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Results -->
+          <div class="sim-card card-results" style="border: 1.5px solid var(--secondary-color);">
+            <div class="results-inner">
+              <div class="results-top" style="background: var(--secondary-color);">
+                <span class="badge-title">PUISSANCE PAC CONSEILLÉE</span>
+                <div class="total-aides" id="res_required_power" style="font-size: 3.5rem;">8.4 kW</div>
+                <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                  Puissance requise pour couvrir 100% des besoins à la température extrême locale
+                </p>
+                <div class="profile-card profile-bleu" id="res_temp_badge">
+                  <span class="profile-dot" style="background: #3b82f6;"></span>
+                  <span id="res_temp_name">Basse / Moyenne Température</span>
+                </div>
+              </div>
+
+              <div class="results-middle">
+                <div class="summary-row">
+                  <span>Volume à chauffer :</span>
+                  <strong id="res_house_volume">300 m³</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Température extérieure de base :</span>
+                  <strong id="res_base_temp">-9 °C</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Déperditions thermiques nettes :</span>
+                  <strong id="res_heat_losses">6.96 kW</strong>
+                </div>
+                <div class="summary-row highlight-row" id="res_sizing_alert" style="background: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a; margin-top: 15px; font-size: 14.5px; padding: 12px 14px;">
+                  <span>Type de PAC requis :</span>
+                  <strong id="res_pac_recommendation" style="color: #1d4ed8; font-size: 16px;">Moyenne Température</strong>
+                </div>
+
+                <div class="breakdown-list">
+                  <h4>Performances & Estimations RGE :</h4>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>🔥 Coefficient COP estimé (hiver)</span>
+                    </div>
+                    <strong id="res_winter_cop">3.20</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>⚡ Économies de combustible</span>
+                    </div>
+                    <strong style="color: #166534;" id="res_fuel_saving">- 60% à - 75%</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>🛡️ Coefficient d'isolation (G)</span>
+                    </div>
+                    <strong id="res_insulation_g">0.80</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>🏢 Température de départ d'eau</span>
+                    </div>
+                    <strong id="res_water_temp">35 °C</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="results-bottom-actions">
+                <a href="/#devis" class="btn-primary-results pulse-btn">
+                  📋 Obtenir un Dimensionnement RGE &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2 Guide -->
+        <section class="section" style="padding: 60px 0; border-top: 1px solid var(--border-color); background: #ffffff; margin-top: 40px;">
+          <div style="margin-bottom: 40px; text-align: center;">
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">
+              📏 Comprendre le dimensionnement en altitude
+            </h2>
+            <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 14px;">
+              Les déperditions physiques sont régies par la formule : **Déperditions (W) = Volume &times; G &times; (T_interne - T_base_externe)**.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+            <div class="step-guide-card" style="padding: 25px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: #ffffff;">
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">🏔️ L'altitude en Isère</h4>
+              <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.6; margin: 0;">
+                La température extérieure de base de référence nationale pour l'Isère est de **-9°C** à 200m d'altitude. La réglementation impose de soustraire **1°C par palier de 200m d'altitude supplémentaire** (ex: -13°C à 1000m d'altitude). Cela augmente les pertes thermiques et le dimensionnement nécessaire de la PAC.
+              </p>
+            </div>
+            <div class="step-guide-card" style="padding: 25px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: #ffffff;">
+              <h4 style="font-size: 1.1rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">⚠️ Risques de surdimensionnement</h4>
+              <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.6; margin: 0;">
+                Une PAC trop puissante s'éteint et s'allume en continu (courts-cycles). Cela use prématurément le compresseur, détériore le rendement COP de démarrage et augmente les pannes. Une PAC sous-dimensionnée sollicitera en continu la résistance électrique d'appoint par grand froid, multipliant vos factures.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ========================================== -->
+      <!-- TAB 3: SIMULATEUR D'ÉCONOMIES              -->
+      <!-- ========================================== -->
+      <div class="tab-content" id="content-economies" style="display: none;">
+        <div class="simulator-layout">
+          <!-- Left Side: Inputs -->
+          <div class="sim-card card-inputs">
+            <div class="sim-header">
+              <h3>📋 Vos factures de chauffage actuelles</h3>
+              <p>Renseignez vos dépenses énergétiques actuelles pour estimer le gain annuel.</p>
+            </div>
+            
+            <div class="sim-body">
+              <div class="form-section">
+                <label class="section-label">1. Votre énergie de chauffage actuelle</label>
+                <div class="options-vertical">
+                  <label class="radio-card active">
+                    <input type="radio" name="current_energy" value="electricity" checked />
+                    <span class="card-icon">⚡</span>
+                    <div class="card-content">
+                      <span class="card-title">Électricité (Radiateurs Convecteurs directs)</span>
+                      <span class="card-subtitle">Énergie la plus chère du marché (env. 0.25 € / kWh)</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="current_energy" value="oil" />
+                    <span class="card-icon">🛢️</span>
+                    <div class="card-content">
+                      <span class="card-title">Fioul Domestique (Mazout)</span>
+                      <span class="card-subtitle">Forte pollution et hausse des prix</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="current_energy" value="gas" />
+                    <span class="card-icon">🔥</span>
+                    <div class="card-content">
+                      <span class="card-title">Gaz Naturel / Propane</span>
+                      <span class="card-subtitle">Soumis aux taxes carbones croissantes</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="current_energy" value="wood" />
+                    <span class="card-icon">🪵</span>
+                    <div class="card-content">
+                      <span class="card-title">Chaudière Bois ou Charbon ancienne</span>
+                      <span class="card-subtitle">Rendement moyen (env. 70%)</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <label class="section-label" style="margin-bottom: 0;">2. Votre facture de chauffage annuelle (€)</label>
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <input type="number" id="input_bill" class="number-input" value="2000" min="400" max="8000" step="50" style="width: 100px;" />
+                    <span style="font-weight: 700; color: var(--secondary-color);">€</span>
+                  </div>
+                </div>
+                <input type="range" id="slider_bill" min="400" max="8000" step="100" value="2000" class="range-slider" />
+              </div>
+
+              <div class="form-section">
+                <label class="section-label">3. Émetteurs intérieurs envisagés (détermine le rendement COP)</label>
+                <div class="options-vertical">
+                  <label class="radio-card active">
+                    <input type="radio" name="target_emitters" value="floor" checked />
+                    <span class="card-icon">♨️</span>
+                    <div class="card-content">
+                      <span class="card-title">Plancher chauffant hydraulique</span>
+                      <span class="card-subtitle">Basse température (35°C) - COP optimal de 3.8</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="target_emitters" value="radiators_standard" />
+                    <span class="card-icon">🔥</span>
+                    <div class="card-content">
+                      <span class="card-title">Radiateurs Acier ou Alu classiques</span>
+                      <span class="card-subtitle">Température moyenne (45-50°C) - COP de 3.2</span>
+                    </div>
+                  </label>
+                  <label class="radio-card">
+                    <input type="radio" name="target_emitters" value="radiators_fonte" />
+                    <span class="card-icon">🛢️</span>
+                    <div class="card-content">
+                      <span class="card-title">Anciens radiateurs fonte</span>
+                      <span class="card-subtitle">Haute température (65°C) - COP de 2.6</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Results -->
+          <div class="sim-card card-results" style="border: 1.5px solid var(--secondary-color);">
+            <div class="results-inner">
+              <div class="results-top" style="background: var(--secondary-color);">
+                <span class="badge-title">ÉCONOMIE ANNUELLE ESTIMÉE</span>
+                <div class="total-aides" id="res_annual_saving" style="font-size: 3.5rem;">1 474 €</div>
+                <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.7); margin-bottom: 20px;">
+                  Économie directe sur votre facture énergétique annuelle (-74%)
+                </p>
+                <div class="profile-card profile-bleu" id="res_saving_badge">
+                  <span class="profile-dot" style="background: #3b82f6;"></span>
+                  <span id="res_saving_percent">Chauffage financé à 74% par l'air</span>
+                </div>
+              </div>
+
+              <div class="results-middle">
+                <div class="summary-row">
+                  <span>Coût actuel estimé :</span>
+                  <strong><span id="res_current_cost">2 000</span> € / an</strong>
+                </div>
+                <div class="summary-row">
+                  <span>Nouveau coût estimé (PAC) :</span>
+                  <strong style="color: #2563eb;"><span id="res_pac_cost">526</span> € / an</strong>
+                </div>
+                <div class="summary-row highlight-row" style="background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; margin-top: 15px; font-size: 14.5px; padding: 12px 14px;">
+                  <span>Économie sur 10 ans :</span>
+                  <strong style="color: #15803d; font-size: 16px;"><span id="res_10yr_savings">14 740</span> €</strong>
+                </div>
+
+                <div class="breakdown-list">
+                  <h4>Impact Écologique & Énergétique :</h4>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>🌱 Réduction de CO₂</span>
+                    </div>
+                    <strong style="color: #166534;" id="res_co2_reduction">- 305 kg / an</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>⚡ Énergie thermique générée</span>
+                    </div>
+                    <strong id="res_thermal_generated">8 000 kWh</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>🔌 Électricité consommée par la PAC</span>
+                    </div>
+                    <strong id="res_pac_electricity">2 105 kWh</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <div class="item-title">
+                      <span>📊 Rendement COP moyen</span>
+                    </div>
+                    <strong id="res_cop_factor">3.80</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="results-bottom-actions">
+                <a href="/#devis" class="btn-primary-results pulse-btn">
+                  📋 Lancer mon projet & Devis RGE &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 Guide -->
+        <section class="section" style="padding: 60px 0; border-top: 1px solid var(--border-color); background: #ffffff; margin-top: 40px;">
+          <div style="margin-bottom: 40px; text-align: center;">
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--secondary-color); margin-bottom: 10px;">
+              📉 Coût moyen comparatif aux 100 kWh utiles
+            </h2>
+            <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 14px;">
+              Dépense d'utilisation en 2026 pour générer 100 kWh de chaleur utile (rendements inclus) :
+            </p>
+          </div>
+
+          <div style="max-width: 600px; margin: 0 auto; background: #f8fafc; border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 25px;">
+            <table style="width: 100%; font-size: 14px; text-align: left; border-collapse: collapse;">
+              <thead>
+                <tr style="border-bottom: 1px solid var(--border-color); color: var(--secondary-color); font-weight: 700;">
+                  <th style="padding: 8px 0;">Énergie</th>
+                  <th style="padding: 8px 0; text-align: right;">Coût aux 100 kWh utiles</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid #e2e8f0;">
+                  <td style="padding: 8px 0;">🔌 Électricité Directe (Convecteurs)</td>
+                  <td style="padding: 8px 0; text-align: right; font-weight: 700; color: #b91c1c;">25.16 €</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e2e8f0;">
+                  <td style="padding: 8px 0;">🛢️ Fioul Domestique (Chaudière)</td>
+                  <td style="padding: 8px 0; text-align: right; font-weight: 700; color: #c2410c;">15.60 €</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #e2e8f0;">
+                  <td style="padding: 8px 0;">🔥 Gaz Naturel (Chaudière standard)</td>
+                  <td style="padding: 8px 0; text-align: right; font-weight: 700; color: #ca8a04;">12.00 €</td>
+                </tr>
+                <tr style="background: rgba(59,130,246,0.05); font-weight: 700; color: var(--accent-color);">
+                  <td style="padding: 10px 8px;">💧 Pompe à chaleur Air/Eau (COP 3.8)</td>
+                  <td style="padding: 10px 8px; text-align: right;">6.62 €</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* --- Tab navigation bar --- */
+  .tabs-nav-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 45px;
+    background: #e2e8f0;
+    padding: 8px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+  }
+
+  .tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border: none;
+    background: transparent;
+    font-family: var(--font-main);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+  }
+
+  .tab-btn:hover {
+    color: var(--secondary-color);
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  .tab-btn.active {
+    background: #ffffff;
+    color: var(--secondary-color);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .tab-content {
+    display: none;
+  }
+
+  .tab-content.active {
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .tabs-nav-container {
+      flex-direction: column;
+      gap: 5px;
+      padding: 6px;
+    }
+    .tab-btn {
+      padding: 12px;
+      font-size: 14px;
+      justify-content: center;
+    }
+  }
+
+  /* --- Simulator Grid Layout --- */
+  .simulator-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+
+  @media (max-width: 992px) {
+    .simulator-layout {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+  }
+
+  .sim-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  .card-inputs {
+    padding: 35px;
+  }
+
+  .sim-header {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+  }
+
+  .sim-header h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    margin-bottom: 6px;
+  }
+
+  .sim-header p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+  }
+
+  .sim-body {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-label {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+  }
+
+  /* --- Foyer buttons row --- */
+  .foyer-buttons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .foyer-btn {
+    flex: 1;
+    padding: 12px 0;
+    font-family: var(--font-main);
+    font-size: 15px;
+    font-weight: 700;
+    background: #f8fafc;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+
+  .foyer-btn:hover {
+    border-color: var(--accent-color);
+    background: #fff;
+  }
+
+  .foyer-btn.active {
+    border-color: var(--accent-color);
+    background: rgba(59, 130, 246, 0.08);
+    color: var(--accent-color);
+  }
+
+  /* --- RFR range input slider --- */
+  .rfr-badge {
+    background: var(--secondary-color);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .range-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: #e2e8f0;
+    outline: none;
+    margin: 12px 0;
+  }
+
+  .range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: transform 0.1s ease;
+  }
+
+  .range-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+  }
+
+  /* --- Radio cards list --- */
+  .options-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .radio-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    background: #ffffff;
+  }
+
+  .radio-card input[type="radio"] {
+    display: none;
+  }
+
+  .radio-card:hover {
+    border-color: var(--accent-color);
+    background: #f8fafc;
+  }
+
+  .radio-card.active {
+    border-color: var(--accent-color);
+    background: rgba(59, 130, 246, 0.03);
+  }
+
+  .card-icon {
+    font-size: 1.8rem;
+    flex-shrink: 0;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+
+  .card-subtitle {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    margin-top: 2px;
+  }
+
+  /* --- Right Results Card --- */
+  .card-results {
+    background: #ffffff;
+    border: 1.5px solid var(--secondary-color);
+    position: sticky;
+    top: 100px;
+  }
+
+  .results-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .results-top {
+    background: var(--secondary-color);
+    color: #ffffff;
+    padding: 35px 30px;
+    text-align: center;
+  }
+
+  .badge-title {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .total-aides {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  .profile-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 12.5px;
+    font-weight: 700;
+  }
+
+  /* Dynamic Profile Colors */
+  .profile-bleu {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+  }
+  .profile-bleu .profile-dot { background: #3b82f6; }
+
+  .profile-jaune {
+    background: rgba(234, 179, 8, 0.15);
+    color: #eab308;
+  }
+  .profile-jaune .profile-dot { background: #eab308; }
+
+  .profile-violet {
+    background: rgba(168, 85, 247, 0.15);
+    color: #c084fc;
+  }
+  .profile-violet .profile-dot { background: #a855f7; }
+
+  .profile-rose {
+    background: rgba(244, 63, 94, 0.15);
+    color: #fb7185;
+  }
+  .profile-rose .profile-dot { background: #f43f5e; }
+
+  .profile-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .results-middle {
+    padding: 30px;
+  }
+
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+
+  .summary-row strong {
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+
+  .highlight-row {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    padding: 12px 14px;
+    border-radius: var(--radius-sm);
+    color: #166534;
+    margin-top: 15px;
+    font-size: 15px;
+  }
+
+  .highlight-row strong {
+    color: #15803d;
+    font-size: 17px;
+  }
+
+  /* --- Progress Bar --- */
+  .progress-bar-bg {
+    background: #e2e8f0;
+    height: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .progress-bar-fill {
+    background: var(--accent-color);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+  }
+
+  /* --- Breakdown list --- */
+  .breakdown-list {
+    margin-top: 25px;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 20px;
+  }
+
+  .breakdown-list h4 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 12px;
+  }
+
+  .breakdown-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--text-muted);
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .breakdown-item strong {
+    color: var(--secondary-color);
+    font-weight: 600;
+  }
+
+  .item-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .info-helper {
+    background: #e2e8f0;
+    color: var(--text-muted);
+    font-size: 10px;
+    font-weight: 800;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: help;
+  }
+
+  /* --- Results Bottom Action --- */
+  .results-bottom-actions {
+    padding: 0 30px 30px 30px;
+  }
+
+  .btn-primary-results {
+    background: var(--accent-color);
+    color: #ffffff;
+    padding: 15px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    box-shadow: 0 4px 12px rgba(243, 112, 33, 0.2);
+    transition: var(--transition);
+  }
+
+  .btn-primary-results:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(243, 112, 33, 0.3);
+    opacity: 0.95;
+  }
+
+  .pulse-btn {
+    animation: pulseGlow 2s infinite;
+  }
+
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+    }
+  }
+
+  /* --- Dynamic number input style --- */
+  .number-input {
+    width: 95px;
+    padding: 8px 12px;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-align: right;
+    outline: none;
+    transition: var(--transition);
+    background: #f8fafc;
+  }
+  .number-input:focus {
+    border-color: var(--accent-color);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+  }
+  .number-input::-webkit-outer-spin-button,
+  .number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .number-input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  /* --- Bareme Table Styles --- */
+  .bareme-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-main);
+    background: #ffffff;
+  }
+  .bareme-table th,
+  .bareme-table td {
+    padding: 14px 18px;
+    border: 1px solid var(--border-color);
+    font-size: 14px;
+  }
+  .bareme-table th {
+    font-weight: 800;
+    color: var(--secondary-color);
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .bareme-table td {
+    color: var(--text-dark);
+  }
+  .bareme-table tbody tr:hover {
+    background: #f8fafc;
+  }
+  
+  @media (max-width: 768px) {
+    .bareme-table th,
+    .bareme-table td {
+      padding: 10px 8px;
+      font-size: 12.5px;
+    }
+    .step-guide-card {
+      padding: 20px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    /* Responsive adjustment for Guide Grid */
+    section[style*="border-top"] div[style*="display: grid"] {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    // ==========================================
+    // TAB NAVIGATION LOGIC
+    // ==========================================
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
+
+        // Toggle active button
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Toggle active content
+        tabContents.forEach(content => {
+          if (content.getAttribute('id') === `content-${targetTab}`) {
+            content.classList.add('active');
+            (content as HTMLElement).style.display = 'block';
+          } else {
+            content.classList.remove('active');
+            (content as HTMLElement).style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ==========================================
+    // TAB 1: CALCULATION LOGIC (AIDES)
+    // ==========================================
+    const foyerButtons = document.querySelectorAll('.foyer-btn');
+    const foyerSizeInput = document.getElementById('foyer_size') as HTMLInputElement;
+    const rfrSlider = document.getElementById('rfr_slider') as HTMLInputElement;
+    const rfrDisplay = document.getElementById('rfr_display');
+    const heatingCurrentInputs = document.getElementsByName('heating_current');
+    const pacPlannedInputs = document.getElementsByName('pac_planned');
+    const projectCostInput = document.getElementById('project_cost_input') as HTMLInputElement;
+    const projectCostSlider = document.getElementById('project_cost_slider') as HTMLInputElement;
+
+    const resTotalAides = document.getElementById('res_total_aides');
+    const resProfileCard = document.getElementById('res_profile_card');
+    const resProfileName = document.getElementById('res_profile_name');
+    const resProjectCost = document.getElementById('res_project_cost');
+    const resRemainingCharge = document.getElementById('res_remaining_charge');
+    const resPctText = document.getElementById('res_pct_text');
+    const resProgressFill = document.getElementById('res_progress_fill');
+    const resPrimeAnah = document.getElementById('res_prime_anah');
+    const resPrimeCee = document.getElementById('res_prime_cee');
+    const resTvaSaving = document.getElementById('res_tva_saving');
+
+    const ceilingsBleu = [0, 17009, 24875, 29917, 34948, 40002];
+    const ceilingsJaune = [0, 21838, 31889, 38349, 44802, 51281];
+    const ceilingsViolet = [0, 32894, 47983, 57734, 67473, 77206];
+
+    const getCeilingForFoyer = (foyerSize: number, scale: string) => {
+      if (foyerSize <= 5) {
+        if (scale === 'Bleu') return ceilingsBleu[foyerSize];
+        if (scale === 'Jaune') return ceilingsJaune[foyerSize];
+        if (scale === 'Violet') return ceilingsViolet[foyerSize];
+      }
+      const baseBleu = ceilingsBleu[5];
+      const baseJaune = ceilingsJaune[5];
+      const baseViolet = ceilingsViolet[5];
+      const extraPeople = foyerSize - 5;
+      if (scale === 'Bleu') return baseBleu + (extraPeople * 5033);
+      if (scale === 'Jaune') return baseJaune + (extraPeople * 6462);
+      if (scale === 'Violet') return baseViolet + (extraPeople * 9738);
+      return Infinity;
+    };
+
+    const calculateAides = () => {
+      const foyerSize = parseInt(foyerSizeInput.value, 10);
+      const rfr = parseInt(rfrSlider.value, 10);
+      const projectCost = parseInt(projectCostInput.value, 10) || 14000;
+
+      let heatingCurrent = 'fioul';
+      heatingCurrentInputs.forEach(input => {
+        if ((input as HTMLInputElement).checked) heatingCurrent = (input as HTMLInputElement).value;
+      });
+
+      let pacPlanned = 'air_eau';
+      pacPlannedInputs.forEach(input => {
+        if ((input as HTMLInputElement).checked) pacPlanned = (input as HTMLInputElement).value;
+      });
+
+      const ceilingBleu = getCeilingForFoyer(foyerSize, 'Bleu');
+      const ceilingJaune = getCeilingForFoyer(foyerSize, 'Jaune');
+      const ceilingViolet = getCeilingForFoyer(foyerSize, 'Violet');
+
+      let profile = 'Rose';
+      if (rfr <= ceilingBleu) profile = 'Bleu';
+      else if (rfr <= ceilingJaune) profile = 'Jaune';
+      else if (rfr <= ceilingViolet) profile = 'Violet';
+
+      let primeAnah = 0;
+      if (pacPlanned === 'air_eau') {
+        if (profile === 'Bleu') primeAnah = 9000;
+        else if (profile === 'Jaune') primeAnah = 7000;
+        else if (profile === 'Violet') primeAnah = 4000;
+      } else if (pacPlanned === 'geothermie') {
+        if (profile === 'Bleu') primeAnah = 11000;
+        else if (profile === 'Jaune') primeAnah = 9000;
+        else if (profile === 'Violet') primeAnah = 6000;
+      }
+
+      const isCoupDePouceEligible = ['fioul', 'gaz_classique', 'charbon'].includes(heatingCurrent);
+      let primeCee = 0;
+      if (pacPlanned === 'air_eau' || pacPlanned === 'geothermie') {
+        if (isCoupDePouceEligible) {
+          if (profile === 'Bleu' || profile === 'Jaune') primeCee = 4500;
+          else primeCee = 2500;
+        } else {
+          primeCee = 500;
+        }
+      } else if (pacPlanned === 'air_air') {
+        primeCee = isCoupDePouceEligible ? 750 : 400;
+      }
+
+      let maxPct = 0.30;
+      if (profile === 'Bleu') maxPct = 0.90;
+      else if (profile === 'Jaune') maxPct = 0.75;
+      else if (profile === 'Violet') maxPct = 0.60;
+
+      const totalSubventionsRaw = primeAnah + primeCee;
+      const maxAllowedSubventions = Math.round(projectCost * maxPct);
+      const totalAides = Math.min(totalSubventionsRaw, maxAllowedSubventions);
+
+      const remainingCharge = Math.max(0, projectCost - totalAides);
+      const pctFinanced = Math.round((totalAides / projectCost) * 100) || 0;
+      const tvaSaving = Math.round(projectCost * 0.145);
+
+      if (resTotalAides) resTotalAides.innerText = `${totalAides.toLocaleString('fr-FR')} €`;
+      if (resProjectCost) resProjectCost.innerText = `${projectCost.toLocaleString('fr-FR')} €`;
+      if (resRemainingCharge) resRemainingCharge.innerText = `${remainingCharge.toLocaleString('fr-FR')} €`;
+      if (resPrimeAnah) resPrimeAnah.innerText = `${primeAnah.toLocaleString('fr-FR')} €`;
+      if (resPrimeCee) resPrimeCee.innerText = `${primeCee.toLocaleString('fr-FR')} €`;
+      if (resTvaSaving) resTvaSaving.innerText = `${tvaSaving.toLocaleString('fr-FR')} €`;
+      if (resPctText) resPctText.innerText = `${pctFinanced}%`;
+      if (resProgressFill) resProgressFill.style.width = `${pctFinanced}%`;
+
+      if (resProfileCard && resProfileName) {
+        resProfileCard.className = 'profile-card';
+        if (profile === 'Bleu') {
+          resProfileCard.classList.add('profile-bleu');
+          resProfileName.innerText = 'Profil BLEU (Revenus Très Modestes)';
+        } else if (profile === 'Jaune') {
+          resProfileCard.classList.add('profile-jaune');
+          resProfileName.innerText = 'Profil JAUNE (Revenus Modestes)';
+        } else if (profile === 'Violet') {
+          resProfileCard.classList.add('profile-violet');
+          resProfileName.innerText = 'Profil VIOLET (Revenus Intermédiaires)';
+        } else {
+          resProfileCard.classList.add('profile-rose');
+          resProfileName.innerText = 'Profil ROSE (Revenus Aisés)';
+        }
+      }
+    };
+
+    foyerButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        foyerButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const val = btn.getAttribute('data-value');
+        if (val) foyerSizeInput.value = val;
+        const size = parseInt(val || '1', 10);
+        if (size >= 3) {
+          rfrSlider.min = '15000';
+          rfrSlider.max = '120000';
+        } else {
+          rfrSlider.min = '10000';
+          rfrSlider.max = '90000';
+        }
+        calculateAides();
+      });
+    });
+
+    rfrSlider.addEventListener('input', () => {
+      const val = parseInt(rfrSlider.value, 10);
+      if (rfrDisplay) rfrDisplay.innerText = `${val.toLocaleString('fr-FR')} €`;
+      calculateAides();
+    });
+
+    const updateProjectCost = (val: number, source: string) => {
+      const value = Math.max(2000, Math.min(40000, val));
+      if (source === 'slider') projectCostInput.value = value.toString();
+      else projectCostSlider.value = value.toString();
+      calculateAides();
+    };
+
+    projectCostSlider.addEventListener('input', () => updateProjectCost(parseInt(projectCostSlider.value, 10), 'slider'));
+    projectCostInput.addEventListener('change', () => updateProjectCost(parseInt(projectCostInput.value, 10), 'input'));
+
+    const setupRadioCardSelect = (groupName: string, callback: () => void) => {
+      const cards = document.querySelectorAll(`input[name="${groupName}"]`);
+      cards.forEach(card => {
+        const parentLabel = card.closest('.radio-card');
+        card.addEventListener('change', () => {
+          document.querySelectorAll(`input[name="${groupName}"]`).forEach(c => {
+            c.closest('.radio-card')?.classList.remove('active');
+          });
+          if (card.checked) parentLabel?.classList.add('active');
+          callback();
+        });
+      });
+    };
+
+    setupRadioCardSelect('heating_current', calculateAides);
+    setupRadioCardSelect('pac_planned', () => {
+      let defaultCost = 14000;
+      let selectedPac = 'air_eau';
+      pacPlannedInputs.forEach(input => {
+        if ((input as HTMLInputElement).checked) selectedPac = (input as HTMLInputElement).value;
+      });
+      if (selectedPac === 'air_air') defaultCost = 6000;
+      if (selectedPac === 'geothermie') defaultCost = 22000;
+      projectCostInput.value = defaultCost.toString();
+      projectCostSlider.value = defaultCost.toString();
+      calculateAides();
+    });
+
+    // ==========================================
+    // TAB 2: CALCULATION LOGIC (PUISSANCE)
+    // ==========================================
+    const inputSurface = document.getElementById('input_surface') as HTMLInputElement;
+    const sliderSurface = document.getElementById('slider_surface') as HTMLInputElement;
+    const inputHeight = document.getElementById('input_height') as HTMLInputElement;
+    const sliderHeight = document.getElementById('slider_height') as HTMLInputElement;
+    const inputAltitude = document.getElementById('input_altitude') as HTMLInputElement;
+    const sliderAltitude = document.getElementById('slider_altitude') as HTMLInputElement;
+    const insulationInputs = document.getElementsByName('insulation_coef');
+    const emittersInputs = document.getElementsByName('emitters_type');
+
+    const resRequiredPower = document.getElementById('res_required_power');
+    const resTempBadge = document.getElementById('res_temp_badge');
+    const resTempName = document.getElementById('res_temp_name');
+    const resHouseVolume = document.getElementById('res_house_volume');
+    const resBaseTemp = document.getElementById('res_base_temp');
+    const resHeatLosses = document.getElementById('res_heat_losses');
+    const resPacRecommendation = document.getElementById('res_pac_recommendation');
+    const resSizingAlert = document.getElementById('res_sizing_alert');
+    const resWinterCop = document.getElementById('res_winter_cop');
+    const resFuelSaving = document.getElementById('res_fuel_saving');
+    const resInsulationG = document.getElementById('res_insulation_g');
+    const resWaterTemp = document.getElementById('res_water_temp');
+
+    const syncInputs = (numEl: HTMLInputElement, rangeEl: HTMLInputElement, min: number, max: number, callback: () => void, decimals: number = 0) => {
+      const updateVal = (val: number, source: string) => {
+        let cleanVal = Math.max(min, Math.min(max, val));
+        cleanVal = decimals > 0 ? parseFloat(cleanVal.toFixed(decimals)) : Math.round(cleanVal);
+        if (source === 'range') numEl.value = cleanVal.toString();
+        else rangeEl.value = cleanVal.toString();
+        callback();
+      };
+      rangeEl.addEventListener('input', () => updateVal(parseFloat(rangeEl.value), 'range'));
+      numEl.addEventListener('change', () => updateVal(parseFloat(numEl.value), 'num'));
+    };
+
+    const calculateSizing = () => {
+      const surface = parseFloat(inputSurface.value) || 120;
+      const height = parseFloat(inputHeight.value) || 2.5;
+      const altitude = parseInt(inputAltitude.value, 10) || 200;
+
+      const volume = surface * height;
+      let insulationG = 0.8;
+      insulationInputs.forEach(input => {
+        if ((input as HTMLInputElement).checked) insulationG = parseFloat((input as HTMLInputElement).value);
+      });
+
+      let emittersType = 'low';
+      emittersInputs.forEach(input => {
+        if ((input as HTMLInputElement).checked) emittersType = (input as HTMLInputElement).value;
+      });
+
+      const baseTemp = -9 - Math.floor(Math.max(0, altitude - 200) / 200);
+      const deltaT = 20 - baseTemp;
+      const lossesW = volume * insulationG * deltaT;
+      const losseskW = lossesW / 1000;
+      const requiredPowerkW = losseskW * 1.2;
+
+      let waterTemp = 35;
+      let winterCop = 3.20;
+      let savingsRange = '- 60% à - 75%';
+
+      if (emittersType === 'low') {
+        waterTemp = 35;
+        winterCop = parseFloat((3.6 - (altitude / 2000) * 0.8).toFixed(2));
+        savingsRange = '- 65% à - 78%';
+      } else if (emittersType === 'med') {
+        waterTemp = 48;
+        winterCop = parseFloat((2.9 - (altitude / 2000) * 0.7).toFixed(2));
+        savingsRange = '- 55% à - 68%';
+      } else if (emittersType === 'high') {
+        waterTemp = 65;
+        winterCop = parseFloat((2.3 - (altitude / 2000) * 0.5).toFixed(2));
+        savingsRange = '- 45% à - 60%';
+      }
+
+      if (resRequiredPower) resRequiredPower.innerText = `${requiredPowerkW.toFixed(1)} kW`;
+      if (resHouseVolume) resHouseVolume.innerText = `${Math.round(volume)} m³`;
+      if (resBaseTemp) resBaseTemp.innerText = `${baseTemp} °C`;
+      if (resHeatLosses) resHeatLosses.innerText = `${losseskW.toFixed(2)} kW`;
+      if (resWinterCop) resWinterCop.innerText = winterCop.toFixed(2);
+      if (resFuelSaving) resFuelSaving.innerText = savingsRange;
+      if (resInsulationG) resInsulationG.innerText = insulationG.toFixed(2);
+      if (resWaterTemp) resWaterTemp.innerText = `${waterTemp} °C`;
+
+      if (resTempBadge && resTempName && resPacRecommendation && resSizingAlert) {
+        resTempBadge.className = 'profile-card';
+        resSizingAlert.className = 'summary-row highlight-row';
+
+        if (emittersType === 'high') {
+          resTempBadge.classList.add('profile-rose');
+          resTempName.innerText = 'Haute Température Obligatoire';
+          resPacRecommendation.innerText = 'Haute Température (65°C)';
+          resSizingAlert.style.background = '#fdf2f8';
+          resSizingAlert.style.borderColor = '#fbcfe8';
+          resSizingAlert.style.color = '#9d174d';
+          resPacRecommendation.style.color = '#be185d';
+        } else if (emittersType === 'med') {
+          resTempBadge.classList.add('profile-jaune');
+          resTempName.innerText = 'Moyenne Température';
+          resPacRecommendation.innerText = 'Moyenne Température (50°C)';
+          resSizingAlert.style.background = '#fef9c3';
+          resSizingAlert.style.borderColor = '#fef08a';
+          resSizingAlert.style.color = '#854d0e';
+          resPacRecommendation.style.color = '#a16207';
+        } else {
+          resTempBadge.classList.add('profile-bleu');
+          resTempName.innerText = 'Basse Température Optimisée';
+          resPacRecommendation.innerText = 'Basse Température (35°C)';
+          resSizingAlert.style.background = '#eff6ff';
+          resSizingAlert.style.borderColor = '#bfdbfe';
+          resSizingAlert.style.color = '#1e3a8a';
+          resPacRecommendation.style.color = '#1d4ed8';
+        }
+      }
+    };
+
+    syncInputs(inputSurface, sliderSurface, 20, 400, calculateSizing);
+    syncInputs(inputHeight, sliderHeight, 2.0, 4.5, calculateSizing, 1);
+    syncInputs(inputAltitude, sliderAltitude, 0, 2000, calculateSizing);
+    setupRadioCardSelect('insulation_coef', calculateSizing);
+    setupRadioCardSelect('emitters_type', calculateSizing);
+
+    // ==========================================
+    // TAB 3: CALCULATION LOGIC (ÉCONOMIES)
+    // ==========================================
+    const inputBill = document.getElementById('input_bill') as HTMLInputElement;
+    const sliderBill = document.getElementById('slider_bill') as HTMLInputElement;
+    const energyInputs = document.getElementsByName('current_energy');
+    const targetEmittersInputs = document.getElementsByName('target_emitters');
+
+    const resAnnualSaving = document.getElementById('res_annual_saving');
+    const resSavingPercent = document.getElementById('res_saving_percent');
+    const resCurrentCost = document.getElementById('res_current_cost');
+    const resPacCost = document.getElementById('res_pac_cost');
+    const res10yrSavings = document.getElementById('res_10yr_savings');
+    const resCo2Reduction = document.getElementById('res_co2_reduction');
+    const resThermalGenerated = document.getElementById('res_thermal_generated');
+    const resPacElectricity = document.getElementById('res_pac_electricity');
+    const resCopFactor = document.getElementById('res_cop_factor');
+
+    const calculateSavings = () => {
+      const bill = parseInt(inputBill.value, 10) || 2000;
+      let currentEnergy = 'electricity';
+      energyInputs.forEach(input => {
+        if ((input as HTMLInputElement).checked) currentEnergy = (input as HTMLInputElement).value;
+      });
+
+      let targetEmitters = 'floor';
+      targetEmittersInputs.forEach(input => {
+        if ((input as HTMLInputElement).checked) targetEmitters = (input as HTMLInputElement).value;
+      });
+
+      let costPerThermalKwh = 0.2516;
+      let currentCo2PerKwh = 0.052;
+
+      if (currentEnergy === 'electricity') {
+        costPerThermalKwh = 0.2516;
+        currentCo2PerKwh = 0.052;
+      } else if (currentEnergy === 'oil') {
+        costPerThermalKwh = 0.1560;
+        currentCo2PerKwh = 0.324;
+      } else if (currentEnergy === 'gas') {
+        costPerThermalKwh = 0.1200;
+        currentCo2PerKwh = 0.227;
+      } else if (currentEnergy === 'wood') {
+        costPerThermalKwh = 0.1060;
+        currentCo2PerKwh = 0.030;
+      }
+
+      const thermalGeneratedKwh = bill / costPerThermalKwh;
+      let pacCop = 3.80;
+      if (targetEmitters === 'floor') pacCop = 3.80;
+      else if (targetEmitters === 'radiators_standard') pacCop = 3.20;
+      else if (targetEmitters === 'radiators_fonte') pacCop = 2.60;
+
+      const pacElectricityKwh = thermalGeneratedKwh / pacCop;
+      const pacCost = pacElectricityKwh * 0.2516;
+      const annualSavings = bill - pacCost;
+      const savingsPercent = Math.round((annualSavings / bill) * 100);
+      const savings10Yr = annualSavings * 10;
+
+      const currentCo2 = thermalGeneratedKwh * currentCo2PerKwh;
+      const pacCo2 = pacElectricityKwh * 0.052;
+      const co2Reduction = currentCo2 - pacCo2;
+
+      if (resAnnualSaving) resAnnualSaving.innerText = annualSavings > 0 ? `${Math.round(annualSavings).toLocaleString('fr-FR')} €` : `0 €`;
+      if (resSavingPercent) resSavingPercent.innerText = annualSavings > 0 ? `Chauffage financé à ${savingsPercent}% par l'air` : `Économies non significatives`;
+      if (resCurrentCost) resCurrentCost.innerText = bill.toLocaleString('fr-FR');
+      if (resPacCost) resPacCost.innerText = Math.round(pacCost).toLocaleString('fr-FR');
+      if (res10yrSavings) res10yrSavings.innerText = savings10Yr > 0 ? `${Math.round(savings10Yr).toLocaleString('fr-FR')} €` : `0 €`;
+      if (resThermalGenerated) resThermalGenerated.innerText = `${Math.round(thermalGeneratedKwh).toLocaleString('fr-FR')} kWh`;
+      if (resPacElectricity) resPacElectricity.innerText = `${Math.round(pacElectricityKwh).toLocaleString('fr-FR')} kWh`;
+      if (resCopFactor) resCopFactor.innerText = pacCop.toFixed(2);
+      if (resCo2Reduction) resCo2Reduction.innerText = co2Reduction > 0 ? `- ${Math.round(co2Reduction).toLocaleString('fr-FR')} kg / an` : `Neutre`;
+    };
+
+    syncInputs(inputBill, sliderBill, 400, 8000, calculateSavings);
+    setupRadioCardSelect('current_energy', calculateSavings);
+    setupRadioCardSelect('target_emitters', calculateSavings);
+
+    // Run all calculations once on load
+    calculateAides();
+    calculateSizing();
+    calculateSavings();
+  });
+</script>

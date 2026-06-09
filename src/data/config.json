@@ -11,5 +11,10 @@
   "fontFamily": "'Outfit', sans-serif",
   "description": "Installation de pompe à chaleur RGE en Isère (38). Calculez vos aides de l'État (MaPrimeRénov') et comparez les devis de chauffagistes locaux.",
   "supabaseUrl": "https://nhmvgsrwhjsjnpncpiaj.supabase.co",
-  "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5obXZnc3J3aGpzam5wbmNwaWFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5OTY0NjQsImV4cCI6MjA4MzU3MjQ2NH0.qpG5CJDNa53BB7ZpDy414GL3hmb51omxqPrnrrd7O6I"
+  "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5obXZnc3J3aGpzam5wbmNwaWFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5OTY0NjQsImV4cCI6MjA4MzU3MjQ2NH0.qpG5CJDNa53BB7ZpDy414GL3hmb51omxqPrnrrd7O6I",
+  "viteundevis": {
+    "partnerId": "2353",
+    "boxId": "f219b53eb1",
+    "apiKey": "17695301406978e31c715766978e31c715ae"
+  }
 }
