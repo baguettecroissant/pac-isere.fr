@@ -1,0 +1,15 @@
+{
+  "brandName": "PAC Isère",
+  "domain": "pac-isere.fr",
+  "phone": "04 76 00 00 00",
+  "email": "contact@pac-isere.fr",
+  "mainCity": "Grenoble",
+  "department": "Isère",
+  "departmentCode": "38",
+  "accentColor": "#3B82F6",
+  "secondaryColor": "#1E293B",
+  "fontFamily": "'Outfit', sans-serif",
+  "description": "Installation de pompe à chaleur RGE en Isère (38). Calculez vos aides de l'État (MaPrimeRénov') et comparez les devis de chauffagistes locaux.",
+  "supabaseUrl": "https://nhmvgsrwhjsjnpncpiaj.supabase.co",
+  "supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5obXZnc3J3aGpzam5wbmNwaWFqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njc5OTY0NjQsImV4cCI6MjA4MzU3MjQ2NH0.qpG5CJDNa53BB7ZpDy414GL3hmb51omxqPrnrrd7O6I"
+}

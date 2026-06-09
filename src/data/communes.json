@@ -1,0 +1,3194 @@
+[
+  {
+    "nom": "Grenoble",
+    "slug": "grenoble",
+    "codeInsee": "38185",
+    "codePostal": "38000",
+    "population": 156140
+  },
+  {
+    "nom": "Saint-Martin-d'Hères",
+    "slug": "saint-martin-d-heres",
+    "codeInsee": "38421",
+    "codePostal": "38400",
+    "population": 37695
+  },
+  {
+    "nom": "Échirolles",
+    "slug": "echirolles",
+    "codeInsee": "38151",
+    "codePostal": "38130",
+    "population": 37491
+  },
+  {
+    "nom": "Vienne",
+    "slug": "vienne",
+    "codeInsee": "38544",
+    "codePostal": "38200",
+    "population": 31778
+  },
+  {
+    "nom": "Bourgoin-Jallieu",
+    "slug": "bourgoin-jallieu",
+    "codeInsee": "38053",
+    "codePostal": "38300",
+    "population": 30151
+  },
+  {
+    "nom": "Fontaine",
+    "slug": "fontaine",
+    "codeInsee": "38169",
+    "codePostal": "38600",
+    "population": 22020
+  },
+  {
+    "nom": "Voiron",
+    "slug": "voiron",
+    "codeInsee": "38563",
+    "codePostal": "38500",
+    "population": 21847
+  },
+  {
+    "nom": "Villefontaine",
+    "slug": "villefontaine",
+    "codeInsee": "38553",
+    "codePostal": "38090",
+    "population": 19445
+  },
+  {
+    "nom": "Meylan",
+    "slug": "meylan",
+    "codeInsee": "38229",
+    "codePostal": "38240",
+    "population": 18770
+  },
+  {
+    "nom": "Saint-Égrève",
+    "slug": "saint-egreve",
+    "codeInsee": "38382",
+    "codePostal": "38120",
+    "population": 17986
+  },
+  {
+    "nom": "L'Isle-d'Abeau",
+    "slug": "l-isle-d-abeau",
+    "codeInsee": "38193",
+    "codePostal": "38080",
+    "population": 17515
+  },
+  {
+    "nom": "Seyssinet-Pariset",
+    "slug": "seyssinet-pariset",
+    "codeInsee": "38485",
+    "codePostal": "38170",
+    "population": 11739
+  },
+  {
+    "nom": "Sassenage",
+    "slug": "sassenage",
+    "codeInsee": "38474",
+    "codePostal": "38360",
+    "population": 11646
+  },
+  {
+    "nom": "Le Pont-de-Claix",
+    "slug": "le-pont-de-claix",
+    "codeInsee": "38317",
+    "codePostal": "38800",
+    "population": 10956
+  },
+  {
+    "nom": "Charvieu-Chavagneux",
+    "slug": "charvieu-chavagneux",
+    "codeInsee": "38085",
+    "codePostal": "38230",
+    "population": 10547
+  },
+  {
+    "nom": "Eybens",
+    "slug": "eybens",
+    "codeInsee": "38158",
+    "codePostal": "38320",
+    "population": 10493
+  },
+  {
+    "nom": "Voreppe",
+    "slug": "voreppe",
+    "codeInsee": "38565",
+    "codePostal": "38340",
+    "population": 9922
+  },
+  {
+    "nom": "Crolles",
+    "slug": "crolles",
+    "codeInsee": "38140",
+    "codePostal": "38920",
+    "population": 8609
+  },
+  {
+    "nom": "Roussillon",
+    "slug": "roussillon",
+    "codeInsee": "38344",
+    "codePostal": "38150",
+    "population": 8595
+  },
+  {
+    "nom": "Varces-Allières-et-Risset",
+    "slug": "varces-allieres-et-risset",
+    "codeInsee": "38524",
+    "codePostal": "38760",
+    "population": 8542
+  },
+  {
+    "nom": "Vif",
+    "slug": "vif",
+    "codeInsee": "38545",
+    "codePostal": "38450",
+    "population": 8530
+  },
+  {
+    "nom": "La Tour-du-Pin",
+    "slug": "la-tour-du-pin",
+    "codeInsee": "38509",
+    "codePostal": "38110",
+    "population": 8111
+  },
+  {
+    "nom": "Seyssins",
+    "slug": "seyssins",
+    "codeInsee": "38486",
+    "codePostal": "38180",
+    "population": 8092
+  },
+  {
+    "nom": "Tignieu-Jameyzieu",
+    "slug": "tignieu-jameyzieu",
+    "codeInsee": "38507",
+    "codePostal": "38230",
+    "population": 8031
+  },
+  {
+    "nom": "Claix",
+    "slug": "claix",
+    "codeInsee": "38111",
+    "codePostal": "38640",
+    "population": 7836
+  },
+  {
+    "nom": "Moirans",
+    "slug": "moirans",
+    "codeInsee": "38239",
+    "codePostal": "38430",
+    "population": 7818
+  },
+  {
+    "nom": "La Verpillière",
+    "slug": "la-verpilliere",
+    "codeInsee": "38537",
+    "codePostal": "38290",
+    "population": 7786
+  },
+  {
+    "nom": "Saint-Marcellin",
+    "slug": "saint-marcellin",
+    "codeInsee": "38416",
+    "codePostal": "38160",
+    "population": 7700
+  },
+  {
+    "nom": "Les Avenières Veyrins-Thuellin",
+    "slug": "les-avenieres-veyrins-thuellin",
+    "codeInsee": "38022",
+    "codePostal": "38630",
+    "population": 7698
+  },
+  {
+    "nom": "Tullins",
+    "slug": "tullins",
+    "codeInsee": "38517",
+    "codePostal": "38210",
+    "population": 7624
+  },
+  {
+    "nom": "Villard-Bonnot",
+    "slug": "villard-bonnot",
+    "codeInsee": "38547",
+    "codePostal": "38190",
+    "population": 7509
+  },
+  {
+    "nom": "Gières",
+    "slug": "gieres",
+    "codeInsee": "38179",
+    "codePostal": "38610",
+    "population": 7376
+  },
+  {
+    "nom": "Pontcharra",
+    "slug": "pontcharra",
+    "codeInsee": "38314",
+    "codePostal": "38530",
+    "population": 7350
+  },
+  {
+    "nom": "Vizille",
+    "slug": "vizille",
+    "codeInsee": "38562",
+    "codePostal": "38220",
+    "population": 7292
+  },
+  {
+    "nom": "Saint-Ismier",
+    "slug": "saint-ismier",
+    "codeInsee": "38397",
+    "codePostal": "38330",
+    "population": 7165
+  },
+  {
+    "nom": "Saint-Maurice-l'Exil",
+    "slug": "saint-maurice-l-exil",
+    "codeInsee": "38425",
+    "codePostal": "38550",
+    "population": 6889
+  },
+  {
+    "nom": "Les Abrets en Dauphiné",
+    "slug": "les-abrets-en-dauphine",
+    "codeInsee": "38001",
+    "codePostal": "38490",
+    "population": 6850
+  },
+  {
+    "nom": "Domène",
+    "slug": "domene",
+    "codeInsee": "38150",
+    "codePostal": "38420",
+    "population": 6835
+  },
+  {
+    "nom": "Le Péage-de-Roussillon",
+    "slug": "le-peage-de-roussillon",
+    "codeInsee": "38298",
+    "codePostal": "38550",
+    "population": 6718
+  },
+  {
+    "nom": "Chasse-sur-Rhône",
+    "slug": "chasse-sur-rhone",
+    "codeInsee": "38087",
+    "codePostal": "38670",
+    "population": 6588
+  },
+  {
+    "nom": "Rives",
+    "slug": "rives",
+    "codeInsee": "38337",
+    "codePostal": "38140",
+    "population": 6549
+  },
+  {
+    "nom": "La Tronche",
+    "slug": "la-tronche",
+    "codeInsee": "38516",
+    "codePostal": "38700",
+    "population": 6424
+  },
+  {
+    "nom": "Pont-de-Chéruy",
+    "slug": "pont-de-cheruy",
+    "codeInsee": "38316",
+    "codePostal": "38230",
+    "population": 6302
+  },
+  {
+    "nom": "Pont-Évêque",
+    "slug": "pont-eveque",
+    "codeInsee": "38318",
+    "codePostal": "38780",
+    "population": 6213
+  },
+  {
+    "nom": "Saint-Quentin-Fallavier",
+    "slug": "saint-quentin-fallavier",
+    "codeInsee": "38449",
+    "codePostal": "38070",
+    "population": 6189
+  },
+  {
+    "nom": "Saint-Martin-le-Vinoux",
+    "slug": "saint-martin-le-vinoux",
+    "codeInsee": "38423",
+    "codePostal": "38950",
+    "population": 6078
+  },
+  {
+    "nom": "Montbonnot-Saint-Martin",
+    "slug": "montbonnot-saint-martin",
+    "codeInsee": "38249",
+    "codePostal": "38330",
+    "population": 5698
+  },
+  {
+    "nom": "Saint-Martin-d'Uriage",
+    "slug": "saint-martin-d-uriage",
+    "codeInsee": "38422",
+    "codePostal": "38410",
+    "population": 5587
+  },
+  {
+    "nom": "Coublevie",
+    "slug": "coublevie",
+    "codeInsee": "38133",
+    "codePostal": "38500",
+    "population": 5520
+  },
+  {
+    "nom": "Villette-d'Anthon",
+    "slug": "villette-d-anthon",
+    "codeInsee": "38557",
+    "codePostal": "38280",
+    "population": 5268
+  },
+  {
+    "nom": "Chavanoz",
+    "slug": "chavanoz",
+    "codeInsee": "38097",
+    "codePostal": "38230",
+    "population": 5126
+  },
+  {
+    "nom": "Beaurepaire",
+    "slug": "beaurepaire",
+    "codeInsee": "38034",
+    "codePostal": "38270",
+    "population": 5010
+  },
+  {
+    "nom": "La Mure",
+    "slug": "la-mure",
+    "codeInsee": "38269",
+    "codePostal": "38350",
+    "population": 4963
+  },
+  {
+    "nom": "Heyrieux",
+    "slug": "heyrieux",
+    "codeInsee": "38189",
+    "codePostal": "38540",
+    "population": 4956
+  },
+  {
+    "nom": "Le Versoud",
+    "slug": "le-versoud",
+    "codeInsee": "38538",
+    "codePostal": "38420",
+    "population": 4900
+  },
+  {
+    "nom": "La Côte-Saint-André",
+    "slug": "la-cote-saint-andre",
+    "codeInsee": "38130",
+    "codePostal": "38260",
+    "population": 4873
+  },
+  {
+    "nom": "Saint-Jean-de-Bournay",
+    "slug": "saint-jean-de-bournay",
+    "codeInsee": "38399",
+    "codePostal": "38440",
+    "population": 4843
+  },
+  {
+    "nom": "Ruy-Montceau",
+    "slug": "ruy-montceau",
+    "codeInsee": "38348",
+    "codePostal": "38300",
+    "population": 4805
+  },
+  {
+    "nom": "Salaise-sur-Sanne",
+    "slug": "salaise-sur-sanne",
+    "codeInsee": "38468",
+    "codePostal": "38150",
+    "population": 4606
+  },
+  {
+    "nom": "Saint-Laurent-du-Pont",
+    "slug": "saint-laurent-du-pont",
+    "codeInsee": "38412",
+    "codePostal": "38380",
+    "population": 4490
+  },
+  {
+    "nom": "Vinay",
+    "slug": "vinay",
+    "codeInsee": "38559",
+    "codePostal": "38470",
+    "population": 4438
+  },
+  {
+    "nom": "Morestel",
+    "slug": "morestel",
+    "codeInsee": "38261",
+    "codePostal": "38510",
+    "population": 4340
+  },
+  {
+    "nom": "Villard-de-Lans",
+    "slug": "villard-de-lans",
+    "codeInsee": "38548",
+    "codePostal": "38250",
+    "population": 4328
+  },
+  {
+    "nom": "Saint-Savin",
+    "slug": "saint-savin",
+    "codeInsee": "38455",
+    "codePostal": "38300",
+    "population": 4323
+  },
+  {
+    "nom": "Corenc",
+    "slug": "corenc",
+    "codeInsee": "38126",
+    "codePostal": "38700",
+    "population": 4215
+  },
+  {
+    "nom": "Vaulnaveys-le-Haut",
+    "slug": "vaulnaveys-le-haut",
+    "codeInsee": "38529",
+    "codePostal": "38410",
+    "population": 4006
+  },
+  {
+    "nom": "Allevard",
+    "slug": "allevard",
+    "codeInsee": "38006",
+    "codePostal": "38580",
+    "population": 3971
+  },
+  {
+    "nom": "Jarrie",
+    "slug": "jarrie",
+    "codeInsee": "38200",
+    "codePostal": "38560",
+    "population": 3952
+  },
+  {
+    "nom": "Saint-Chef",
+    "slug": "saint-chef",
+    "codeInsee": "38374",
+    "codePostal": "38890",
+    "population": 3921
+  },
+  {
+    "nom": "Saint-Clair-du-Rhône",
+    "slug": "saint-clair-du-rhone",
+    "codeInsee": "38378",
+    "codePostal": "38370",
+    "population": 3778
+  },
+  {
+    "nom": "Estrablin",
+    "slug": "estrablin",
+    "codeInsee": "38157",
+    "codePostal": "38780",
+    "population": 3677
+  },
+  {
+    "nom": "Saint-Clair-de-la-Tour",
+    "slug": "saint-clair-de-la-tour",
+    "codeInsee": "38377",
+    "codePostal": "38110",
+    "population": 3628
+  },
+  {
+    "nom": "Saint-Jean-de-Moirans",
+    "slug": "saint-jean-de-moirans",
+    "codeInsee": "38400",
+    "codePostal": "38430",
+    "population": 3620
+  },
+  {
+    "nom": "Apprieu",
+    "slug": "apprieu",
+    "codeInsee": "38013",
+    "codePostal": "38140",
+    "population": 3615
+  },
+  {
+    "nom": "Le Pont-de-Beauvoisin",
+    "slug": "le-pont-de-beauvoisin",
+    "codeInsee": "38315",
+    "codePostal": "38480",
+    "population": 3602
+  },
+  {
+    "nom": "Saint-Georges-d'Espéranche",
+    "slug": "saint-georges-d-esperanche",
+    "codeInsee": "38389",
+    "codePostal": "38790",
+    "population": 3545
+  },
+  {
+    "nom": "Crémieu",
+    "slug": "cremieu",
+    "codeInsee": "38138",
+    "codePostal": "38460",
+    "population": 3536
+  },
+  {
+    "nom": "Montalieu-Vercieu",
+    "slug": "montalieu-vercieu",
+    "codeInsee": "38247",
+    "codePostal": "38390",
+    "population": 3510
+  },
+  {
+    "nom": "La Buisse",
+    "slug": "la-buisse",
+    "codeInsee": "38061",
+    "codePostal": "38500",
+    "population": 3500
+  },
+  {
+    "nom": "Crêts en Belledonne",
+    "slug": "crets-en-belledonne",
+    "codeInsee": "38439",
+    "codePostal": "38570",
+    "population": 3470
+  },
+  {
+    "nom": "Saint-Étienne-de-Saint-Geoirs",
+    "slug": "saint-etienne-de-saint-geoirs",
+    "codeInsee": "38384",
+    "codePostal": "38590",
+    "population": 3425
+  },
+  {
+    "nom": "Saint-Romain-de-Jalionas",
+    "slug": "saint-romain-de-jalionas",
+    "codeInsee": "38451",
+    "codePostal": "38460",
+    "population": 3417
+  },
+  {
+    "nom": "Fontanil-Cornillon",
+    "slug": "fontanil-cornillon",
+    "codeInsee": "38170",
+    "codePostal": "38120",
+    "population": 3404
+  },
+  {
+    "nom": "Renage",
+    "slug": "renage",
+    "codeInsee": "38332",
+    "codePostal": "38140",
+    "population": 3348
+  },
+  {
+    "nom": "Champ-sur-Drac",
+    "slug": "champ-sur-drac",
+    "codeInsee": "38071",
+    "codePostal": "38560",
+    "population": 3335
+  },
+  {
+    "nom": "Bernin",
+    "slug": "bernin",
+    "codeInsee": "38039",
+    "codePostal": "38190",
+    "population": 3334
+  },
+  {
+    "nom": "Froges",
+    "slug": "froges",
+    "codeInsee": "38175",
+    "codePostal": "38190",
+    "population": 3285
+  },
+  {
+    "nom": "Cessieu",
+    "slug": "cessieu",
+    "codeInsee": "38064",
+    "codePostal": "38110",
+    "population": 3259
+  },
+  {
+    "nom": "Saint-Siméon-de-Bressieux",
+    "slug": "saint-simeon-de-bressieux",
+    "codeInsee": "38457",
+    "codePostal": "38870",
+    "population": 3186
+  },
+  {
+    "nom": "Dolomieu",
+    "slug": "dolomieu",
+    "codeInsee": "38148",
+    "codePostal": "38110",
+    "population": 3173
+  },
+  {
+    "nom": "Le Touvet",
+    "slug": "le-touvet",
+    "codeInsee": "38511",
+    "codePostal": "38660",
+    "population": 3116
+  },
+  {
+    "nom": "Le Grand-Lemps",
+    "slug": "le-grand-lemps",
+    "codeInsee": "38182",
+    "codePostal": "38690",
+    "population": 3083
+  },
+  {
+    "nom": "Chapareillan",
+    "slug": "chapareillan",
+    "codeInsee": "38075",
+    "codePostal": "38530",
+    "population": 3065
+  },
+  {
+    "nom": "Saint-Nazaire-les-Eymes",
+    "slug": "saint-nazaire-les-eymes",
+    "codeInsee": "38431",
+    "codePostal": "38330",
+    "population": 3016
+  },
+  {
+    "nom": "Diémoz",
+    "slug": "diemoz",
+    "codeInsee": "38144",
+    "codePostal": "38790",
+    "population": 2947
+  },
+  {
+    "nom": "Autrans-Méaudre en Vercors",
+    "slug": "autrans-meaudre-en-vercors",
+    "codeInsee": "38225",
+    "codePostal": "38112",
+    "population": 2936
+  },
+  {
+    "nom": "Valencin",
+    "slug": "valencin",
+    "codeInsee": "38519",
+    "codePostal": "38540",
+    "population": 2878
+  },
+  {
+    "nom": "Aoste",
+    "slug": "aoste",
+    "codeInsee": "38012",
+    "codePostal": "38490",
+    "population": 2876
+  },
+  {
+    "nom": "Saint-André-le-Gaz",
+    "slug": "saint-andre-le-gaz",
+    "codeInsee": "38357",
+    "codePostal": "38490",
+    "population": 2754
+  },
+  {
+    "nom": "Lans-en-Vercors",
+    "slug": "lans-en-vercors",
+    "codeInsee": "38205",
+    "codePostal": "38250",
+    "population": 2751
+  },
+  {
+    "nom": "Chanas",
+    "slug": "chanas",
+    "codeInsee": "38072",
+    "codePostal": "38150",
+    "population": 2706
+  },
+  {
+    "nom": "Nivolas-Vermelle",
+    "slug": "nivolas-vermelle",
+    "codeInsee": "38276",
+    "codePostal": "38300",
+    "population": 2706
+  },
+  {
+    "nom": "Saint-Georges-de-Commiers",
+    "slug": "saint-georges-de-commiers",
+    "codeInsee": "38388",
+    "codePostal": "38450",
+    "population": 2699
+  },
+  {
+    "nom": "Saint-Just-Chaleyssin",
+    "slug": "saint-just-chaleyssin",
+    "codeInsee": "38408",
+    "codePostal": "38540",
+    "population": 2695
+  },
+  {
+    "nom": "Saint-Étienne-de-Crossey",
+    "slug": "saint-etienne-de-crossey",
+    "codeInsee": "38383",
+    "codePostal": "38960",
+    "population": 2619
+  },
+  {
+    "nom": "Le Bourg-d'Oisans",
+    "slug": "le-bourg-d-oisans",
+    "codeInsee": "38052",
+    "codePostal": "38520",
+    "population": 2617
+  },
+  {
+    "nom": "Villages du Lac de Paladru",
+    "slug": "villages-du-lac-de-paladru",
+    "codeInsee": "38292",
+    "codePostal": "38730",
+    "population": 2598
+  },
+  {
+    "nom": "Chirens",
+    "slug": "chirens",
+    "codeInsee": "38105",
+    "codePostal": "38850",
+    "population": 2546
+  },
+  {
+    "nom": "Satolas-et-Bonce",
+    "slug": "satolas-et-bonce",
+    "codeInsee": "38475",
+    "codePostal": "38290",
+    "population": 2532
+  },
+  {
+    "nom": "Chatte",
+    "slug": "chatte",
+    "codeInsee": "38095",
+    "codePostal": "38160",
+    "population": 2518
+  },
+  {
+    "nom": "Brié-et-Angonnes",
+    "slug": "brie-et-angonnes",
+    "codeInsee": "38059",
+    "codePostal": "38320",
+    "population": 2497
+  },
+  {
+    "nom": "Vaulx-Milieu",
+    "slug": "vaulx-milieu",
+    "codeInsee": "38530",
+    "codePostal": "38090",
+    "population": 2472
+  },
+  {
+    "nom": "La Terrasse",
+    "slug": "la-terrasse",
+    "codeInsee": "38503",
+    "codePostal": "38660",
+    "population": 2470
+  },
+  {
+    "nom": "Plateau-des-Petites-Roches",
+    "slug": "plateau-des-petites-roches",
+    "codeInsee": "38395",
+    "codePostal": "38660",
+    "population": 2433
+  },
+  {
+    "nom": "Luzinay",
+    "slug": "luzinay",
+    "codeInsee": "38215",
+    "codePostal": "38200",
+    "population": 2416
+  },
+  {
+    "nom": "Goncelin",
+    "slug": "goncelin",
+    "codeInsee": "38181",
+    "codePostal": "38570",
+    "population": 2400
+  },
+  {
+    "nom": "Saint-Geoire-en-Valdaine",
+    "slug": "saint-geoire-en-valdaine",
+    "codeInsee": "38386",
+    "codePostal": "38620",
+    "population": 2392
+  },
+  {
+    "nom": "Le Cheylas",
+    "slug": "le-cheylas",
+    "codeInsee": "38100",
+    "codePostal": "38570",
+    "population": 2389
+  },
+  {
+    "nom": "Biviers",
+    "slug": "biviers",
+    "codeInsee": "38045",
+    "codePostal": "38330",
+    "population": 2377
+  },
+  {
+    "nom": "Corbelin",
+    "slug": "corbelin",
+    "codeInsee": "38124",
+    "codePostal": "38630",
+    "population": 2375
+  },
+  {
+    "nom": "Chuzelles",
+    "slug": "chuzelles",
+    "codeInsee": "38110",
+    "codePostal": "38200",
+    "population": 2366
+  },
+  {
+    "nom": "Noyarey",
+    "slug": "noyarey",
+    "codeInsee": "38281",
+    "codePostal": "38360",
+    "population": 2365
+  },
+  {
+    "nom": "Sablons",
+    "slug": "sablons",
+    "codeInsee": "38349",
+    "codePostal": "38550",
+    "population": 2346
+  },
+  {
+    "nom": "Brézins",
+    "slug": "brezins",
+    "codeInsee": "38058",
+    "codePostal": "38590",
+    "population": 2312
+  },
+  {
+    "nom": "Eyzin-Pinet",
+    "slug": "eyzin-pinet",
+    "codeInsee": "38160",
+    "codePostal": "38780",
+    "population": 2285
+  },
+  {
+    "nom": "Seyssuel",
+    "slug": "seyssuel",
+    "codeInsee": "38487",
+    "codePostal": "38200",
+    "population": 2248
+  },
+  {
+    "nom": "Vézeronce-Curtin",
+    "slug": "vezeronce-curtin",
+    "codeInsee": "38543",
+    "codePostal": "38510",
+    "population": 2241
+  },
+  {
+    "nom": "Saint-Paul-de-Varces",
+    "slug": "saint-paul-de-varces",
+    "codeInsee": "38436",
+    "codePostal": "38760",
+    "population": 2218
+  },
+  {
+    "nom": "Roche",
+    "slug": "roche",
+    "codeInsee": "38339",
+    "codePostal": "38090",
+    "population": 2196
+  },
+  {
+    "nom": "Septème",
+    "slug": "septeme",
+    "codeInsee": "38480",
+    "codePostal": "38780",
+    "population": 2186
+  },
+  {
+    "nom": "Tencin",
+    "slug": "tencin",
+    "codeInsee": "38501",
+    "codePostal": "38570",
+    "population": 2180
+  },
+  {
+    "nom": "Jardin",
+    "slug": "jardin",
+    "codeInsee": "38199",
+    "codePostal": "38200",
+    "population": 2178
+  },
+  {
+    "nom": "Poisat",
+    "slug": "poisat",
+    "codeInsee": "38309",
+    "codePostal": "38320",
+    "population": 2173
+  },
+  {
+    "nom": "Saint-Alban-de-Roche",
+    "slug": "saint-alban-de-roche",
+    "codeInsee": "38352",
+    "codePostal": "38080",
+    "population": 2168
+  },
+  {
+    "nom": "Lumbin",
+    "slug": "lumbin",
+    "codeInsee": "38214",
+    "codePostal": "38660",
+    "population": 2164
+  },
+  {
+    "nom": "Saint-Victor-de-Cessieu",
+    "slug": "saint-victor-de-cessieu",
+    "codeInsee": "38464",
+    "codePostal": "38110",
+    "population": 2148
+  },
+  {
+    "nom": "Saint-Didier-de-la-Tour",
+    "slug": "saint-didier-de-la-tour",
+    "codeInsee": "38381",
+    "codePostal": "38110",
+    "population": 2143
+  },
+  {
+    "nom": "Izeaux",
+    "slug": "izeaux",
+    "codeInsee": "38194",
+    "codePostal": "38140",
+    "population": 2134
+  },
+  {
+    "nom": "Châbons",
+    "slug": "chabons",
+    "codeInsee": "38065",
+    "codePostal": "38690",
+    "population": 2133
+  },
+  {
+    "nom": "Saint-Sauveur",
+    "slug": "saint-sauveur",
+    "codeInsee": "38454",
+    "codePostal": "38160",
+    "population": 2127
+  },
+  {
+    "nom": "Frontonas",
+    "slug": "frontonas",
+    "codeInsee": "38176",
+    "codePostal": "38290",
+    "population": 2123
+  },
+  {
+    "nom": "Porte-des-Bonnevaux",
+    "slug": "porte-des-bonnevaux",
+    "codeInsee": "38479",
+    "codePostal": "38260",
+    "population": 2099
+  },
+  {
+    "nom": "Trept",
+    "slug": "trept",
+    "codeInsee": "38515",
+    "codePostal": "38460",
+    "population": 2095
+  },
+  {
+    "nom": "Serpaize",
+    "slug": "serpaize",
+    "codeInsee": "38484",
+    "codePostal": "38200",
+    "population": 2091
+  },
+  {
+    "nom": "Les Roches-de-Condrieu",
+    "slug": "les-roches-de-condrieu",
+    "codeInsee": "38340",
+    "codePostal": "38370",
+    "population": 2055
+  },
+  {
+    "nom": "La Bâtie-Montgascon",
+    "slug": "la-batie-montgascon",
+    "codeInsee": "38029",
+    "codePostal": "38110",
+    "population": 2035
+  },
+  {
+    "nom": "Reventin-Vaugris",
+    "slug": "reventin-vaugris",
+    "codeInsee": "38336",
+    "codePostal": "38121",
+    "population": 2035
+  },
+  {
+    "nom": "Villette-de-Vienne",
+    "slug": "villette-de-vienne",
+    "codeInsee": "38558",
+    "codePostal": "38200",
+    "population": 2025
+  },
+  {
+    "nom": "Les Côtes-d'Arey",
+    "slug": "les-cotes-d-arey",
+    "codeInsee": "38131",
+    "codePostal": "38138",
+    "population": 2023
+  },
+  {
+    "nom": "Charantonnay",
+    "slug": "charantonnay",
+    "codeInsee": "38081",
+    "codePostal": "38790",
+    "population": 2019
+  },
+  {
+    "nom": "Barraux",
+    "slug": "barraux",
+    "codeInsee": "38027",
+    "codePostal": "38530",
+    "population": 2016
+  },
+  {
+    "nom": "Theys",
+    "slug": "theys",
+    "codeInsee": "38504",
+    "codePostal": "38570",
+    "population": 2011
+  },
+  {
+    "nom": "Châtonnay",
+    "slug": "chatonnay",
+    "codeInsee": "38094",
+    "codePostal": "38440",
+    "population": 2009
+  },
+  {
+    "nom": "Saint-Hilaire-du-Rosier",
+    "slug": "saint-hilaire-du-rosier",
+    "codeInsee": "38394",
+    "codePostal": "38840",
+    "population": 2004
+  },
+  {
+    "nom": "Charavines",
+    "slug": "charavines",
+    "codeInsee": "38082",
+    "codePostal": "38850",
+    "population": 2003
+  },
+  {
+    "nom": "La Chapelle-de-la-Tour",
+    "slug": "la-chapelle-de-la-tour",
+    "codeInsee": "38076",
+    "codePostal": "38110",
+    "population": 1992
+  },
+  {
+    "nom": "Moidieu-Détourbe",
+    "slug": "moidieu-detourbe",
+    "codeInsee": "38238",
+    "codePostal": "38440",
+    "population": 1978
+  },
+  {
+    "nom": "Maubec",
+    "slug": "maubec",
+    "codeInsee": "38223",
+    "codePostal": "38300",
+    "population": 1930
+  },
+  {
+    "nom": "Le Gua",
+    "slug": "le-gua",
+    "codeInsee": "38187",
+    "codePostal": "38450",
+    "population": 1928
+  },
+  {
+    "nom": "Villemoirieu",
+    "slug": "villemoirieu",
+    "codeInsee": "38554",
+    "codePostal": "38460",
+    "population": 1925
+  },
+  {
+    "nom": "Sillans",
+    "slug": "sillans",
+    "codeInsee": "38490",
+    "codePostal": "38590",
+    "population": 1919
+  },
+  {
+    "nom": "Entre-deux-Guiers",
+    "slug": "entre-deux-guiers",
+    "codeInsee": "38155",
+    "codePostal": "38380",
+    "population": 1915
+  },
+  {
+    "nom": "Les Deux Alpes",
+    "slug": "les-deux-alpes",
+    "codeInsee": "38253",
+    "codePostal": "38520",
+    "population": 1910
+  },
+  {
+    "nom": "Saint-Romans",
+    "slug": "saint-romans",
+    "codeInsee": "38453",
+    "codePostal": "38160",
+    "population": 1897
+  },
+  {
+    "nom": "Janneyrias",
+    "slug": "janneyrias",
+    "codeInsee": "38197",
+    "codePostal": "38280",
+    "population": 1896
+  },
+  {
+    "nom": "Colombe",
+    "slug": "colombe",
+    "codeInsee": "38118",
+    "codePostal": "38690",
+    "population": 1890
+  },
+  {
+    "nom": "Arandon-Passins",
+    "slug": "arandon-passins",
+    "codeInsee": "38297",
+    "codePostal": "38510",
+    "population": 1864
+  },
+  {
+    "nom": "Montferrat",
+    "slug": "montferrat",
+    "codeInsee": "38256",
+    "codePostal": "38620",
+    "population": 1846
+  },
+  {
+    "nom": "La Murette",
+    "slug": "la-murette",
+    "codeInsee": "38270",
+    "codePostal": "38140",
+    "population": 1836
+  },
+  {
+    "nom": "Chamagnieu",
+    "slug": "chamagnieu",
+    "codeInsee": "38067",
+    "codePostal": "38460",
+    "population": 1822
+  },
+  {
+    "nom": "Artas",
+    "slug": "artas",
+    "codeInsee": "38015",
+    "codePostal": "38440",
+    "population": 1799
+  },
+  {
+    "nom": "Beaucroissant",
+    "slug": "beaucroissant",
+    "codeInsee": "38030",
+    "codePostal": "38140",
+    "population": 1790
+  },
+  {
+    "nom": "Porcieu-Amblagnieu",
+    "slug": "porcieu-amblagnieu",
+    "codeInsee": "38320",
+    "codePostal": "38390",
+    "population": 1787
+  },
+  {
+    "nom": "Romagnieu",
+    "slug": "romagnieu",
+    "codeInsee": "38343",
+    "codePostal": "38480",
+    "population": 1753
+  },
+  {
+    "nom": "Oytier-Saint-Oblas",
+    "slug": "oytier-saint-oblas",
+    "codeInsee": "38288",
+    "codePostal": "38780",
+    "population": 1743
+  },
+  {
+    "nom": "Chonas-l'Amballan",
+    "slug": "chonas-l-amballan",
+    "codeInsee": "38107",
+    "codePostal": "38121",
+    "population": 1729
+  },
+  {
+    "nom": "Assieu",
+    "slug": "assieu",
+    "codeInsee": "38017",
+    "codePostal": "38150",
+    "population": 1726
+  },
+  {
+    "nom": "Saint-Jean-de-Soudain",
+    "slug": "saint-jean-de-soudain",
+    "codeInsee": "38401",
+    "codePostal": "38110",
+    "population": 1714
+  },
+  {
+    "nom": "Miribel-les-Échelles",
+    "slug": "miribel-les-echelles",
+    "codeInsee": "38236",
+    "codePostal": "38380",
+    "population": 1713
+  },
+  {
+    "nom": "Viriville",
+    "slug": "viriville",
+    "codeInsee": "38561",
+    "codePostal": "38980",
+    "population": 1713
+  },
+  {
+    "nom": "La Motte-d'Aveillans",
+    "slug": "la-motte-d-aveillans",
+    "codeInsee": "38265",
+    "codePostal": "38770",
+    "population": 1711
+  },
+  {
+    "nom": "Saint-Vérand",
+    "slug": "saint-verand",
+    "codeInsee": "38463",
+    "codePostal": "38160",
+    "population": 1711
+  },
+  {
+    "nom": "Vourey",
+    "slug": "vourey",
+    "codeInsee": "38566",
+    "codePostal": "38210",
+    "population": 1688
+  },
+  {
+    "nom": "Four",
+    "slug": "four",
+    "codeInsee": "38172",
+    "codePostal": "38080",
+    "population": 1673
+  },
+  {
+    "nom": "Domarin",
+    "slug": "domarin",
+    "codeInsee": "38149",
+    "codePostal": "38300",
+    "population": 1659
+  },
+  {
+    "nom": "Sermérieu",
+    "slug": "sermerieu",
+    "codeInsee": "38483",
+    "codePostal": "38510",
+    "population": 1638
+  },
+  {
+    "nom": "Grenay",
+    "slug": "grenay",
+    "codeInsee": "38184",
+    "codePostal": "38540",
+    "population": 1628
+  },
+  {
+    "nom": "Creys-Mépieu",
+    "slug": "creys-mepieu",
+    "codeInsee": "38139",
+    "codePostal": "38510",
+    "population": 1613
+  },
+  {
+    "nom": "Saint-Hilaire-de-la-Côte",
+    "slug": "saint-hilaire-de-la-cote",
+    "codeInsee": "38393",
+    "codePostal": "38260",
+    "population": 1600
+  },
+  {
+    "nom": "Biol",
+    "slug": "biol",
+    "codeInsee": "38044",
+    "codePostal": "38690",
+    "population": 1594
+  },
+  {
+    "nom": "Champier",
+    "slug": "champier",
+    "codeInsee": "38069",
+    "codePostal": "38260",
+    "population": 1582
+  },
+  {
+    "nom": "Bilieu",
+    "slug": "bilieu",
+    "codeInsee": "38043",
+    "codePostal": "38850",
+    "population": 1578
+  },
+  {
+    "nom": "Champagnier",
+    "slug": "champagnier",
+    "codeInsee": "38068",
+    "codePostal": "38800",
+    "population": 1557
+  },
+  {
+    "nom": "Clonas-sur-Varèze",
+    "slug": "clonas-sur-vareze",
+    "codeInsee": "38114",
+    "codePostal": "38550",
+    "population": 1535
+  },
+  {
+    "nom": "Saint-Vincent-de-Mercuze",
+    "slug": "saint-vincent-de-mercuze",
+    "codeInsee": "38466",
+    "codePostal": "38660",
+    "population": 1532
+  },
+  {
+    "nom": "Val-de-Virieu",
+    "slug": "val-de-virieu",
+    "codeInsee": "38560",
+    "codePostal": "38730",
+    "population": 1528
+  },
+  {
+    "nom": "Bouvesse-Quirieu",
+    "slug": "bouvesse-quirieu",
+    "codeInsee": "38054",
+    "codePostal": "38390",
+    "population": 1524
+  },
+  {
+    "nom": "Vernioz",
+    "slug": "vernioz",
+    "codeInsee": "38536",
+    "codePostal": "38150",
+    "population": 1521
+  },
+  {
+    "nom": "Charnècles",
+    "slug": "charnecles",
+    "codeInsee": "38084",
+    "codePostal": "38140",
+    "population": 1517
+  },
+  {
+    "nom": "Eclose-Badinières",
+    "slug": "eclose-badinieres",
+    "codeInsee": "38152",
+    "codePostal": "38300",
+    "population": 1515
+  },
+  {
+    "nom": "Salagnon",
+    "slug": "salagnon",
+    "codeInsee": "38467",
+    "codePostal": "38890",
+    "population": 1508
+  },
+  {
+    "nom": "Saint-Marcel-Bel-Accueil",
+    "slug": "saint-marcel-bel-accueil",
+    "codeInsee": "38415",
+    "codePostal": "38080",
+    "population": 1505
+  },
+  {
+    "nom": "Auberives-sur-Varèze",
+    "slug": "auberives-sur-vareze",
+    "codeInsee": "38019",
+    "codePostal": "38550",
+    "population": 1501
+  },
+  {
+    "nom": "Faverges-de-la-Tour",
+    "slug": "faverges-de-la-tour",
+    "codeInsee": "38162",
+    "codePostal": "38110",
+    "population": 1487
+  },
+  {
+    "nom": "Saint-Lattier",
+    "slug": "saint-lattier",
+    "codeInsee": "38410",
+    "codePostal": "38840",
+    "population": 1486
+  },
+  {
+    "nom": "Monestier-de-Clermont",
+    "slug": "monestier-de-clermont",
+    "codeInsee": "38242",
+    "codePostal": "38650",
+    "population": 1478
+  },
+  {
+    "nom": "Saint-Prim",
+    "slug": "saint-prim",
+    "codeInsee": "38448",
+    "codePostal": "38370",
+    "population": 1478
+  },
+  {
+    "nom": "Pierre-Châtel",
+    "slug": "pierre-chatel",
+    "codeInsee": "38304",
+    "codePostal": "38119",
+    "population": 1475
+  },
+  {
+    "nom": "Bougé-Chambalud",
+    "slug": "bouge-chambalud",
+    "codeInsee": "38051",
+    "codePostal": "38150",
+    "population": 1467
+  },
+  {
+    "nom": "Saint-Quentin-sur-Isère",
+    "slug": "saint-quentin-sur-isere",
+    "codeInsee": "38450",
+    "codePostal": "38210",
+    "population": 1466
+  },
+  {
+    "nom": "Veurey-Voroize",
+    "slug": "veurey-voroize",
+    "codeInsee": "38540",
+    "codePostal": "38113",
+    "population": 1427
+  },
+  {
+    "nom": "Herbeys",
+    "slug": "herbeys",
+    "codeInsee": "38188",
+    "codePostal": "38320",
+    "population": 1424
+  },
+  {
+    "nom": "Chimilin",
+    "slug": "chimilin",
+    "codeInsee": "38104",
+    "codePostal": "38490",
+    "population": 1417
+  },
+  {
+    "nom": "Mens",
+    "slug": "mens",
+    "codeInsee": "38226",
+    "codePostal": "38710",
+    "population": 1415
+  },
+  {
+    "nom": "Saint-Just-de-Claix",
+    "slug": "saint-just-de-claix",
+    "codeInsee": "38409",
+    "codePostal": "38680",
+    "population": 1401
+  },
+  {
+    "nom": "Vaulnaveys-le-Bas",
+    "slug": "vaulnaveys-le-bas",
+    "codeInsee": "38528",
+    "codePostal": "38410",
+    "population": 1398
+  },
+  {
+    "nom": "Revel",
+    "slug": "revel",
+    "codeInsee": "38334",
+    "codePostal": "38420",
+    "population": 1312
+  },
+  {
+    "nom": "Le Champ-près-Froges",
+    "slug": "le-champ-pres-froges",
+    "codeInsee": "38070",
+    "codePostal": "38190",
+    "population": 1289
+  },
+  {
+    "nom": "Courtenay",
+    "slug": "courtenay",
+    "codeInsee": "38135",
+    "codePostal": "38510",
+    "population": 1277
+  },
+  {
+    "nom": "Saint Antoine l'Abbaye",
+    "slug": "saint-antoine-l-abbaye",
+    "codeInsee": "38359",
+    "codePostal": "38160",
+    "population": 1263
+  },
+  {
+    "nom": "L'Albenc",
+    "slug": "l-albenc",
+    "codeInsee": "38004",
+    "codePostal": "38470",
+    "population": 1255
+  },
+  {
+    "nom": "Saint-Joseph-de-Rivière",
+    "slug": "saint-joseph-de-riviere",
+    "codeInsee": "38405",
+    "codePostal": "38134",
+    "population": 1254
+  },
+  {
+    "nom": "Livet-et-Gavet",
+    "slug": "livet-et-gavet",
+    "codeInsee": "38212",
+    "codePostal": "38220",
+    "population": 1253
+  },
+  {
+    "nom": "Agnin",
+    "slug": "agnin",
+    "codeInsee": "38003",
+    "codePostal": "38150",
+    "population": 1245
+  },
+  {
+    "nom": "Hières-sur-Amby",
+    "slug": "hieres-sur-amby",
+    "codeInsee": "38190",
+    "codePostal": "38118",
+    "population": 1245
+  },
+  {
+    "nom": "Huez",
+    "slug": "huez",
+    "codeInsee": "38191",
+    "codePostal": "38750",
+    "population": 1244
+  },
+  {
+    "nom": "Sonnay",
+    "slug": "sonnay",
+    "codeInsee": "38496",
+    "codePostal": "38150",
+    "population": 1234
+  },
+  {
+    "nom": "Marcilloles",
+    "slug": "marcilloles",
+    "codeInsee": "38218",
+    "codePostal": "38260",
+    "population": 1201
+  },
+  {
+    "nom": "Pressins",
+    "slug": "pressins",
+    "codeInsee": "38323",
+    "codePostal": "38480",
+    "population": 1194
+  },
+  {
+    "nom": "Sardieu",
+    "slug": "sardieu",
+    "codeInsee": "38473",
+    "codePostal": "38260",
+    "population": 1193
+  },
+  {
+    "nom": "Le Sappey-en-Chartreuse",
+    "slug": "le-sappey-en-chartreuse",
+    "codeInsee": "38471",
+    "codePostal": "38700",
+    "population": 1191
+  },
+  {
+    "nom": "Saint-Agnin-sur-Bion",
+    "slug": "saint-agnin-sur-bion",
+    "codeInsee": "38351",
+    "codePostal": "38300",
+    "population": 1187
+  },
+  {
+    "nom": "Saint-Aupre",
+    "slug": "saint-aupre",
+    "codeInsee": "38362",
+    "codePostal": "38960",
+    "population": 1182
+  },
+  {
+    "nom": "Montagnieu",
+    "slug": "montagnieu",
+    "codeInsee": "38246",
+    "codePostal": "38110",
+    "population": 1179
+  },
+  {
+    "nom": "Ville-sous-Anjou",
+    "slug": "ville-sous-anjou",
+    "codeInsee": "38556",
+    "codePostal": "38150",
+    "population": 1175
+  },
+  {
+    "nom": "Saint-Victor-de-Morestel",
+    "slug": "saint-victor-de-morestel",
+    "codeInsee": "38465",
+    "codePostal": "38510",
+    "population": 1168
+  },
+  {
+    "nom": "Saint-Nizier-du-Moucherotte",
+    "slug": "saint-nizier-du-moucherotte",
+    "codeInsee": "38433",
+    "codePostal": "38250",
+    "population": 1162
+  },
+  {
+    "nom": "Anthon",
+    "slug": "anthon",
+    "codeInsee": "38011",
+    "codePostal": "38280",
+    "population": 1154
+  },
+  {
+    "nom": "Saint-Cassien",
+    "slug": "saint-cassien",
+    "codeInsee": "38373",
+    "codePostal": "38500",
+    "population": 1154
+  },
+  {
+    "nom": "Villeneuve-de-Marc",
+    "slug": "villeneuve-de-marc",
+    "codeInsee": "38555",
+    "codePostal": "38440",
+    "population": 1154
+  },
+  {
+    "nom": "La Balme-les-Grottes",
+    "slug": "la-balme-les-grottes",
+    "codeInsee": "38026",
+    "codePostal": "38390",
+    "population": 1146
+  },
+  {
+    "nom": "Faramans",
+    "slug": "faramans",
+    "codeInsee": "38161",
+    "codePostal": "38260",
+    "population": 1143
+  },
+  {
+    "nom": "Jarcieu",
+    "slug": "jarcieu",
+    "codeInsee": "38198",
+    "codePostal": "38270",
+    "population": 1135
+  },
+  {
+    "nom": "Sérézin-de-la-Tour",
+    "slug": "serezin-de-la-tour",
+    "codeInsee": "38481",
+    "codePostal": "38300",
+    "population": 1135
+  },
+  {
+    "nom": "Susville",
+    "slug": "susville",
+    "codeInsee": "38499",
+    "codePostal": "38350",
+    "population": 1134
+  },
+  {
+    "nom": "Notre-Dame-de-Mésage",
+    "slug": "notre-dame-de-mesage",
+    "codeInsee": "38279",
+    "codePostal": "38220",
+    "population": 1129
+  },
+  {
+    "nom": "Bonnefamille",
+    "slug": "bonnefamille",
+    "codeInsee": "38048",
+    "codePostal": "38090",
+    "population": 1114
+  },
+  {
+    "nom": "Poliénas",
+    "slug": "polienas",
+    "codeInsee": "38310",
+    "codePostal": "38210",
+    "population": 1111
+  },
+  {
+    "nom": "Oyeu",
+    "slug": "oyeu",
+    "codeInsee": "38287",
+    "codePostal": "38690",
+    "population": 1106
+  },
+  {
+    "nom": "Beauvoir-de-Marc",
+    "slug": "beauvoir-de-marc",
+    "codeInsee": "38035",
+    "codePostal": "38440",
+    "population": 1098
+  },
+  {
+    "nom": "Meyrié",
+    "slug": "meyrie",
+    "codeInsee": "38230",
+    "codePostal": "38300",
+    "population": 1096
+  },
+  {
+    "nom": "Roybon",
+    "slug": "roybon",
+    "codeInsee": "38347",
+    "codePostal": "38940",
+    "population": 1091
+  },
+  {
+    "nom": "Rochetoirin",
+    "slug": "rochetoirin",
+    "codeInsee": "38341",
+    "codePostal": "38110",
+    "population": 1090
+  },
+  {
+    "nom": "La Frette",
+    "slug": "la-frette",
+    "codeInsee": "38174",
+    "codePostal": "38260",
+    "population": 1083
+  },
+  {
+    "nom": "Les Adrets",
+    "slug": "les-adrets",
+    "codeInsee": "38002",
+    "codePostal": "38190",
+    "population": 1079
+  },
+  {
+    "nom": "Cheyssieu",
+    "slug": "cheyssieu",
+    "codeInsee": "38101",
+    "codePostal": "38550",
+    "population": 1074
+  },
+  {
+    "nom": "La Sure en Chartreuse",
+    "slug": "la-sure-en-chartreuse",
+    "codeInsee": "38407",
+    "codePostal": "38134",
+    "population": 1072
+  },
+  {
+    "nom": "Saint-Blaise-du-Buis",
+    "slug": "saint-blaise-du-buis",
+    "codeInsee": "38368",
+    "codePostal": "38140",
+    "population": 1062
+  },
+  {
+    "nom": "Revel-Tourdan",
+    "slug": "revel-tourdan",
+    "codeInsee": "38335",
+    "codePostal": "38270",
+    "population": 1050
+  },
+  {
+    "nom": "Bévenais",
+    "slug": "bevenais",
+    "codeInsee": "38042",
+    "codePostal": "38690",
+    "population": 1049
+  },
+  {
+    "nom": "Sainte-Blandine",
+    "slug": "sainte-blandine",
+    "codeInsee": "38369",
+    "codePostal": "38110",
+    "population": 1039
+  },
+  {
+    "nom": "Pajay",
+    "slug": "pajay",
+    "codeInsee": "38291",
+    "codePostal": "38260",
+    "population": 1036
+  },
+  {
+    "nom": "Anjou",
+    "slug": "anjou",
+    "codeInsee": "38009",
+    "codePostal": "38150",
+    "population": 1031
+  },
+  {
+    "nom": "Laval-en-Belledonne",
+    "slug": "laval-en-belledonne",
+    "codeInsee": "38206",
+    "codePostal": "38190",
+    "population": 1029
+  },
+  {
+    "nom": "Bizonnes",
+    "slug": "bizonnes",
+    "codeInsee": "38046",
+    "codePostal": "38690",
+    "population": 1028
+  },
+  {
+    "nom": "Les Éparres",
+    "slug": "les-eparres",
+    "codeInsee": "38156",
+    "codePostal": "38300",
+    "population": 1028
+  },
+  {
+    "nom": "Meyrieu-les-Étangs",
+    "slug": "meyrieu-les-etangs",
+    "codeInsee": "38231",
+    "codePostal": "38440",
+    "population": 1024
+  },
+  {
+    "nom": "Vignieu",
+    "slug": "vignieu",
+    "codeInsee": "38546",
+    "codePostal": "38890",
+    "population": 1024
+  },
+  {
+    "nom": "Réaumont",
+    "slug": "reaumont",
+    "codeInsee": "38331",
+    "codePostal": "38140",
+    "population": 1019
+  },
+  {
+    "nom": "Gillonnay",
+    "slug": "gillonnay",
+    "codeInsee": "38180",
+    "codePostal": "38260",
+    "population": 1009
+  },
+  {
+    "nom": "Bellegarde-Poussieu",
+    "slug": "bellegarde-poussieu",
+    "codeInsee": "38037",
+    "codePostal": "38270",
+    "population": 1007
+  },
+  {
+    "nom": "Saint-Pierre-de-Chartreuse",
+    "slug": "saint-pierre-de-chartreuse",
+    "codeInsee": "38442",
+    "codePostal": "38380",
+    "population": 1003
+  },
+  {
+    "nom": "Montseveroux",
+    "slug": "montseveroux",
+    "codeInsee": "38259",
+    "codePostal": "38122",
+    "population": 999
+  },
+  {
+    "nom": "Séchilienne",
+    "slug": "sechilienne",
+    "codeInsee": "38478",
+    "codePostal": "38220",
+    "population": 993
+  },
+  {
+    "nom": "Chozeau",
+    "slug": "chozeau",
+    "codeInsee": "38109",
+    "codePostal": "38460",
+    "population": 987
+  },
+  {
+    "nom": "Le Passage",
+    "slug": "le-passage",
+    "codeInsee": "38296",
+    "codePostal": "38490",
+    "population": 983
+  },
+  {
+    "nom": "Allemond",
+    "slug": "allemond",
+    "codeInsee": "38005",
+    "codePostal": "38114",
+    "population": 971
+  },
+  {
+    "nom": "Saint-Jean-d'Avelanne",
+    "slug": "saint-jean-d-avelanne",
+    "codeInsee": "38398",
+    "codePostal": "38480",
+    "population": 969
+  },
+  {
+    "nom": "Vénérieu",
+    "slug": "venerieu",
+    "codeInsee": "38532",
+    "codePostal": "38460",
+    "population": 968
+  },
+  {
+    "nom": "Saint-Alban-du-Rhône",
+    "slug": "saint-alban-du-rhone",
+    "codeInsee": "38353",
+    "codePostal": "38370",
+    "population": 965
+  },
+  {
+    "nom": "Saint-Sorlin-de-Vienne",
+    "slug": "saint-sorlin-de-vienne",
+    "codeInsee": "38459",
+    "codePostal": "38200",
+    "population": 964
+  },
+  {
+    "nom": "Quaix-en-Chartreuse",
+    "slug": "quaix-en-chartreuse",
+    "codeInsee": "38328",
+    "codePostal": "38950",
+    "population": 943
+  },
+  {
+    "nom": "Saint-Nicolas-de-Macherin",
+    "slug": "saint-nicolas-de-macherin",
+    "codeInsee": "38432",
+    "codePostal": "38500",
+    "population": 937
+  },
+  {
+    "nom": "Saint-Barthélemy",
+    "slug": "saint-barthelemy",
+    "codeInsee": "38363",
+    "codePostal": "38270",
+    "population": 923
+  },
+  {
+    "nom": "Cour-et-Buis",
+    "slug": "cour-et-buis",
+    "codeInsee": "38134",
+    "codePostal": "38122",
+    "population": 920
+  },
+  {
+    "nom": "Leyrieu",
+    "slug": "leyrieu",
+    "codeInsee": "38210",
+    "codePostal": "38460",
+    "population": 919
+  },
+  {
+    "nom": "Murianette",
+    "slug": "murianette",
+    "codeInsee": "38271",
+    "codePostal": "38420",
+    "population": 910
+  },
+  {
+    "nom": "Soleymieu",
+    "slug": "soleymieu",
+    "codeInsee": "38494",
+    "codePostal": "38460",
+    "population": 895
+  },
+  {
+    "nom": "Savas-Mépin",
+    "slug": "savas-mepin",
+    "codeInsee": "38476",
+    "codePostal": "38440",
+    "population": 883
+  },
+  {
+    "nom": "Varacieux",
+    "slug": "varacieux",
+    "codeInsee": "38523",
+    "codePostal": "38470",
+    "population": 881
+  },
+  {
+    "nom": "Doissin",
+    "slug": "doissin",
+    "codeInsee": "38147",
+    "codePostal": "38730",
+    "population": 876
+  },
+  {
+    "nom": "Ornacieux-Balbins",
+    "slug": "ornacieux-balbins",
+    "codeInsee": "38284",
+    "codePostal": "38260",
+    "population": 876
+  },
+  {
+    "nom": "Optevoz",
+    "slug": "optevoz",
+    "codeInsee": "38282",
+    "codePostal": "38460",
+    "population": 875
+  },
+  {
+    "nom": "Pact",
+    "slug": "pact",
+    "codeInsee": "38290",
+    "codePostal": "38270",
+    "population": 863
+  },
+  {
+    "nom": "Saint-Baudille-de-la-Tour",
+    "slug": "saint-baudille-de-la-tour",
+    "codeInsee": "38365",
+    "codePostal": "38118",
+    "population": 849
+  },
+  {
+    "nom": "Saint-Christophe-sur-Guiers",
+    "slug": "saint-christophe-sur-guiers",
+    "codeInsee": "38376",
+    "codePostal": "38380",
+    "population": 847
+  },
+  {
+    "nom": "Venon",
+    "slug": "venon",
+    "codeInsee": "38533",
+    "codePostal": "38610",
+    "population": 841
+  },
+  {
+    "nom": "Torchefelon",
+    "slug": "torchefelon",
+    "codeInsee": "38508",
+    "codePostal": "38690",
+    "population": 838
+  },
+  {
+    "nom": "Dizimieu",
+    "slug": "dizimieu",
+    "codeInsee": "38146",
+    "codePostal": "38460",
+    "population": 835
+  },
+  {
+    "nom": "Saint-Honoré",
+    "slug": "saint-honore",
+    "codeInsee": "38396",
+    "codePostal": "38350",
+    "population": 830
+  },
+  {
+    "nom": "La Buissière",
+    "slug": "la-buissiere",
+    "codeInsee": "38062",
+    "codePostal": "38530",
+    "population": 827
+  },
+  {
+    "nom": "Mottier",
+    "slug": "mottier",
+    "codeInsee": "38267",
+    "codePostal": "38260",
+    "population": 825
+  },
+  {
+    "nom": "Tramolé",
+    "slug": "tramole",
+    "codeInsee": "38512",
+    "codePostal": "38300",
+    "population": 810
+  },
+  {
+    "nom": "Izeron",
+    "slug": "izeron",
+    "codeInsee": "38195",
+    "codePostal": "38160",
+    "population": 809
+  },
+  {
+    "nom": "Pont-en-Royans",
+    "slug": "pont-en-royans",
+    "codeInsee": "38319",
+    "codePostal": "38680",
+    "population": 805
+  },
+  {
+    "nom": "Thodure",
+    "slug": "thodure",
+    "codeInsee": "38505",
+    "codePostal": "38260",
+    "population": 795
+  },
+  {
+    "nom": "Culin",
+    "slug": "culin",
+    "codeInsee": "38141",
+    "codePostal": "38300",
+    "population": 790
+  },
+  {
+    "nom": "Saint-Pierre-de-Bressieux",
+    "slug": "saint-pierre-de-bressieux",
+    "codeInsee": "38440",
+    "codePostal": "38870",
+    "population": 786
+  },
+  {
+    "nom": "Saint-Pierre-de-Mésage",
+    "slug": "saint-pierre-de-mesage",
+    "codeInsee": "38445",
+    "codePostal": "38220",
+    "population": 784
+  },
+  {
+    "nom": "Succieu",
+    "slug": "succieu",
+    "codeInsee": "38498",
+    "codePostal": "38300",
+    "population": 777
+  },
+  {
+    "nom": "Massieu",
+    "slug": "massieu",
+    "codeInsee": "38222",
+    "codePostal": "38620",
+    "population": 773
+  },
+  {
+    "nom": "Monsteroux-Milieu",
+    "slug": "monsteroux-milieu",
+    "codeInsee": "38244",
+    "codePostal": "38122",
+    "population": 768
+  },
+  {
+    "nom": "Sainte-Anne-sur-Gervonde",
+    "slug": "sainte-anne-sur-gervonde",
+    "codeInsee": "38358",
+    "codePostal": "38440",
+    "population": 759
+  },
+  {
+    "nom": "La Chapelle-de-Surieu",
+    "slug": "la-chapelle-de-surieu",
+    "codeInsee": "38077",
+    "codePostal": "38150",
+    "population": 757
+  },
+  {
+    "nom": "Saint-Martin-de-la-Cluze",
+    "slug": "saint-martin-de-la-cluze",
+    "codeInsee": "38115",
+    "codePostal": "38650",
+    "population": 754
+  },
+  {
+    "nom": "Moissieu-sur-Dolon",
+    "slug": "moissieu-sur-dolon",
+    "codeInsee": "38240",
+    "codePostal": "38270",
+    "population": 747
+  },
+  {
+    "nom": "La Combe-de-Lancey",
+    "slug": "la-combe-de-lancey",
+    "codeInsee": "38120",
+    "codePostal": "38190",
+    "population": 745
+  },
+  {
+    "nom": "Chevrières",
+    "slug": "chevrieres",
+    "codeInsee": "38099",
+    "codePostal": "38160",
+    "population": 742
+  },
+  {
+    "nom": "Charancieu",
+    "slug": "charancieu",
+    "codeInsee": "38080",
+    "codePostal": "38490",
+    "population": 738
+  },
+  {
+    "nom": "Châteauvilain",
+    "slug": "chateauvilain",
+    "codeInsee": "38091",
+    "codePostal": "38300",
+    "population": 737
+  },
+  {
+    "nom": "Chélieu",
+    "slug": "chelieu",
+    "codeInsee": "38098",
+    "codePostal": "38730",
+    "population": 733
+  },
+  {
+    "nom": "Pommier-de-Beaurepaire",
+    "slug": "pommier-de-beaurepaire",
+    "codeInsee": "38311",
+    "codePostal": "38260",
+    "population": 731
+  },
+  {
+    "nom": "Sinard",
+    "slug": "sinard",
+    "codeInsee": "38492",
+    "codePostal": "38650",
+    "population": 724
+  },
+  {
+    "nom": "Parmilieu",
+    "slug": "parmilieu",
+    "codeInsee": "38295",
+    "codePostal": "38390",
+    "population": 723
+  },
+  {
+    "nom": "La Rivière",
+    "slug": "la-riviere",
+    "codeInsee": "38338",
+    "codePostal": "38210",
+    "population": 720
+  },
+  {
+    "nom": "Annoisin-Chatelans",
+    "slug": "annoisin-chatelans",
+    "codeInsee": "38010",
+    "codePostal": "38460",
+    "population": 719
+  },
+  {
+    "nom": "Saint-Bueil",
+    "slug": "saint-bueil",
+    "codeInsee": "38372",
+    "codePostal": "38620",
+    "population": 716
+  },
+  {
+    "nom": "Panossas",
+    "slug": "panossas",
+    "codeInsee": "38294",
+    "codePostal": "38460",
+    "population": 696
+  },
+  {
+    "nom": "Saint-Maximin",
+    "slug": "saint-maximin",
+    "codeInsee": "38426",
+    "codePostal": "38530",
+    "population": 689
+  },
+  {
+    "nom": "Primarette",
+    "slug": "primarette",
+    "codeInsee": "38324",
+    "codePostal": "38270",
+    "population": 686
+  },
+  {
+    "nom": "Meyssiez",
+    "slug": "meyssiez",
+    "codeInsee": "38232",
+    "codePostal": "38440",
+    "population": 671
+  },
+  {
+    "nom": "Saint-Ondras",
+    "slug": "saint-ondras",
+    "codeInsee": "38434",
+    "codePostal": "38490",
+    "population": 668
+  },
+  {
+    "nom": "Valencogne",
+    "slug": "valencogne",
+    "codeInsee": "38520",
+    "codePostal": "38730",
+    "population": 666
+  },
+  {
+    "nom": "La Pierre",
+    "slug": "la-pierre",
+    "codeInsee": "38303",
+    "codePostal": "38570",
+    "population": 664
+  },
+  {
+    "nom": "Bresson",
+    "slug": "bresson",
+    "codeInsee": "38057",
+    "codePostal": "38320",
+    "population": 663
+  },
+  {
+    "nom": "Le Bouchage",
+    "slug": "le-bouchage",
+    "codeInsee": "38050",
+    "codePostal": "38510",
+    "population": 655
+  },
+  {
+    "nom": "Saint-Bonnet-de-Chavagne",
+    "slug": "saint-bonnet-de-chavagne",
+    "codeInsee": "38370",
+    "codePostal": "38840",
+    "population": 655
+  },
+  {
+    "nom": "Chèzeneuve",
+    "slug": "chezeneuve",
+    "codeInsee": "38102",
+    "codePostal": "38300",
+    "population": 654
+  },
+  {
+    "nom": "Belmont",
+    "slug": "belmont",
+    "codeInsee": "38038",
+    "codePostal": "38690",
+    "population": 636
+  },
+  {
+    "nom": "Beaulieu",
+    "slug": "beaulieu",
+    "codeInsee": "38033",
+    "codePostal": "38470",
+    "population": 635
+  },
+  {
+    "nom": "La Sône",
+    "slug": "la-sone",
+    "codeInsee": "38495",
+    "codePostal": "38840",
+    "population": 634
+  },
+  {
+    "nom": "Cognin-les-Gorges",
+    "slug": "cognin-les-gorges",
+    "codeInsee": "38117",
+    "codePostal": "38470",
+    "population": 615
+  },
+  {
+    "nom": "Brangues",
+    "slug": "brangues",
+    "codeInsee": "38055",
+    "codePostal": "38510",
+    "population": 614
+  },
+  {
+    "nom": "Montcarra",
+    "slug": "montcarra",
+    "codeInsee": "38250",
+    "codePostal": "38890",
+    "population": 612
+  },
+  {
+    "nom": "Saint-Théoffrey",
+    "slug": "saint-theoffrey",
+    "codeInsee": "38462",
+    "codePostal": "38119",
+    "population": 612
+  },
+  {
+    "nom": "Saint-Sorlin-de-Morestel",
+    "slug": "saint-sorlin-de-morestel",
+    "codeInsee": "38458",
+    "codePostal": "38510",
+    "population": 610
+  },
+  {
+    "nom": "Siccieu-Saint-Julien-et-Carisieu",
+    "slug": "siccieu-saint-julien-et-carisieu",
+    "codeInsee": "38488",
+    "codePostal": "38460",
+    "population": 609
+  },
+  {
+    "nom": "Vertrieu",
+    "slug": "vertrieu",
+    "codeInsee": "38539",
+    "codePostal": "38390",
+    "population": 608
+  },
+  {
+    "nom": "Rovon",
+    "slug": "rovon",
+    "codeInsee": "38345",
+    "codePostal": "38470",
+    "population": 605
+  },
+  {
+    "nom": "Saint-Hilaire-de-Brens",
+    "slug": "saint-hilaire-de-brens",
+    "codeInsee": "38392",
+    "codePostal": "38460",
+    "population": 603
+  },
+  {
+    "nom": "Crachier",
+    "slug": "crachier",
+    "codeInsee": "38136",
+    "codePostal": "38300",
+    "population": 600
+  },
+  {
+    "nom": "Marcollin",
+    "slug": "marcollin",
+    "codeInsee": "38219",
+    "codePostal": "38270",
+    "population": 599
+  },
+  {
+    "nom": "Clelles",
+    "slug": "clelles",
+    "codeInsee": "38113",
+    "codePostal": "38930",
+    "population": 596
+  },
+  {
+    "nom": "Têche",
+    "slug": "teche",
+    "codeInsee": "38500",
+    "codePostal": "38470",
+    "population": 596
+  },
+  {
+    "nom": "Longechenal",
+    "slug": "longechenal",
+    "codeInsee": "38213",
+    "codePostal": "38690",
+    "population": 593
+  },
+  {
+    "nom": "Saint-Pierre-d'Entremont",
+    "slug": "saint-pierre-d-entremont",
+    "codeInsee": "38446",
+    "codePostal": "38380",
+    "population": 581
+  },
+  {
+    "nom": "Flachères",
+    "slug": "flacheres",
+    "codeInsee": "38167",
+    "codePostal": "38690",
+    "population": 579
+  },
+  {
+    "nom": "Beaufort",
+    "slug": "beaufort",
+    "codeInsee": "38032",
+    "codePostal": "38270",
+    "population": 573
+  },
+  {
+    "nom": "Velanne",
+    "slug": "velanne",
+    "codeInsee": "38531",
+    "codePostal": "38620",
+    "population": 572
+  },
+  {
+    "nom": "Sainte-Agnès",
+    "slug": "sainte-agnes",
+    "codeInsee": "38350",
+    "codePostal": "38190",
+    "population": 548
+  },
+  {
+    "nom": "Eydoche",
+    "slug": "eydoche",
+    "codeInsee": "38159",
+    "codePostal": "38690",
+    "population": 543
+  },
+  {
+    "nom": "La Chapelle-du-Bard",
+    "slug": "la-chapelle-du-bard",
+    "codeInsee": "38078",
+    "codePostal": "38580",
+    "population": 541
+  },
+  {
+    "nom": "Saint-Gervais",
+    "slug": "saint-gervais",
+    "codeInsee": "38390",
+    "codePostal": "38470",
+    "population": 538
+  },
+  {
+    "nom": "Saint-Jean-de-Vaulx",
+    "slug": "saint-jean-de-vaulx",
+    "codeInsee": "38402",
+    "codePostal": "38220",
+    "population": 536
+  },
+  {
+    "nom": "Notre-Dame-de-l'Osier",
+    "slug": "notre-dame-de-l-osier",
+    "codeInsee": "38278",
+    "codePostal": "38470",
+    "population": 535
+  },
+  {
+    "nom": "Montaud",
+    "slug": "montaud",
+    "codeInsee": "38248",
+    "codePostal": "38210",
+    "population": 530
+  },
+  {
+    "nom": "Pisieu",
+    "slug": "pisieu",
+    "codeInsee": "38307",
+    "codePostal": "38270",
+    "population": 524
+  },
+  {
+    "nom": "Proveysieux",
+    "slug": "proveysieux",
+    "codeInsee": "38325",
+    "codePostal": "38120",
+    "population": 522
+  },
+  {
+    "nom": "Moras",
+    "slug": "moras",
+    "codeInsee": "38260",
+    "codePostal": "38460",
+    "population": 520
+  },
+  {
+    "nom": "Valbonnais",
+    "slug": "valbonnais",
+    "codeInsee": "38518",
+    "codePostal": "38740",
+    "population": 520
+  },
+  {
+    "nom": "Granieu",
+    "slug": "granieu",
+    "codeInsee": "38183",
+    "codePostal": "38490",
+    "population": 519
+  },
+  {
+    "nom": "Notre-Dame-de-Commiers",
+    "slug": "notre-dame-de-commiers",
+    "codeInsee": "38277",
+    "codePostal": "38450",
+    "population": 519
+  },
+  {
+    "nom": "Notre-Dame-de-Vaulx",
+    "slug": "notre-dame-de-vaulx",
+    "codeInsee": "38280",
+    "codePostal": "38144",
+    "population": 512
+  },
+  {
+    "nom": "Monteynard",
+    "slug": "monteynard",
+    "codeInsee": "38254",
+    "codePostal": "38770",
+    "population": 502
+  },
+  {
+    "nom": "Saint-Geoirs",
+    "slug": "saint-geoirs",
+    "codeInsee": "38387",
+    "codePostal": "38590",
+    "population": 498
+  },
+  {
+    "nom": "Châtel-en-Trièves",
+    "slug": "chatel-en-trieves",
+    "codeInsee": "38456",
+    "codePostal": "38710",
+    "population": 491
+  },
+  {
+    "nom": "Sainte-Marie-d'Alloix",
+    "slug": "sainte-marie-d-alloix",
+    "codeInsee": "38417",
+    "codePostal": "38660",
+    "population": 486
+  },
+  {
+    "nom": "Nantes-en-Ratier",
+    "slug": "nantes-en-ratier",
+    "codeInsee": "38273",
+    "codePostal": "38350",
+    "population": 476
+  },
+  {
+    "nom": "Saint-Romain-de-Surieu",
+    "slug": "saint-romain-de-surieu",
+    "codeInsee": "38452",
+    "codePostal": "38150",
+    "population": 468
+  },
+  {
+    "nom": "Laffrey",
+    "slug": "laffrey",
+    "codeInsee": "38203",
+    "codePostal": "38220",
+    "population": 466
+  },
+  {
+    "nom": "Merlas",
+    "slug": "merlas",
+    "codeInsee": "38228",
+    "codePostal": "38620",
+    "population": 465
+  },
+  {
+    "nom": "Saint-Pierre-de-Chérennes",
+    "slug": "saint-pierre-de-cherennes",
+    "codeInsee": "38443",
+    "codePostal": "38160",
+    "population": 461
+  },
+  {
+    "nom": "Vasselin",
+    "slug": "vasselin",
+    "codeInsee": "38525",
+    "codePostal": "38890",
+    "population": 458
+  },
+  {
+    "nom": "Le Haut-Bréda",
+    "slug": "le-haut-breda",
+    "codeInsee": "38163",
+    "codePostal": "38580",
+    "population": 456
+  },
+  {
+    "nom": "Chamrousse",
+    "slug": "chamrousse",
+    "codeInsee": "38567",
+    "codePostal": "38410",
+    "population": 453
+  },
+  {
+    "nom": "Montrevel",
+    "slug": "montrevel",
+    "codeInsee": "38257",
+    "codePostal": "38690",
+    "population": 452
+  },
+  {
+    "nom": "La Flachère",
+    "slug": "la-flachere",
+    "codeInsee": "38166",
+    "codePostal": "38530",
+    "population": 449
+  },
+  {
+    "nom": "La Motte-Saint-Martin",
+    "slug": "la-motte-saint-martin",
+    "codeInsee": "38266",
+    "codePostal": "38770",
+    "population": 448
+  },
+  {
+    "nom": "Charette",
+    "slug": "charette",
+    "codeInsee": "38083",
+    "codePostal": "38390",
+    "population": 445
+  },
+  {
+    "nom": "Miribel-Lanchâtre",
+    "slug": "miribel-lanchatre",
+    "codeInsee": "38235",
+    "codePostal": "38450",
+    "population": 445
+  },
+  {
+    "nom": "Chasselay",
+    "slug": "chasselay",
+    "codeInsee": "38086",
+    "codePostal": "38470",
+    "population": 444
+  },
+  {
+    "nom": "Châtenay",
+    "slug": "chatenay",
+    "codeInsee": "38093",
+    "codePostal": "38980",
+    "population": 433
+  },
+  {
+    "nom": "Burcin",
+    "slug": "burcin",
+    "codeInsee": "38063",
+    "codePostal": "38690",
+    "population": 430
+  },
+  {
+    "nom": "Royas",
+    "slug": "royas",
+    "codeInsee": "38346",
+    "codePostal": "38440",
+    "population": 427
+  },
+  {
+    "nom": "Saint-Sulpice-des-Rivoires",
+    "slug": "saint-sulpice-des-rivoires",
+    "codeInsee": "38460",
+    "codePostal": "38620",
+    "population": 425
+  },
+  {
+    "nom": "Saint-Barthélemy-de-Séchilienne",
+    "slug": "saint-barthelemy-de-sechilienne",
+    "codeInsee": "38364",
+    "codePostal": "38220",
+    "population": 423
+  },
+  {
+    "nom": "Engins",
+    "slug": "engins",
+    "codeInsee": "38153",
+    "codePostal": "38360",
+    "population": 422
+  },
+  {
+    "nom": "Saint-Laurent-en-Beaumont",
+    "slug": "saint-laurent-en-beaumont",
+    "codeInsee": "38413",
+    "codePostal": "38350",
+    "population": 422
+  },
+  {
+    "nom": "Corps",
+    "slug": "corps",
+    "codeInsee": "38128",
+    "codePostal": "38970",
+    "population": 421
+  },
+  {
+    "nom": "Saint-Albin-de-Vaulserre",
+    "slug": "saint-albin-de-vaulserre",
+    "codeInsee": "38354",
+    "codePostal": "38480",
+    "population": 420
+  },
+  {
+    "nom": "Murinais",
+    "slug": "murinais",
+    "codeInsee": "38272",
+    "codePostal": "38160",
+    "population": 412
+  },
+  {
+    "nom": "Cras",
+    "slug": "cras",
+    "codeInsee": "38137",
+    "codePostal": "38210",
+    "population": 407
+  },
+  {
+    "nom": "Chantesse",
+    "slug": "chantesse",
+    "codeInsee": "38074",
+    "codePostal": "38470",
+    "population": 397
+  },
+  {
+    "nom": "Villard-Saint-Christophe",
+    "slug": "villard-saint-christophe",
+    "codeInsee": "38552",
+    "codePostal": "38119",
+    "population": 397
+  },
+  {
+    "nom": "Saint-Appolinard",
+    "slug": "saint-appolinard",
+    "codeInsee": "38360",
+    "codePostal": "38160",
+    "population": 395
+  },
+  {
+    "nom": "Penol",
+    "slug": "penol",
+    "codeInsee": "38300",
+    "codePostal": "38260",
+    "population": 381
+  },
+  {
+    "nom": "Prunières",
+    "slug": "prunieres",
+    "codeInsee": "38326",
+    "codePostal": "38350",
+    "population": 381
+  },
+  {
+    "nom": "Corrençon-en-Vercors",
+    "slug": "correncon-en-vercors",
+    "codeInsee": "38129",
+    "codePostal": "38250",
+    "population": 374
+  },
+  {
+    "nom": "Vatilieu",
+    "slug": "vatilieu",
+    "codeInsee": "38526",
+    "codePostal": "38470",
+    "population": 373
+  },
+  {
+    "nom": "Auberives-en-Royans",
+    "slug": "auberives-en-royans",
+    "codeInsee": "38018",
+    "codePostal": "38680",
+    "population": 367
+  },
+  {
+    "nom": "Morette",
+    "slug": "morette",
+    "codeInsee": "38263",
+    "codePostal": "38210",
+    "population": 358
+  },
+  {
+    "nom": "Rencurel",
+    "slug": "rencurel",
+    "codeInsee": "38333",
+    "codePostal": "38680",
+    "population": 358
+  },
+  {
+    "nom": "Vaujany",
+    "slug": "vaujany",
+    "codeInsee": "38527",
+    "codePostal": "38114",
+    "population": 357
+  },
+  {
+    "nom": "La Salle-en-Beaumont",
+    "slug": "la-salle-en-beaumont",
+    "codeInsee": "38470",
+    "codePostal": "38350",
+    "population": 355
+  },
+  {
+    "nom": "Montchaboud",
+    "slug": "montchaboud",
+    "codeInsee": "38252",
+    "codePostal": "38220",
+    "population": 352
+  },
+  {
+    "nom": "Gresse-en-Vercors",
+    "slug": "gresse-en-vercors",
+    "codeInsee": "38186",
+    "codePostal": "38650",
+    "population": 351
+  },
+  {
+    "nom": "Lieudieu",
+    "slug": "lieudieu",
+    "codeInsee": "38211",
+    "codePostal": "38440",
+    "population": 345
+  },
+  {
+    "nom": "Saint-André-en-Royans",
+    "slug": "saint-andre-en-royans",
+    "codeInsee": "38356",
+    "codePostal": "38680",
+    "population": 342
+  },
+  {
+    "nom": "Saint-Mury-Monteymond",
+    "slug": "saint-mury-monteymond",
+    "codeInsee": "38430",
+    "codePostal": "38190",
+    "population": 342
+  },
+  {
+    "nom": "Saint-Didier-de-Bizonnes",
+    "slug": "saint-didier-de-bizonnes",
+    "codeInsee": "38380",
+    "codePostal": "38690",
+    "population": 341
+  },
+  {
+    "nom": "Cholonge",
+    "slug": "cholonge",
+    "codeInsee": "38106",
+    "codePostal": "38220",
+    "population": 339
+  },
+  {
+    "nom": "La Forteresse",
+    "slug": "la-forteresse",
+    "codeInsee": "38171",
+    "codePostal": "38590",
+    "population": 338
+  },
+  {
+    "nom": "Chichilianne",
+    "slug": "chichilianne",
+    "codeInsee": "38103",
+    "codePostal": "38930",
+    "population": 336
+  },
+  {
+    "nom": "Veyssilieu",
+    "slug": "veyssilieu",
+    "codeInsee": "38542",
+    "codePostal": "38460",
+    "population": 328
+  },
+  {
+    "nom": "Bossieu",
+    "slug": "bossieu",
+    "codeInsee": "38049",
+    "codePostal": "38260",
+    "population": 326
+  },
+  {
+    "nom": "Roissard",
+    "slug": "roissard",
+    "codeInsee": "38342",
+    "codePostal": "38650",
+    "population": 324
+  },
+  {
+    "nom": "Saint-Jean-d'Hérans",
+    "slug": "saint-jean-d-herans",
+    "codeInsee": "38403",
+    "codePostal": "38710",
+    "population": 318
+  },
+  {
+    "nom": "Serre-Nerpol",
+    "slug": "serre-nerpol",
+    "codeInsee": "38275",
+    "codePostal": "38470",
+    "population": 307
+  },
+  {
+    "nom": "Saint-Paul-d'Izeaux",
+    "slug": "saint-paul-d-izeaux",
+    "codeInsee": "38437",
+    "codePostal": "38140",
+    "population": 307
+  },
+  {
+    "nom": "Plan",
+    "slug": "plan",
+    "codeInsee": "38308",
+    "codePostal": "38590",
+    "population": 300
+  },
+  {
+    "nom": "Château-Bernard",
+    "slug": "chateau-bernard",
+    "codeInsee": "38090",
+    "codePostal": "38650",
+    "population": 295
+  },
+  {
+    "nom": "Ponsonnas",
+    "slug": "ponsonnas",
+    "codeInsee": "38313",
+    "codePostal": "38350",
+    "population": 288
+  },
+  {
+    "nom": "Saint-Paul-lès-Monestier",
+    "slug": "saint-paul-les-monestier",
+    "codeInsee": "38438",
+    "codePostal": "38650",
+    "population": 288
+  },
+  {
+    "nom": "Saint-Michel-les-Portes",
+    "slug": "saint-michel-les-portes",
+    "codeInsee": "38429",
+    "codePostal": "38650",
+    "population": 285
+  },
+  {
+    "nom": "Saint-Michel-de-Saint-Geoirs",
+    "slug": "saint-michel-de-saint-geoirs",
+    "codeInsee": "38427",
+    "codePostal": "38590",
+    "population": 281
+  },
+  {
+    "nom": "Saint-Jean-le-Vieux",
+    "slug": "saint-jean-le-vieux",
+    "codeInsee": "38404",
+    "codePostal": "38420",
+    "population": 280
+  },
+  {
+    "nom": "Montagne",
+    "slug": "montagne",
+    "codeInsee": "38245",
+    "codePostal": "38160",
+    "population": 273
+  },
+  {
+    "nom": "Vernas",
+    "slug": "vernas",
+    "codeInsee": "38535",
+    "codePostal": "38460",
+    "population": 268
+  },
+  {
+    "nom": "Saint-Clair-sur-Galaure",
+    "slug": "saint-clair-sur-galaure",
+    "codeInsee": "38379",
+    "codePostal": "38940",
+    "population": 265
+  },
+  {
+    "nom": "Sarcenas",
+    "slug": "sarcenas",
+    "codeInsee": "38472",
+    "codePostal": "38700",
+    "population": 261
+  },
+  {
+    "nom": "Le Freney-d'Oisans",
+    "slug": "le-freney-d-oisans",
+    "codeInsee": "38173",
+    "codePostal": "38142",
+    "population": 260
+  },
+  {
+    "nom": "Saint-Baudille-et-Pipet",
+    "slug": "saint-baudille-et-pipet",
+    "codeInsee": "38366",
+    "codePostal": "38710",
+    "population": 256
+  },
+  {
+    "nom": "Monestier-du-Percy",
+    "slug": "monestier-du-percy",
+    "codeInsee": "38243",
+    "codePostal": "38930",
+    "population": 254
+  },
+  {
+    "nom": "Le Moutaret",
+    "slug": "le-moutaret",
+    "codeInsee": "38268",
+    "codePostal": "38580",
+    "population": 250
+  },
+  {
+    "nom": "Treffort",
+    "slug": "treffort",
+    "codeInsee": "38513",
+    "codePostal": "38650",
+    "population": 249
+  },
+  {
+    "nom": "Saint-Martin-de-Vaulserre",
+    "slug": "saint-martin-de-vaulserre",
+    "codeInsee": "38420",
+    "codePostal": "38480",
+    "population": 246
+  },
+  {
+    "nom": "Voissant",
+    "slug": "voissant",
+    "codeInsee": "38564",
+    "codePostal": "38620",
+    "population": 246
+  },
+  {
+    "nom": "Sainte-Marie-du-Mont",
+    "slug": "sainte-marie-du-mont",
+    "codeInsee": "38418",
+    "codePostal": "38660",
+    "population": 243
+  },
+  {
+    "nom": "Lentiol",
+    "slug": "lentiol",
+    "codeInsee": "38209",
+    "codePostal": "38270",
+    "population": 242
+  },
+  {
+    "nom": "Saint-Guillaume",
+    "slug": "saint-guillaume",
+    "codeInsee": "38391",
+    "codePostal": "38650",
+    "population": 238
+  },
+  {
+    "nom": "Hurtières",
+    "slug": "hurtieres",
+    "codeInsee": "38192",
+    "codePostal": "38570",
+    "population": 233
+  },
+  {
+    "nom": "Chassignieu",
+    "slug": "chassignieu",
+    "codeInsee": "38089",
+    "codePostal": "38730",
+    "population": 225
+  },
+  {
+    "nom": "Entraigues",
+    "slug": "entraigues",
+    "codeInsee": "38154",
+    "codePostal": "38740",
+    "population": 225
+  },
+  {
+    "nom": "Oz",
+    "slug": "oz",
+    "codeInsee": "38289",
+    "codePostal": "38114",
+    "population": 217
+  },
+  {
+    "nom": "Chantepérier",
+    "slug": "chanteperier",
+    "codeInsee": "38073",
+    "codePostal": "38740",
+    "population": 213
+  },
+  {
+    "nom": "Avignonet",
+    "slug": "avignonet",
+    "codeInsee": "38023",
+    "codePostal": "38650",
+    "population": 203
+  }
+]
