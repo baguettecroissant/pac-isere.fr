@@ -240,7 +240,6 @@
 </style>
 
 <script>
-  // Script executes in the browser client
   document.addEventListener('DOMContentLoaded', () => {
     const backdrop = document.getElementById('exit-intent-backdrop');
     const closeBtn = document.getElementById('close-modal-btn');
@@ -249,20 +248,20 @@
 
     if (!backdrop) return;
 
-    // Check if the user has already dismissed or completed the popup during this session
+    // localStorage key — show only ONCE ever
     const isShownKey = 'pac_exit_popup_shown';
-    const isDismissed = localStorage.getItem(isShownKey);
+    if (localStorage.getItem(isShownKey) === 'true') return;
 
-    if (isDismissed === 'true') {
-      return; // Stop here if already dismissed
-    }
+    let alreadyShown = false;
 
     const showModal = () => {
-      localStorage.setItem(isShownKey, 'true'); // Save state so it triggers only once
+      if (alreadyShown) return;
+      alreadyShown = true;
+      localStorage.setItem(isShownKey, 'true');
       backdrop.style.display = 'flex';
-      // Force repaint to trigger CSS transitions
       void backdrop.offsetWidth;
       backdrop.classList.add('show');
+      document.removeEventListener('mouseleave', handleMouseLeave);
     };
 
     const closeModal = () => {
@@ -272,78 +271,41 @@
       }, 350);
     };
 
-    // 1. DESKTOP : Trigger when mouse leaves the top viewport
-    document.addEventListener('mouseleave', (e) => {
+    // ONLY TRIGGER: Desktop exit intent — mouse leaves viewport top
+    const handleMouseLeave = (e: MouseEvent) => {
       if (e.clientY < 20) {
         showModal();
       }
-    });
+    };
+    document.addEventListener('mouseleave', handleMouseLeave);
 
-    // 2. MOBILE : Trigger when user scrolls past 50% of the page
-    let mobileTriggered = false;
-    window.addEventListener('scroll', () => {
-      if (mobileTriggered) return;
-      
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      if (docHeight > 0 && (scrollTop / docHeight) > 0.5) {
-        mobileTriggered = true;
-        // Trigger with a small delay for better user experience
-        setTimeout(showModal, 1000);
-      }
-    });
-
-    // 3. MOBILE : Trigger if user remains inactive on the page for 25 seconds
-    setTimeout(() => {
-      if (!mobileTriggered && !localStorage.getItem(isShownKey)) {
-        showModal();
-      }
-    }, 25000);
-
-    // Event Listeners for closing the modal
+    // Close handlers
     closeBtn?.addEventListener('click', closeModal);
     optOutBtn?.addEventListener('click', closeModal);
-    
-    // Close when clicking outside the modal content box
+
     backdrop.addEventListener('click', (e) => {
-      if (e.target === backdrop) {
-        closeModal();
-      }
+      if (e.target === backdrop) closeModal();
     });
 
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && backdrop.classList.contains('show')) {
-        closeModal();
-      }
+      if (e.key === 'Escape' && backdrop.classList.contains('show')) closeModal();
     });
 
-    // CTA Click Event : Scroll to form or redirect
+    // CTA: scroll to form
     ctaBtn?.addEventListener('click', () => {
       closeModal();
-      
       const targetForm = document.getElementById('devis') || document.getElementById('pac-lead-form');
       if (targetForm) {
-        // Form is present on this page -> scroll smoothly
         targetForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        
-        // Highlight form to draw user attention
         targetForm.classList.add('pulse-form');
-        setTimeout(() => {
-          targetForm.classList.remove('pulse-form');
-        }, 3000);
-
-        // Highlight first interactive box
+        setTimeout(() => targetForm.classList.remove('pulse-form'), 3000);
         const firstBox = targetForm.querySelector('.option-box') as HTMLElement;
         if (firstBox) {
           firstBox.focus();
           firstBox.style.outline = '3px solid var(--accent-color)';
-          setTimeout(() => {
-            firstBox.style.outline = '';
-          }, 3000);
+          setTimeout(() => { if (firstBox) firstBox.style.outline = ''; }, 3000);
         }
       } else {
-        // Form is NOT present on this page -> redirect to landing page form anchor
         window.location.href = '/#devis';
       }
     });
