@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "cf-pages-build": "npm install --prefer-offline && astro build"
+    "cf-pages-build": "rm -rf node_modules && npm install && astro build"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.13",
