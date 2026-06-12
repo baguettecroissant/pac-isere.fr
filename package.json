@@ -7,10 +7,9 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "rm -rf node_modules && npm install && astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "cf-pages-build": "rm -rf node_modules && npm install && astro build"
+    "astro": "astro"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.13",
